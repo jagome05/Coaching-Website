@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  background-color: rgb(211, 182, 15);
+}
