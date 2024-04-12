@@ -13,3 +13,6 @@ export default function Contact() {
     </>
   )
 }
+
+// ? ref
+//https://medium.com/@emmilindsey/react-router-hashlink-vs-link-e1e7a81bac1d

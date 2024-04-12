@@ -5,5 +5,119 @@ header {
   align-items: center;
   gap: 1em;
   padding: 1em;
-  background-color: rgb(211, 182, 15);
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #000000;
+}
+
+.app-layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.serviceBox {
+  background-size: cover;
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
+
+.main-container {
+  display: grid;
+}
+
+.home-top-bg {
+  background-color: rgb(219, 195, 55);
+  width: 100%;
+  height: 400px;
+}
+
+.home-top-img {
+  position: relative;
+  bottom: 200px;
+}
+
+.home-top-text {
+  background-color: grey;
+  position: relative;
+  z-index: 1;
+  width: 500px;
+  bottom: 400px;
+  left: 200px;
+}
+
+.home-top-gif {
+  width: 100%;
+  position: relative;
+  bottom: 600px;
+  z-index: -1;
+}
+
+.home-services {
+  position: relative;
+  bottom: 500px;
+}
+
+.home-services-bg {
+  background-color: rgb(219, 195, 55);
+  width: 100%;
+  height: 400px;
+}
+
+.home-services-main {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-areas:
+  "text   text  text"
+  "  a      b     c";
+  column-gap: 10px;
+  background-color: white;
+  border: black solid 1em;
+  position: relative;
+  bottom: 200px;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+}
+
+.home-services-text {
+  grid-area: text
+}
+
+.home-services-box1 {
+  background-color: lightblue;
+  grid-area: a;
+}
+
+.home-services-box2 {
+  background-color: lightgreen;
+  grid-area: b;
+}
+
+.home-services-box3 {
+  background-color: lightgray;
+  grid-area: c;
+}
+
+.aboutme-container {
+  position: relative;
+}
+
+.aboutme-gif {
+  width: 100%;
+}
+
+.aboutme-whitebox {
+  height: 400px;
+  width: 400px;
+  /* margin: 5px; */
+  background-color: white;
+  position: absolute;
+  bottom: 0;
 }

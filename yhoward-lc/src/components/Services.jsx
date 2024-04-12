@@ -6,7 +6,7 @@ export default function Services() {
 
   return(
     <>
-      <div>
+      <div className="serviceBox">
         <h2>Services</h2>
 
       </div>
