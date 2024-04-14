@@ -1,5 +1,5 @@
 import "./App.css";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -7,11 +7,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import AppLayout from "./components/AppLayout";
-import Home from "./components/Home";
-import AboutMe from "./components/AboutMe"
-import Services from "./components/Services";
-import Book from "./components/Book";
+import AppLayout from "./pages/AppLayout";
+import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe"
+import Services from "./pages/Services";
+import Book from "./pages/Book";
 import Contact from "./components/Contact";
 // import Login from "./components/auth/Login";
 // import Register from "./components/auth/Register";
