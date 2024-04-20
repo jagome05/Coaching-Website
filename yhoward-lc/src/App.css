@@ -2,96 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1em;
-  padding: 1em;
-  background-color: rgba(253, 253, 253, 0.514);
-  border-bottom: 1px solid #000000;
+a {
+  color: white !important;
+  text-decoration: none !important;
 }
 
-/* todo fix logo to top-left */
 .logo {
   height: 5em;
-  justify-self: start;
+  margin-right: auto;
 }
 
 .app-layout {
-  background-color: rgb(255, 255, 255);
-  min-height: 100%;
+  background-color: rgb(235, 246, 255);
   display: grid;
   grid-template-rows: auto 1fr auto;
-  z-index: -2;
+  /* z-index: -2; */
 }
 
 footer {
-  background-color: rgba(204, 204, 204, 0.418);
+  /* position: relative; */
+  /* bottom: 0; */
+  width: 100%;
+  background-color: #D9DCD6;
   text-align: center;
   border: 1px solid #000000;
-}
-
-.home-top-bg {
-  background-color: #9e9e9e;
-  width: 100%;
-  height: 400px;
-}
-
-.home-top-img {
-  position: relative;
   z-index: 1;
-  bottom: 250px;
 }
 
 .home-top-text {
-  background-color: rgb(216, 216, 216, 0.8);
+  background-color: rgb(216, 216, 216, 0);
+  color: white;
   position: relative;
   z-index: 2;
   width: 700px;
-  bottom: 500px;
+  top: 400px;
   left: 100px;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
-.home-top-gif {
-  width: 100%;
-  position: relative;
-  bottom: 700px;
-  /* z-index: -1; */
-}
-
-.home-services {
-  position: relative;
-  bottom: 500px;
-}
-
-.home-services-bg {
-  background-color: rgb(182, 182, 182);
-  width: 100%;
-  height: 400px;
-}
-
-.home-services-main {
-  /* display: grid;
-  grid-template-columns: 300px;
-  grid-template-areas:
-  "text   text  text"
-  "  a      b     c";
-  column-gap: 10px; */
-  background-color: white;
-  border: black solid 0.5em;
-  position: relative;
-  bottom: 200px;
-  margin: auto;
-  width: 90%;
-  /* height: 100%; */
-}
-
-.home-services-text {
-  grid-area: text
-}
 
 .aboutme-container {
   position: relative;

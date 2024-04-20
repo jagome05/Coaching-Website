@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 const { dbConnect } = require("./db");
 
 //connects to controllers
-
+const contact = require("./controllers/contact.js")
 
 //* cors helps us if other project using server/db
 app.use(cors());
@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 // connects to endpoints
-
+app.use("/api", contact)
 
 //* use this to test admin privelge ---> app.use('/admin', admin)
 
