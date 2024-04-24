@@ -4,10 +4,15 @@ export default function Footer() {
 
   return (
     <>
-        <div class="flex flex-row justify-end items-center">
-        <h2 class="">Social Media Links!</h2>
-          <img class="w-1/5" src="https://t4.ftcdn.net/jpg/03/92/71/99/360_F_392719944_L0LYv3e7QozB2tsj3CfUN0HPC8eZQOWb.jpg"></img>
+      <div class="flex flex-col justify-evenly items-end">
+        <h4 class="">Links</h4>
+        <div class="flex flex-row justify-end gap-2">
+          <button><i class="fa fa-facebook-f"></i></button>
+          <button><i class="fa fa-twitter"></i></button>
+          <button><i class="fa fa-linkedin"></i></button>
+          <button><i class="fa fa-instagram"></i></button>
         </div>
+      </div>
     </>
   )
 }

@@ -7,7 +7,7 @@ export default function Contact() {
 
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
-  const [email, setEmail] = useState("");
+  const [from, setFrom] = useState("");
   const [message, setMessage] = useState("");
 
   async function handleSend(event) {
@@ -22,13 +22,13 @@ export default function Contact() {
       body: JSON.stringify({
         first,
         last,
-        email,
+        from,
         message,
       })
     })
     .then(res => res.json())
     .then(data => {
-      console.log(first, last, email, message)
+      console.log(first, last, from, message)
       console.log(data)
       alert("Message successfully sent!")
     })
@@ -82,15 +82,15 @@ export default function Contact() {
                   </Col>
                 </Row>
                 <FormGroup>
-                  <Label for="email">
+                  <Label for="from">
                     Email
                   </Label>
                   <Input
-                    id="email"
-                    name="email"
+                    id="from"
+                    name="from"
                     placeholder="Email Address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={from}
+                    onChange={(e) => setFrom(e.target.value)}
                   />
                 </FormGroup>
                 <FormGroup>

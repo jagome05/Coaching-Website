@@ -8,40 +8,47 @@ router.post("/contactMe", (req, res) => {
   let transporter = nodemailer.createTransport({
     //--> use this for gmail
     //todo look into OAtuh2
-    //   service: 'gmail',
-    //   host: 'smtp.gmail.com',
-    //   port: 587,
-    //   secure: false,
-    //   // *admin user info
-    //   auth: {
-    //     user: 'jobranja04@gmail.com',
-    //     pass: 'asdf1204'
-    //   },
-    //   tls: {
-    //     rejectUnauthorized: false
-    // }
+      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      // *admin user info
+      auth: {
+        user: 'jobranja04@gmail.com',
+        pass: 'bbyb ujuo imcz gdkl'
+      },
+      tls: {
+        rejectUnauthorized: false
+    }
 
     // --> use this for mailtrap
-    host: "sandbox.smtp.mailtrap.io",
-    port: 2525,
-    auth: {
-      user: "7dc7b0a0436181",
-      pass: "28ffbcc859bdf2"
-    }
+    // host: "sandbox.smtp.mailtrap.io",
+    // port: 2525,
+    // auth: {
+    //   user: "7dc7b0a0436181",
+    //   pass: "28ffbcc859bdf2"
+    // }
   });
 
-  console.log(req.body)
-  let { first, last, email, message } = req.body;
+  //* pulls info from contact.jsx
+  let { first, last, from, message } = req.body;
 
   // * email layout
   let mailOptions = {
-    from: email,
-    to: "jobranja@gmail.com",
-    subject: `New Message from ${first}`,
+    // ! from will always be auth user for gmail? https://stackoverflow.com/questions/34628729/nodemailer-send-emails-using-original-user-account-instead-of-alias
+    // todo unsure if 'from' can be updated? https://stackoverflow.com/questions/33949984/how-to-change-the-from-field-in-nodemailer
+    from: {
+      name: `Website Contact`,
+      address: from
+    },
+    replyTo: from,
+    to: "jobranja04@gmail.com",
+    subject: `Website Contact: New Message from ${first}`,
     text: message,
     html: message
   }
 
+  //* line of code that actually sends the mail
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);

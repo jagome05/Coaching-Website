@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  color: white !important;
+  color: #ffffff !important;
   text-decoration: none !important;
 }
 
@@ -20,8 +20,8 @@ a {
 }
 
 footer {
-  /* position: relative; */
-  /* bottom: 0; */
+  /* position: absolute; */
+  /* bottom: auto; */
   width: 100%;
   background-color: #D9DCD6;
   text-align: center;
@@ -29,31 +29,3 @@ footer {
   z-index: 1;
 }
 
-.home-top-text {
-  background-color: rgb(216, 216, 216, 0);
-  color: white;
-  position: relative;
-  z-index: 2;
-  width: 700px;
-  top: 400px;
-  left: 100px;
-  /* opacity: 1; */
-}
-
-
-.aboutme-container {
-  position: relative;
-}
-
-.aboutme-gif {
-  width: 100%;
-}
-
-.aboutme-whitebox {
-  height: 400px;
-  width: 400px;
-  /* margin: 5px; */
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-}

@@ -15,6 +15,7 @@ function AppLayout() {
           <NavLink to="about-me" class="">About Me</NavLink>
           <NavLink to="services" class="">Services</NavLink>
           <NavLink to="book" class="">Book</NavLink>
+          <NavLink to="resource" class="">Resources</NavLink>
           {/* <NavLink to="auth">Login</NavLink> */}
         </header>
         <main>

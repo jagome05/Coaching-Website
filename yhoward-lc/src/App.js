@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe"
 import Services from "./pages/Services";
 import Book from "./pages/Book";
+import Resources from "./pages/Resources"
 // import Login from "./components/auth/Login";
 // import Register from "./components/auth/Register";
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="about-me" element={<AboutMe />} />
       <Route path="services" element={<Services />} />
       <Route path="book" element={<Book />} />
+      <Route path="resource" element={<Resources />} />
       {/* <Route path="users"> */}
         {/* <Route path="" element={<Login />} /> */}
         {/* <Route path="register" element={<Register />} /> */}
