@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.logo {
+  height: 5em;
+  margin-right: auto;
+}
+
+.app-layout {
+  background-color: rgb(235, 246, 255);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* z-index: -2; */
+}
+
+footer {
+  /* position: absolute; */
+  /* bottom: auto; */
+  width: 100%;
+  background-color: #D9DCD6;
+  text-align: center;
+  border: 1px solid #000000;
+  z-index: 1;
+}
+
