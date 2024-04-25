@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-import Contact from "../components/Contact"
+import Contact from "../components/Contact";
+import Header from "../components/Header";
 
 function AppLayout() {
   const navigate = useNavigate();
@@ -9,15 +10,7 @@ function AppLayout() {
   return (
     <>
       <div className="app-layout">
-        <header class="flex flex-row justify-end items-center gap-4 px-2 bg-[rgba(58,124,165,0)] z-1">
-          <img className="logo" src="https://www.creativefabrica.com/wp-content/uploads/2021/03/20/Mountain-logo-Design-Graphics-9785421-1-1-580x435.png"></img>
-          <NavLink to="/" class="text-white no-underline visited:text-white visited:no-underline active:text-white">Home</NavLink>
-          <NavLink to="about-me" class="">About Me</NavLink>
-          <NavLink to="services" class="">Services</NavLink>
-          <NavLink to="book" class="">Book</NavLink>
-          <NavLink to="resource" class="">Resources</NavLink>
-          {/* <NavLink to="auth">Login</NavLink> */}
-        </header>
+        <Header style={"flex flex-row justify-end items-center gap-4 px-2 bg-[#3A7CA5] border-black border-b-4"}/>
         <main>
           <Outlet />
           <div class="fixed bottom-1 left-2 z-2">

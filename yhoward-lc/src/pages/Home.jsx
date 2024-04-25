@@ -1,6 +1,7 @@
 import React from "react";
 import HomeServices from "../components/HomeServices"
 import { Button } from "reactstrap";
+import Header from "../components/Header";
 
 export default function Home() {
 
@@ -8,7 +9,8 @@ export default function Home() {
   return (
     <>
       {/* <div class="relative h-screen"> */}
-      <div class="relative bottom-20">
+      <Header style={"relative bottom-20 flex flex-row justify-end items-center gap-4 px-2 bg-[rgb(235, 246, 255), 0] z-2"}/>
+      <div class="relative bottom-48">
         {/* <video autoPlay loop muted class="absolute bottom-0 w-auto min-w-full min-h-full"> */}
         <video autoPlay loop muted class="brightness-75">
           <source src='https://cdn.pixabay.com/video/2020/12/15/59291-492700392_large.mp4' />
@@ -29,64 +31,42 @@ export default function Home() {
           <button>Learn More</button>
         </div>
         <br></br>
-        <div class="bg-transparent font-basker text-center text-2xl">
+        {/*  //todo work on creative way to show Qs*/}
+        <div class="bg-transparent font-basker text-center text-2xl p-5">
           <h2>Do these questions sound familiar?</h2>
           <br></br>
-          <div class="grid grid-cols-2 gap-20">
-            <div>
-              <ul>
-                <li>What happened to my dreams of…?</li>
-                <li>Is this all there is for me…?</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Who was I before I was married? Had children? Became a caregiver?</li>
-                <li>Why am I spending my time doing more things that I dislike than I enjoy?</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>If I had the chance to change my life’s direction, I would…?/</li>
-                <li>When will it be my time to lead?</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>How can I reclaim my life?</li>
-                <li>What happened to my courage?  My desire for more?</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Why does success continually elude me?</li>
-                <li>How can my relationship be resuscitated?</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>What options can I create to retire?</li>
-                <li>What will my life look like when I retire?</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>How do I re-invent myself?</li>
-                <li> How can I bring more joy into my life?</li>
-              </ul>
-            </div>
+          <div class="grid grid-cols-2 gap-10">
+
+            <ul>What happened to my dreams of…?</ul>
+            <ul>Is this all there is for me…?</ul>
+            <ul>Who was I before I was married? Had children? Became a caregiver?</ul>
+            <ul>Why am I spending my time doing more things that I dislike than I enjoy?</ul>
+            <ul>If I had the chance to change my life’s direction, I would…?/</ul>
+            <ul>When will it be my time to lead?</ul>
+            <ul>How can I reclaim my life?</ul>
+            <ul>What happened to my courage?  My desire for more?</ul>
+            <ul>Why does success continually elude me?</ul>
+            <ul>How can my relationship be resuscitated?</ul>
+            <ul>What options can I create to retire?</ul>
+            <ul>What will my life look like when I retire?</ul>
+            <ul>How do I re-invent myself?</ul>
+            <ul> How can I bring more joy into my life?</ul>
+
           </div>
           <br></br>
-          <h3>
-            Let’s chat!  Schedule a complimentary session or call 309-648-0551 to share your story, explore your goals, and see if we’re a good fit for this adventure together.
-            Remember, you are not alone on this journey. Let's transform together.
+          <div class="">
+            <h3>
+              Let’s chat!  Schedule a complimentary session or call <strong>309-648-0551</strong> to share your story, explore your goals, and see if we’re a good fit for this adventure together.
+              Remember, you are not alone on this journey. Let's transform together.
             </h3>
+            <button>Book Now</button>
             <br></br>
             <h3 class="italic">
-            With Grace, Gratitude, and Goodness,
-            Yvonne
-            Transformative Transition Coach & Thought Partner
-              </h3>
+              With Grace, Gratitude, and Goodness,
+              Yvonne
+              Transformative Transition Coach & Thought Partner
+            </h3>
+          </div>
         </div>
       </div>
       {/* <div class="">

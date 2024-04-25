@@ -6,7 +6,7 @@ export default function Resources() {
 
   return(
     <>
-    <div>
+    <div class="p-5">
       <h1>Below are some resources to help you along your journey</h1>
       <div class="grid grid-cols-2 grid-flow-row gap-12">
         <ResourceBox url="https://geediting.com/people-who-become-a-better-version-of-themselves-later-in-life-usually-adopt-these-habits/" img="https://geediting.com/wp-content/uploads/2024/03/People-who-become-a-better-version-of-themselves-later-in-life-usually-adopt-these-habits-1024x538.png"/>
