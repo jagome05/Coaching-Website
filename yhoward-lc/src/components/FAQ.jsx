@@ -4,10 +4,9 @@ import {
   AccordionBody,
   AccordionHeader,
   AccordionItem,
-} from 'reactstrap';
+} from "reactstrap";
 
 export default function FAQ() {
-
   // const [open, setOpen] = useState('1');
   // const toggle = (id) => {
   //   if (open === id) {
