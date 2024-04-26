@@ -1,37 +1,35 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PopupWidget } from "react-calendly";
 
 const Book = () => {
-  const rootElementRef = useRef(null);
-  const [userData, setUserData] = useState(null);
+  const [userFullName, setUserFullName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
 
   useEffect(() => {
-    const userDataFromStorage = JSON.parse(localStorage.getItem("user"));
-    setUserData(userDataFromStorage);
-    rootElementRef.current = document.getElementById("root");
+    const userData = JSON.parse(localStorage.getItem("user"));
+    if (userData && userData.fullname && userData.email) {
+      setUserFullName(userData.fullname);
+      setUserEmail(userData.email);
+    }
   }, []);
 
-  const renderCalendlyPopup = () => {
-    const prefillData = userData
-      ? {
-          name: userData.fullname,
-          email: userData.email,
-        }
-      : "";
+  const rootElement = document.getElementById("root");
 
-    return (
+  return (
+    <div className="booking">
       <PopupWidget
         url="https://calendly.com/jobranja04"
-        rootElement={rootElementRef.current}
+        rootElement={rootElement || undefined}
         text="Click here to schedule!"
         textColor="#ffffff"
-        color="#00a2ff"
-        prefill={prefillData}
+        color="#0D6EFD"
+        prefill={{
+          name: "" || userFullName,
+          email: "" || userEmail,
+        }}
       />
-    );
-  };
-
-  return <div className="App">{renderCalendlyPopup()}</div>;
+    </div>
+  );
 };
 
 export default Book;

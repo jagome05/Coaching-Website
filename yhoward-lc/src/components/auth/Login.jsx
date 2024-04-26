@@ -21,18 +21,18 @@ function Login() {
       .then((res) => {
         if (res.token) {
           let user = res.foundUser;
-          // let { _id, firstname } = user
           console.log("Token received:", res.token, user);
           localStorage.setItem(TOKEN_KEY, res.token);
           localStorage.setItem("user", JSON.stringify(user));
           navigate("/");
+          // Refresh the page
+          window.location.reload();
         } else {
           setInvalid(true);
         }
       })
       .catch((err) => console.log(err.message));
   };
-
   return (
     <div className="login-container">
       <div className="login-box">
@@ -67,10 +67,7 @@ function Login() {
         </button>
 
         <div>
-          New to the site?
-          <a href="register">
-            <Link to="register">Signup</Link>
-          </a>
+          New to the site? <Link to="register">Signup</Link>
         </div>
       </div>
     </div>
