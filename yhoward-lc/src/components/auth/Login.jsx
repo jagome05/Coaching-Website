@@ -67,9 +67,9 @@ function Login() {
         </button>
 
         <div>
-          New to the site? 
+          New to the site?
           <a href="register">
-          <Link to="register">Signup</Link>
+            <Link to="register">Signup</Link>
           </a>
         </div>
       </div>

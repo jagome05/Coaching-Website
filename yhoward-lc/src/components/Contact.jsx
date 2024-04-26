@@ -1,5 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Form, Row, Col, FormGroup, Label, Input, Button, Collapse, CardBody, Card } from "reactstrap"
+import {
+  Form,
+  Row,
+  Col,
+  FormGroup,
+  Label,
+  Input,
+  Button,
+  Collapse,
+  CardBody,
+  Card,
+} from "reactstrap";
 
 export default function Contact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,23 +35,23 @@ export default function Contact() {
         last,
         from,
         message,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(first, last, from, message);
+        console.log(data);
+        alert("Message successfully sent!");
       })
-    })
-    .then(res => res.json())
-    .then(data => {
-      console.log(first, last, from, message)
-      console.log(data)
-      alert("Message successfully sent!")
-    })
-    .catch((error)=>{
-      console.log(error)
-      alert("error sending messsage")
-    })
+      .catch((error) => {
+        console.log(error);
+        alert("error sending messsage");
+      });
   }
 
   return (
     <>
-      <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>
+      <Button color="primary" onClick={toggle} style={{ marginBottom: "1rem" }}>
         Contact Me!
       </Button>
       <Collapse isOpen={isOpen}>
@@ -52,9 +63,7 @@ export default function Contact() {
                 <Row>
                   <Col md={6}>
                     <FormGroup>
-                      <Label for="first">
-                        First Name
-                      </Label>
+                      <Label for="first">First Name</Label>
                       <Input
                         id="first"
                         name="first"
@@ -67,9 +76,7 @@ export default function Contact() {
                   </Col>
                   <Col md={6}>
                     <FormGroup>
-                      <Label for="last">
-                        Last Name
-                      </Label>
+                      <Label for="last">Last Name</Label>
                       <Input
                         id="last"
                         name="last"
@@ -82,9 +89,7 @@ export default function Contact() {
                   </Col>
                 </Row>
                 <FormGroup>
-                  <Label for="from">
-                    Email
-                  </Label>
+                  <Label for="from">Email</Label>
                   <Input
                     id="from"
                     name="from"
@@ -94,9 +99,7 @@ export default function Contact() {
                   />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="message">
-                    Message
-                  </Label>
+                  <Label for="message">Message</Label>
                   <Input
                     id="message"
                     name="message"
@@ -105,16 +108,14 @@ export default function Contact() {
                     onChange={(e) => setMessage(e.target.value)}
                   />
                 </FormGroup>
-                <Button type="submit">
-                  Send
-                </Button>
+                <Button type="submit">Send</Button>
               </Form>
             </div>
           </CardBody>
         </Card>
       </Collapse>
     </>
-  )
+  );
 }
 
 // ? ref
