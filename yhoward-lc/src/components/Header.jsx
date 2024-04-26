@@ -1,7 +1,42 @@
-import react from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { TOKEN_KEY } from "../constants";
+
 
 export default function Header({ style }) {
+
+  const [userInfo, setUserInfo] = useState({});
+  const [showDropdown, setShowDropdown] = useState(false); // State to toggle dropdown
+  const loggedIn = localStorage.getItem(TOKEN_KEY);
+  const navigate = useNavigate();
+  const contact = useRef(null);
+
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    if (loggedIn) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      setUserInfo(user);
+    } else {
+      setUserInfo({});
+    }
+  }, [loggedIn]);
+
+  const handleLogout = () => {
+    localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem("user");
+    localStorage.removeItem("goals");
+    navigate("/users"); // Redirect to login page after logout
+  };
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   return (
     <>
@@ -13,7 +48,23 @@ export default function Header({ style }) {
         <NavLink to="services" class="">Services</NavLink>
         <NavLink to="book" class="">Book</NavLink>
         <NavLink to="resource" class="">Resources</NavLink>
-        {/* <NavLink to="auth">Login</NavLink> */}
+        <NavLink onClick={() => scrollToSection(contact)}>Contact</NavLink>
+        {loggedIn ? (
+          <div className="user-info">
+            <button onClick={toggleDropdown}>{userInfo.firstname}</button>
+            {showDropdown && ( // Render dropdown if showDropdown is true
+              <div className="dropdown-content">
+                <NavLink to="/users/profile">Profile</NavLink>
+                <br />
+                <a href="#" onClick={handleLogout}>
+                  Logout
+                </a>
+              </div>
+            )}
+          </div>
+        ) : (
+          <NavLink to="users">Sign Up/Login</NavLink>
+        )}
       </header>
     </>
   )
