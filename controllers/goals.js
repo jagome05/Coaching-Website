@@ -55,7 +55,7 @@ router.post("/new", authToken, async (req, res) => {
 });
 
 // Endpoint to update a goal by ID
-router.put("/:goalsId", authToken, async (req, res) => {
+router.put("/update/:goalsId", authToken, async (req, res) => {
   const { name, description } = req.body;
   const goalsId = req.params.goalsId;
 

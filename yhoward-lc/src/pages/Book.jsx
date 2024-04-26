@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from "react";
 import { PopupWidget } from "react-calendly";
 
@@ -32,20 +31,3 @@ const Book = () => {
 };
 
 export default Book;
-=======
-import React from "react";
-
-export default function Book() {
-
-
-
-  return(
-    <>
-      <div>
-        <h2>Book me!</h2>
-
-      </div>
-    </>
-  )
-}
->>>>>>> 197447842c9ad74ed2e14112dc7c1a77c565cfd0

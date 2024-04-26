@@ -32,9 +32,9 @@ const authToken = async (req, res, next) => {
         });
       }
     } else {
-      //   res.status(403).json({
-      //     message: `Forbidden`,
-      //   });
+      res.status(403).json({
+        message: `Forbidden`,
+      });
     }
   } catch (err) {
     res.status(500).json({

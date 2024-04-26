@@ -238,6 +238,39 @@ const UserProfile = () => {
     }
   };
 
+<<<<<<< HEAD
+  const handleUpdateGoal = async (goalId) => {
+    try {
+      const token = localStorage.getItem("authToken");
+      const response = await fetch(
+        `http://localhost:4000/goals/update/${goalId}`,
+        {
+          method: "UPDATE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      if (response.ok) {
+        // Update a goal from the list
+        const updatedGoals = goals.filter((goal) => goal._id !== goalId);
+        setGoals(updatedGoals);
+        setSuccessMessage("Goal Successfully updated!");
+
+  // Update localStorage with the updated goals
+  localStorage.setItem("goals", JSON.stringify(updatedGoals));
+} else {
+  const errorMessage = await response.text();
+  throw new Error(errorMessage || "Failed to update goal");
+}
+} catch (error) {
+console.error(error);
+setErrorMessage(error.message);
+}
+};
+
+=======
+>>>>>>> cc3b7d38d0301e3e8e359f06c791d202c6357693
   return (
     <div className="user-profile-container">
       <h2>{userInfo.isAdmin ? "Admin Center" : "User Profile"}</h2>
@@ -336,6 +369,9 @@ const UserProfile = () => {
                   <strong>{goal.name}</strong>: {goal.description}
                   <button onClick={() => handleDeleteGoal(goal._id)}>
                     Delete
+                  </button>
+                  <button onClick={() => handleUpdateGoal(goal._id)}>
+                    Update
                   </button>
                 </li>
               ))}

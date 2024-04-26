@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// TODO: JASON FIX THIS...
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
 import { TOKEN_KEY } from "../constants";
@@ -84,7 +84,6 @@ function AppLayout() {
 }
 
 export default AppLayout;
-=======
 import { useRef } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
@@ -113,4 +112,3 @@ function AppLayout() {
 }
 
 export default AppLayout;
->>>>>>> 197447842c9ad74ed2e14112dc7c1a77c565cfd0
