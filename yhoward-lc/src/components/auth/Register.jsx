@@ -131,8 +131,14 @@ function Register() {
             style={{ border: isAdmin ? "2px solid green" : "" }} // Change border color if admin code is correct
           />
           {isAdmin && <p style={{ color: "green" }}>Admin code accepted</p>}{" "}
-          <ReCAPTCHA sitekey={reCAPTCHA} ref={recaptchaRef} />
-          <button type="submit">Register</button>
+          <ReCAPTCHA
+            className="reCaptcha"
+            sitekey={reCAPTCHA}
+            ref={recaptchaRef}
+          />
+          <button className="global-button" type="submit">
+            Register
+          </button>
         </form>
         <div>
           Already a member? <Link to="/users">Login</Link>
