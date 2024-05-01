@@ -67,7 +67,10 @@ function Login() {
         </button>
 
         <div>
-          New to the site? <Link to="register">Signup</Link>
+          New to the site?{" "}
+          <Link className="link-button" to="register">
+            Signup
+          </Link>
         </div>
       </div>
     </div>

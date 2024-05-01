@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  color: black !important;
+  color: white !important;
   text-decoration: none !important;
 }
 
@@ -71,19 +71,12 @@ footer {
 }
 
 .home-services-main {
-  /* display: grid;
-  grid-template-columns: 300px;
-  grid-template-areas:
-  "text   text  text"
-  "  a      b     c";
-  column-gap: 10px; */
   background-color: white;
   border: black solid 0.5em;
   position: relative;
   bottom: 200px;
   margin: auto;
   width: 90%;
-  /* height: 100%; */
 }
 
 .home-services-text {
@@ -101,7 +94,6 @@ footer {
 .aboutme-whitebox {
   height: 400px;
   width: 400px;
-  /* margin: 5px; */
   background-color: white;
   position: absolute;
   bottom: 0;
@@ -173,7 +165,7 @@ footer {
 }
 
 .register-box {
-  width: 300px;
+  width: 350px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -205,7 +197,91 @@ footer {
   color: green;
 }
 
-.user-profile-container {
+/* Admin.css */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.table-section {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.users-table th,
+.users-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.users-table th {
+  background-color: #f4f4f4;
+}
+
+.users-table tr:hover {
+  background-color: #e8e8e8;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer; /* Shows a pointer cursor on hover */
+}
+
+.tooltip-text {
+  visibility: hidden;
+  min-width: 120px; /* Ensures a consistent minimum width */
+  background-color: #0d6efd;
+  color: #fff;
+  text-align: left; /* Aligns text to the left */
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  top: 110%; /* Adjusts vertical position to be below the goal name */
+  left: 0%; /* Aligns the start of the tooltip with the start of the goal name */
+  white-space: nowrap; /* Keeps the tooltip text on a single line */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s ease-in-out; /* Smooth transition for the tooltip appearance */
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: -5px; /* Positioning arrow below the tooltip, pointing upwards */
+  left: 50%; /* Centering the arrow */
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent; /* Arrow color */
+}
+
+.link-button {
+  color: #000000 !important;
+}
+
+/* .user-profile-container {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -213,9 +289,20 @@ footer {
   border-radius: 5px;
 }
 
-.user-info,
+
+.user-info {
+  color: black !important;
+  text-decoration: none !important;
+  margin-top: 1em;
+}
 .user-goals {
   margin-bottom: 20px;
+}
+
+.goal-input {
+  border: 1px solid black;
+  border-radius: 1em;
+  margin-bottom: 1em;
 }
 
 .user-info label,
@@ -246,6 +333,10 @@ footer {
   cursor: pointer;
   background-color: #007bff;
   color: #fff;
+}
+
+.global-input {
+  border: #000000;
 }
 
 .user-info .edit-buttons button:last-child,
@@ -337,23 +428,6 @@ footer {
   align-items: center;
   font-size: 25px;
   padding: 1em;
-}
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 75vh;
-}
-
-.login-box {
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .global-input {
@@ -375,32 +449,6 @@ footer {
   cursor: pointer;
 }
 
-.warning {
-  color: red;
-}
-
-.error-message {
-  color: red;
-  font-size: 12px;
-}
-
-.register-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.register-box {
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
 .global-input {
   width: 75%;
   padding: 1em;
@@ -408,20 +456,6 @@ footer {
   border-radius: 100px;
   display: block;
   margin: 0 auto;
-}
-
-.auth-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.success-message {
-  color: green;
 }
 
 .user-profile-container {
@@ -470,25 +504,6 @@ footer {
 .user-info .edit-buttons button:last-child,
 .user-goals button:last-child {
   margin-right: 0;
-}
-
-.success-message,
-.error-message {
-  margin-top: 10px;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.success-message {
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
-  color: #155724;
-}
-
-.error-message {
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
 }
 
 .user-goals {
@@ -556,23 +571,6 @@ footer {
   align-items: center;
   font-size: 25px;
   padding: 1em;
-}
-
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 75vh;
-}
-
-.login-box {
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .global-input {
@@ -596,55 +594,6 @@ footer {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.warning {
-  color: red;
-}
-
-.error-message {
-  color: red;
-  font-size: 12px;
-}
-
-.register-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.register-box {
-  width: 400px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* .global-input {
-  width: 75%;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 100px;
-  display: block;
-  margin: 0 auto;
-} */
-
-.auth-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.success-message {
-  color: green;
 }
 
 .user-profile-container {
@@ -699,25 +648,6 @@ Link {
   margin-right: 0;
 }
 
-.success-message,
-.error-message {
-  margin-top: 10px;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.success-message {
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
-  color: #155724;
-}
-
-.error-message {
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
-}
-
 .user-goals {
   margin-bottom: 20px;
 }
@@ -756,23 +686,3 @@ Link {
   background-color: green;
   margin-right: auto;
 }
-<<<<<<< HEAD
-=======
-
-/* .app-layout {
-  background-color: rgb(235, 246, 255);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  /* z-index: -2; */
-/* }
-
-/* footer { */
-/* position: absolute; */
-/* bottom: auto; */
-/* width: 100%;
-  background-color: #D9DCD6;
-  text-align: center;
-  border: 1px solid #000000;
-  z-index: 1;
-} */
->>>>>>> da25562029ef11539f2a45e159d2b21f55982649

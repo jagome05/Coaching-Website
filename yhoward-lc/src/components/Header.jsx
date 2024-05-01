@@ -60,20 +60,23 @@ export default function Header({ style }) {
         <NavLink to="resource" class="">
           Resources
         </NavLink>
-        <NavLink onClick={() => scrollToSection(contact)}>Contact</NavLink>
         {loggedIn ? (
-          <div className="user-info">
+          <a className="user-info">
             <button onClick={toggleDropdown}>{userInfo.firstname}</button>
             {showDropdown && ( // Render dropdown if showDropdown is true
               <div className="dropdown-content">
-                <NavLink to="/users/profile">Profile</NavLink>
+                {userInfo.isAdmin ? (
+                  <NavLink to="/users/profile">Admin Center</NavLink> // Link to the admin center for admins
+                ) : (
+                  <NavLink to="/users/profile">Profile</NavLink> // Link to the profile for regular users
+                )}
                 <br />
                 <a href="#" onClick={handleLogout}>
                   Logout
                 </a>
               </div>
             )}
-          </div>
+          </a>
         ) : (
           <NavLink to="users">Sign Up/Login</NavLink>
         )}

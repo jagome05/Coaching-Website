@@ -15,6 +15,7 @@ function Register() {
   const recaptchaRef = useRef();
   const nav = useNavigate();
   const reCAPTCHA = process.env.REACT_APP_SITE_KEY;
+  console.log(process.env.REACT_APP_SITE_KEY);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -141,7 +142,10 @@ function Register() {
           </button>
         </form>
         <div>
-          Already a member? <Link to="/users">Login</Link>
+          Already a member?{" "}
+          <Link className="link-button" to="/users">
+            Login
+          </Link>
         </div>
       </div>
     </div>
