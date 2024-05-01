@@ -1,12 +1,9 @@
 import React from "react";
-import HomeServices from "../components/HomeServices";
-import { Button } from "reactstrap";
 import Header from "../components/Header";
 
 export default function Home() {
   return (
     <>
-      {/* <div class="relative h-screen"> */}
       <Header
         style={
           "relative bottom-20 flex flex-row justify-end items-center gap-4 px-2 bg-[rgb(235, 246, 255), 0] z-2"
@@ -19,7 +16,7 @@ export default function Home() {
         </video>
         {/* <div className="flex flex-col gap-8 text-white bg-transparent relative z-2 w-9/12 top-64 left-28"> */}
         <div className="flex flex-col gap-8 font-basker text-white absolute bg-transparent z-2 w-9/12 top-48 left-10">
-          <h1 class="font-bold">Welcome to Verve and Veritas Coaching</h1>
+          <h1 class="font-bold">Welcome to Timeless Life Coaching LCC</h1>
           <h2 class="">
             Live Your Purpose Through{" "}
             <span class="italic">Transformative Change</span>
@@ -28,7 +25,7 @@ export default function Home() {
             Embarking on a new chapter can be exciting and daunting.{" "}
           </h2>
           <h3>
-            I’m Yvonne Howard of Verve &amp; Veritas Coaching and if you are
+            I’m Yvonne Howard of Timeless Life Coaching and if you are
             feeling lost, uncertain, or ready to unlock your full potential,
             I&#39;d love to be your supportive guide on this wondrous journey.
             Whether you are navigating a career change, retirement, relationship
@@ -38,12 +35,14 @@ export default function Home() {
           </h3>
           <button>Learn More</button>
         </div>
+
         <br></br>
+
         {/*  //todo work on creative way to show Qs*/}
-        <div class="bg-transparent font-basker text-center text-2xl p-5">
-          <h2>Do these questions sound familiar?</h2>
+        <div class="font-basker text-center p-5">
+          <h2 className="text-5xl py-2">Do these questions sound familiar?</h2>
           <br></br>
-          <div class="grid grid-cols-2 gap-10">
+          <div class="grid grid-cols-2 gap-10 text-2xl p-2">
             <ul>What happened to my dreams of…?</ul>
             <ul>Is this all there is for me…?</ul>
             <ul>
@@ -67,20 +66,21 @@ export default function Home() {
             <ul> How can I bring more joy into my life?</ul>
           </div>
           <br></br>
-          <div class="">
-            <h3>
-              Let’s chat! Schedule a complimentary session or call{" "}
-              <strong>309-648-0551</strong> to share your story, explore your
+          <div class="p-5">
+            <h3 className="p-5">
+              <strong className="text-5xl">Let’s chat!</strong> 
+            </h3>
+            <h2>
+              Schedule a complimentary session or call
+              <strong> 309-648-0551</strong> to share your story, explore your
               goals, and see if we’re a good fit for this adventure together.
               Remember, you are not alone on this journey. Let's transform
               together.
-            </h3>
-            <button>Book Now</button>
+            </h2>
             <br></br>
-            <h3 class="italic">
-              With Grace, Gratitude, and Goodness, Yvonne Transformative
-              Transition Coach & Thought Partner
-            </h3>
+            <button class="text-4xl">Book Now!</button>
+            <br></br>
+            <p><strong>Yvonne Transformative Transition Coach & Thought Partner</strong></p>
           </div>
         </div>
       </div>

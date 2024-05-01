@@ -3,17 +3,8 @@
 @tailwind utilities;
 
 a {
-  color: black !important;
+  color: white !important;
   text-decoration: none !important;
-}
-
-.logo {
-  height: 5em;
-  justify-self: start;
-}
-
-.social-logos {
-  height: 2em;
 }
 
 .app-layout {
@@ -25,9 +16,10 @@ a {
 }
 
 footer {
-  background-color: rgba(204, 204, 204, 0.418);
+  background-color: rgba(204, 204, 204);
   text-align: center;
   border: 1px solid #000000;
+  z-index: 1;
 }
 
 .user-profile {
@@ -89,7 +81,7 @@ footer {
   font-size: 12px;
 }
 
-.register-container {
+/* .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +96,7 @@ footer {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
+} */
 
 /* .global-input {
   width: 75%;
@@ -239,6 +231,7 @@ Link {
   margin-right: auto;
 }
 
+/* 
 .app-layout {
   background-color: rgb(255, 255, 255);
   min-height: 100%;
@@ -310,9 +303,9 @@ footer {
 .error-message {
   color: red;
   font-size: 12px;
-}
+} */
 
-.register-container {
+/* .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,8 +320,8 @@ footer {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
+} */
+/* 
 .global-input {
   width: 75%;
   padding: 1em;
@@ -456,9 +449,9 @@ footer {
 .goal-card button:hover {
   background-color: green;
   margin-right: auto;
-}
+} */
 
-.app-layout {
+/* .app-layout {
   background-color: rgb(255, 255, 255);
   min-height: 100%;
   display: grid;
@@ -503,16 +496,16 @@ footer {
   text-align: center;
 }
 
-.global-input {
+/* .global-input {
   width: 65%;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 100px;
   display: block;
   margin: 0 auto;
-}
+} */
 
-.reCaptcha {
+/* .reCaptcha {
   padding: 1em;
 }
 
@@ -533,16 +526,16 @@ footer {
 .error-message {
   color: red;
   font-size: 12px;
-}
+} */
 
-.register-container {
+/* .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
 
-.register-box {
+/* .register-box {
   width: 400px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -550,7 +543,7 @@ footer {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
+} */
 
 /* .global-input {
   width: 75%;
@@ -561,7 +554,7 @@ footer {
   margin: 0 auto;
 } */
 
-.auth-button {
+/* .auth-button {
   width: 100%;
   padding: 10px;
   background-color: #007bff;
@@ -683,20 +676,4 @@ Link {
 .goal-card button:hover {
   background-color: green;
   margin-right: auto;
-}
-/* .app-layout {
-  background-color: rgb(235, 246, 255);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  /* z-index: -2; */
-/* }
-
-/* footer { */
-/* position: absolute; */
-/* bottom: auto; */
-/* width: 100%;
-  background-color: #D9DCD6;
-  text-align: center;
-  border: 1px solid #000000;
-  z-index: 1;
 } */

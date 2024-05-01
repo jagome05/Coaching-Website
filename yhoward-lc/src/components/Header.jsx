@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { TOKEN_KEY } from "../constants";
+// const logo = require('../static/IMG_7065.jpg')
 
 export default function Header({ style }) {
 
@@ -8,14 +9,6 @@ export default function Header({ style }) {
   const [showDropdown, setShowDropdown] = useState(false); // State to toggle dropdown
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
-  const contact = useRef(null);
-
-  const scrollToSection = (elementRef) => {
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: "smooth",
-    });
-  };
 
   useEffect(() => {
     if (loggedIn) {
@@ -41,10 +34,13 @@ export default function Header({ style }) {
     <>
       {/* <header class="flex flex-row justify-end items-center gap-4 px-2 bg- z-1"> */}
       <header class={style}>
+
         <img
-          className="logo"
-          src="https://www.creativefabrica.com/wp-content/uploads/2021/03/20/Mountain-logo-Design-Graphics-9785421-1-1-580x435.png"
+          className='h-20 justify-start'
+          alt="landing page logo"
+          src='https://www.creativefabrica.com/wp-content/uploads/2021/03/20/Mountain-logo-Design-Graphics-9785421-1-1-580x435.png'
         ></img>
+
         <NavLink
           to="/"
           class="text-white no-underline visited:text-white visited:no-underline active:text-white"
@@ -60,7 +56,7 @@ export default function Header({ style }) {
         <NavLink to="resource" class="">
           Resources
         </NavLink>
-        <NavLink onClick={() => scrollToSection(contact)}>Contact</NavLink>
+        <NavLink to="testing">Testing</NavLink>
         {loggedIn ? (
           <div className="user-info">
             <button onClick={toggleDropdown}>{userInfo.firstname}</button>
