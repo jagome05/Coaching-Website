@@ -67,11 +67,11 @@ function Login() {
           Login
         </button>
 
-        <div className="p-3">
-          New to the site? 
-          <a href="register">
-          <Link to="register" className="text-black"> <strong>Signup</strong></Link>
-          </a>
+        <div>
+          New to the site?{" "}
+          <Link className="link-button" to="register">
+            Signup
+          </Link>
         </div>
       </div>
     </div>

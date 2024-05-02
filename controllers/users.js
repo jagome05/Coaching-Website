@@ -141,7 +141,7 @@ router.put("/update/:id", async (req, res) => {
     const userId = req.params.id;
     const { firstname, lastname, email, password, isAdmin } = req.body;
 
-    const userToUpdate = await User.findById(userId);
+    const userToUpdate = await Users.findById(userId);
     if (!userToUpdate) throw Error("User not found");
 
     if (firstname) userToUpdate.firstname = firstname;

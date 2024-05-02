@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Admin from "./Admin";
 
 const UserProfile = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -12,25 +13,22 @@ const UserProfile = () => {
   const [editMode, setEditMode] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [users, setUsers] = useState([]);
-  const [selectedUser, setSelectedUser] = useState("");
-  const [selectedUserGoals, setSelectedUserGoals] = useState([]);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
       setUserInfo(user);
       setFirstname(user.firstname); // Display user's first name upon login
+      setIsAdmin(user.isAdmin); // Set isAdmin state
     }
   }, []);
 
   useEffect(() => {
-    if (userInfo.isAdmin) {
-      fetchAllUsers();
-    } else {
+    if (!isAdmin) {
       fetchGoals();
     }
-  }, [userInfo.isAdmin]);
+  }, [isAdmin]);
 
   const fetchGoals = async () => {
     try {
@@ -55,60 +53,8 @@ const UserProfile = () => {
     }
   };
 
-  const fetchAllUsers = async () => {
-    try {
-      const response = await fetch(`http://localhost:4000/users/all`);
-      if (response.ok) {
-        const data = await response.json();
-        setUsers(data.users);
-      } else {
-        throw new Error("Failed to fetch users");
-      }
-    } catch (error) {
-      console.error(error);
-      setErrorMessage("Failed to fetch users");
-    }
-  };
-
-  const handleUserSelection = async (userId) => {
-    try {
-      const response = await fetch(
-        `http://localhost:4000/goals/user/${userId}`
-      );
-      if (response.ok) {
-        const data = await response.json();
-        setSelectedUserGoals(data.goals);
-      } else {
-        throw new Error("Failed to fetch user's goals");
-      }
-    } catch (error) {
-      console.error(error);
-      setErrorMessage("Failed to fetch user's goals");
-    }
-  };
-
-  const handleFirstnameChange = (e) => {
-    setFirstname(e.target.value);
-  };
-
-  const handleLastnameChange = (e) => {
-    setLastname(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
+  const handleInputChange = (e, setter) => {
+    setter(e.target.value);
   };
 
   const handleEdit = () => {
@@ -240,7 +186,7 @@ const UserProfile = () => {
 
   return (
     <div className="user-profile-container">
-      <h2>{userInfo.isAdmin ? "Admin Center" : "User Profile"}</h2>
+      <h2>{isAdmin ? "Admin Center" : "User Profile"}</h2>
       {successMessage && <p className="success-message">{successMessage}</p>}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       <div className="user-info">
@@ -250,10 +196,10 @@ const UserProfile = () => {
             <input
               type="text"
               value={firstname}
-              onChange={handleFirstnameChange}
+              onChange={(e) => handleInputChange(e, setFirstname)}
             />
           ) : (
-            <span>{firstname}</span>
+            <span> {firstname}</span>
           )}
         </div>
         <div>
@@ -262,18 +208,22 @@ const UserProfile = () => {
             <input
               type="text"
               value={lastname}
-              onChange={handleLastnameChange}
+              onChange={(e) => handleInputChange(e, setLastname)}
             />
           ) : (
-            <span>{userInfo.lastname}</span>
+            <span> {userInfo.lastname}</span>
           )}
         </div>
         <div>
           <label>Email: </label>
           {editMode ? (
-            <input type="text" value={email} onChange={handleEmailChange} />
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => handleInputChange(e, setEmail)}
+            />
           ) : (
-            <span>{userInfo.email}</span>
+            <span> {userInfo.email}</span>
           )}
         </div>
         <div>
@@ -283,7 +233,7 @@ const UserProfile = () => {
               <input
                 type="password"
                 value={password}
-                onChange={handlePasswordChange}
+                onChange={(e) => handleInputChange(e, setPassword)}
               />
             </>
           )}
@@ -297,35 +247,8 @@ const UserProfile = () => {
           <button onClick={handleEdit}>Edit</button>
         )}
       </div>
-      {userInfo.isAdmin ? (
-        <div className="admin-section">
-          <label>Select User: </label>
-          <select
-            value={selectedUser}
-            onChange={(e) => {
-              setSelectedUser(e.target.value);
-              handleUserSelection(e.target.value);
-            }}
-          >
-            <option value="">Select a user</option>
-            {users.map((user) => (
-              <option
-                key={user._id}
-                value={user._id}
-              >{`${user.firstname} ${user.lastname}`}</option>
-            ))}
-          </select>
-          <div className="selected-user-goals">
-            <h3>Selected User's Goals</h3>
-            <ul className="goal-list">
-              {selectedUserGoals.map((goal) => (
-                <li key={goal._id}>
-                  <strong>{goal.name}</strong>: {goal.description}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      {isAdmin ? (
+        <Admin />
       ) : (
         <div className="user-goals">
           <div className="goal-card">
@@ -337,9 +260,6 @@ const UserProfile = () => {
                   <button onClick={() => handleDeleteGoal(goal._id)}>
                     Delete
                   </button>
-                  {/* <button onClick={() => handleUpdateGoal(goal._id)}>
-                    Update
-                  </button> */}
                 </li>
               ))}
             </ul>
@@ -347,15 +267,21 @@ const UserProfile = () => {
             <div className="new-goal-form">
               <div>
                 <label>Name:</label>
-                <input type="text" value={name} onChange={handleNameChange} />
+                <input
+                  className="goal-input"
+                  type="text"
+                  value={name}
+                  onChange={(e) => handleInputChange(e, setName)}
+                />
               </div>
               <div>
                 <label>Description:</label>
                 <textarea
+                  className="goal-input"
                   rows="2"
                   cols="50"
                   value={description}
-                  onChange={handleDescriptionChange}
+                  onChange={(e) => handleInputChange(e, setDescription)}
                 />
               </div>
               <button onClick={handleCreateNewGoal}>Create Goal</button>

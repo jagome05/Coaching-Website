@@ -20,7 +20,7 @@ const Book = () => {
       <PopupWidget
         url="https://calendly.com/jobranja04"
         rootElement={rootElement || undefined}
-        text="Click here to schedule!"
+        text="Book Now!"
         textColor="#ffffff"
         color="#0D6EFD"
         prefill={{

@@ -58,18 +58,22 @@ export default function Header({ style }) {
         </NavLink>
         <NavLink to="testing">Testing</NavLink>
         {loggedIn ? (
-          <div className="user-info">
-            <button className="text-white" onClick={toggleDropdown}>{userInfo.firstname}</button>
+          <a className="user-info">
+            <button onClick={toggleDropdown}>{userInfo.firstname}</button>
             {showDropdown && ( // Render dropdown if showDropdown is true
               <div className="dropdown-content">
-                <NavLink to="/users/profile">Profile</NavLink>
+                {userInfo.isAdmin ? (
+                  <NavLink to="/users/profile">Admin Center</NavLink> // Link to the admin center for admins
+                ) : (
+                  <NavLink to="/users/profile">Profile</NavLink> // Link to the profile for regular users
+                )}
                 <br />
                 <a href="#" onClick={handleLogout}>
                   Logout
                 </a>
               </div>
             )}
-          </div>
+          </a>
         ) : (
           <NavLink to="users">Sign Up/Login</NavLink>
         )}
