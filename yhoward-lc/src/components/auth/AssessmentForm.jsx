@@ -8,55 +8,39 @@ export default function AssessmentForm() {
     <>
       <div>
         <Form>
+
           <FormGroup>
             <Label for="exampleEmail">
-              Plain Text (Static)
+              Assessment Form
             </Label>
           </FormGroup>
+
           <FormGroup>
             <Label for="exampleNumber">
               Number
             </Label>
             <Input
+            required autoFocus
               id="exampleNumber"
               name="number"
               placeholder="number placeholder"
               type="number"
             />
           </FormGroup>
-          <FormGroup>
-            <Label for="exampleDatetime">
-              Datetime
-            </Label>
-            <Input
-              id="exampleDatetime"
-              name="datetime"
-              placeholder="datetime placeholder"
-              type="datetime"
-            />
-          </FormGroup>
+
           <FormGroup>
             <Label for="exampleDate">
               Date
             </Label>
             <Input
+            required
               id="exampleDate"
               name="date"
               placeholder="date placeholder"
               type="date"
             />
           </FormGroup>
-          <FormGroup>
-            <Label for="exampleTime">
-              Time
-            </Label>
-            <Input
-              id="exampleTime"
-              name="time"
-              placeholder="time placeholder"
-              type="time"
-            />
-          </FormGroup>
+
           <FormGroup>
             <Label for="exampleColor">
               Color
@@ -68,17 +52,7 @@ export default function AssessmentForm() {
               type="color"
             />
           </FormGroup>
-          <FormGroup>
-            <Label for="exampleSearch">
-              Search
-            </Label>
-            <Input
-              id="exampleSearch"
-              name="search"
-              placeholder="search placeholder"
-              type="search"
-            />
-          </FormGroup>
+
           <FormGroup>
             <Label for="exampleSelect">
               Select

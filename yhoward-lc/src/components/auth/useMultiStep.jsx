@@ -43,6 +43,6 @@ export default function useMultistepForm(steps) {
 }
 
 //? ref
-//https://www.youtube.com/watch?v=uDCBSnWkuH0
-// https://react.dev/learn/reusing-logic-with-custom-hooks
+//https://www.youtube.com/watch?v=uDCBSnWkuH0 //--> main multistep form with custom hook vid
+// https://react.dev/learn/reusing-logic-with-custom-hooks //--> react doc about custom hooks
 // todo OR use with Docusign https://developers.docusign.com/docs/web-forms-api/web-forms-101/

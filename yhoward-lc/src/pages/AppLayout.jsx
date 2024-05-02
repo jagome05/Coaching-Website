@@ -5,6 +5,8 @@ import Book from "../components/Book";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 
+//TODO think about breakpoints and mediaqueries
+
 function AppLayout() {
   return (
     <div className={"app-layout"}>
@@ -19,7 +21,7 @@ function AppLayout() {
           <Contact />
         </div>
         <Book />
-        <h1 class="sticky bottom-0 -z-1 font-basker text-5xl italic text-blue-400/70">With Grace, Gratitude, and Goodness</h1>
+        <h1 class="sticky bottom-0 -z-1 font-basker text-5xl italic text-blue-400/70 select-none">With Grace, Gratitude, and Goodness</h1>
       </main>
       <footer className="footer">
         <Footer />

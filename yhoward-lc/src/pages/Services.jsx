@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FAQ from "../components/FAQ";
 import { Card, CardTitle, CardText, Nav, NavItem, NavLink, TabContent, TabPane, Row, Col } from "reactstrap";
 import Testimonials from "../components/Testimonials";
-
+//TODO update FAQ info and Testimonials...
 
 export default function Services() {
 
@@ -56,7 +56,7 @@ export default function Services() {
                 </CardTitle>
 
                 <Col>
-                  <img className="shadow-2xl w-full" src='https://media.istockphoto.com/id/1372615051/photo/caring-female-high-school-teacher-tutors-female-student.jpg?s=612x612&w=0&k=20&c=80rQ9bYR2K5L-K3l_BHfF6RZ_uwl9M5R-VWWgVB0_IU=' alt='img' />
+                  <img className="shadow-2xl w-full rounded-lg" src='https://media.istockphoto.com/id/1372615051/photo/caring-female-high-school-teacher-tutors-female-student.jpg?s=612x612&w=0&k=20&c=80rQ9bYR2K5L-K3l_BHfF6RZ_uwl9M5R-VWWgVB0_IU=' alt='img' />
                 </Col>
 
                 <Col sm="6">
@@ -75,7 +75,7 @@ export default function Services() {
                   Group Session
                 </CardTitle>
                 <Col>
-                  <img className="shadow-2xl w-full" src='https://t3.ftcdn.net/jpg/05/22/92/86/360_F_522928616_xqzObEMWOQs25Aiz4iubcgLndw2jGsih.jpg' alt='img' />
+                  <img className="shadow-2xl w-full rounded-lg" src='https://t3.ftcdn.net/jpg/05/22/92/86/360_F_522928616_xqzObEMWOQs25Aiz4iubcgLndw2jGsih.jpg' alt='img' />
                 </Col>
                 <Col sm="6">
                   <Card body>
@@ -93,7 +93,7 @@ export default function Services() {
                   Biracial Services
                 </CardTitle>
                 <Col>
-                  <img className="shadow-2xl w-full" src='https://trinityvillage.org/wp-content/uploads/2021/02/Peer-to-Peer-Recovery.png' alt='img' />
+                  <img className="shadow-2xl w-full rounded-lg" src='https://trinityvillage.org/wp-content/uploads/2021/02/Peer-to-Peer-Recovery.png' alt='img' />
                 </Col>
                 <Col sm="6">
                   <Card body>
@@ -111,7 +111,7 @@ export default function Services() {
                   Adoptee
                 </CardTitle>
                 <Col>
-                  <img className="shadow-2xl w-full" src='https://showhope.org/content/uploads/2021/08/IMGL9816-2-scaled.jpg' alt='img' />
+                  <img className="shadow-2xl w-full rounded-lg" src='https://showhope.org/content/uploads/2021/08/IMGL9816-2-scaled.jpg' alt='img' />
                 </Col>
                 <Col sm="6">
                   <Card body>

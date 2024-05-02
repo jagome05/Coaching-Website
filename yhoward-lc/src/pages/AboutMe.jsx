@@ -1,5 +1,7 @@
 import React from "react";
 
+//TODO update styling for bullet points
+
 export default function AboutMe() {
   return (
     <>
@@ -50,24 +52,24 @@ export default function AboutMe() {
         <br></br>
 
         <ul className="text-3xl">
-        <strong>Purpose:</strong> I genuinely care about your story and success. This is not
+          <strong>Purpose:</strong> I genuinely care about your story and success. This is not
           just a job; it’s my passion to see you thrive!
         </ul>
         <ul className="text-3xl">
-        <strong>Proven results:</strong> I cultivate and empower individuals to triumph through
+          <strong>Proven results:</strong> I cultivate and empower individuals to triumph through
           challenging transitions, achieving personal and professional
           fulfillment.
         </ul>
         <ul className="text-3xl">
-        <strong>Compassionate listening:</strong> I create a judgment-free space for you to
+          <strong>Compassionate listening:</strong> I create a judgment-free space for you to
           share your hopes, fears, and questions without hesitation.
         </ul>
         <ul className="text-3xl">
-        <strong>Tailored approach:</strong> I personalize my coaching to your unique needs,
+          <strong>Tailored approach:</strong> I personalize my coaching to your unique needs,
           goals, and learning style.
         </ul>
         <ul className="text-3xl">
-        <strong>Deeply inclusive:</strong> I hold a strong commitment to creating a safe and
+          <strong>Deeply inclusive:</strong> I hold a strong commitment to creating a safe and
           affirming space for all individuals, regardless of race, ethnicity,
           sexual orientation, or gender identity. I understand the nuances of
           BIPOC experiences and walk alongside you with cultural sensitivity,

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { TOKEN_KEY } from "../constants";
-// const logo = require('../static/IMG_7065.jpg')
+
 
 export default function Header({ style }) {
 
@@ -59,7 +59,7 @@ export default function Header({ style }) {
         <NavLink to="testing">Testing</NavLink>
         {loggedIn ? (
           <div className="user-info">
-            <button onClick={toggleDropdown}>{userInfo.firstname}</button>
+            <button className="text-white" onClick={toggleDropdown}>{userInfo.firstname}</button>
             {showDropdown && ( // Render dropdown if showDropdown is true
               <div className="dropdown-content">
                 <NavLink to="/users/profile">Profile</NavLink>

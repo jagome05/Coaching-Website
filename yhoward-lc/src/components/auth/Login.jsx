@@ -36,6 +36,7 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
+        <h1>Login</h1>
         <input
           className="global-input"
           type="text"
@@ -66,10 +67,10 @@ function Login() {
           Login
         </button>
 
-        <div>
+        <div className="p-3">
           New to the site? 
           <a href="register">
-          <Link to="register">Signup</Link>
+          <Link to="register" className="text-black"> <strong>Signup</strong></Link>
           </a>
         </div>
       </div>
