@@ -232,6 +232,10 @@ footer {
 
 .users-table th {
   background-color: #f4f4f4;
+<<<<<<< HEAD
+  width: 20%;
+=======
+>>>>>>> 15915b72d12e83b1eeb7a93baaf3052d38f62f9b
 }
 
 .users-table tr:hover {
@@ -240,25 +244,45 @@ footer {
 
 .tooltip-container {
   position: relative;
+<<<<<<< HEAD
+  display: list-item;
+  cursor: pointer;
+=======
   display: inline-block;
   cursor: pointer; /* Shows a pointer cursor on hover */
+>>>>>>> 15915b72d12e83b1eeb7a93baaf3052d38f62f9b
 }
 
 .tooltip-text {
   visibility: hidden;
+<<<<<<< HEAD
+  min-width: 120px;
+  background-color: #0d6efd;
+  color: #fff;
+  text-align: left;
+=======
   min-width: 120px; /* Ensures a consistent minimum width */
   background-color: #0d6efd;
   color: #fff;
   text-align: left; /* Aligns text to the left */
+>>>>>>> 15915b72d12e83b1eeb7a93baaf3052d38f62f9b
   border-radius: 6px;
   padding: 5px 10px;
   position: absolute;
   z-index: 1;
+<<<<<<< HEAD
+  top: 110%;
+  left: 0%;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s ease-in-out;
+=======
   top: 110%; /* Adjusts vertical position to be below the goal name */
   left: 0%; /* Aligns the start of the tooltip with the start of the goal name */
   white-space: nowrap; /* Keeps the tooltip text on a single line */
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s ease-in-out; /* Smooth transition for the tooltip appearance */
+>>>>>>> 15915b72d12e83b1eeb7a93baaf3052d38f62f9b
 }
 
 .tooltip-container:hover .tooltip-text {
@@ -269,12 +293,21 @@ footer {
 .tooltip-text::after {
   content: "";
   position: absolute;
+<<<<<<< HEAD
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+=======
   top: -5px; /* Positioning arrow below the tooltip, pointing upwards */
   left: 50%; /* Centering the arrow */
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent #555 transparent; /* Arrow color */
+>>>>>>> 15915b72d12e83b1eeb7a93baaf3052d38f62f9b
 }
 
 .link-button {
@@ -686,3 +719,7 @@ Link {
   background-color: green;
   margin-right: auto;
 }
+<<<<<<< HEAD
+*/
+=======
+>>>>>>> 15915b72d12e83b1eeb7a93baaf3052d38f62f9b
