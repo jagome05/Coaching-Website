@@ -12,7 +12,7 @@ export default function Home() {
       <div class="relative bottom-48">
         {/* <video autoPlay loop muted class="absolute bottom-0 w-auto min-w-full min-h-full"> */}
         <video autoPlay loop muted class="brightness-75">
-          <source src="https://cdn.pixabay.com/video/2020/12/15/59291-492700392_large.mp4" />
+          <source src="https://cdn.pixabay.com/video/2024/02/02/199001-909564581_large.mp4" />
         </video>
         {/* <div className="flex flex-col gap-8 text-white bg-transparent relative z-2 w-9/12 top-64 left-28"> */}
         {/* //TODo thonk about Breakpoints to min text */}
@@ -40,37 +40,6 @@ export default function Home() {
 
         <br></br>
 
-        {/*  //TODO style and work on creative way to show Qs*/}
-        <div class="font-basker text-center p-5 relative top-10">
-          <h2 className="text-5xl py-2">Do these questions sound familiar?</h2>
-          <br></br>
-          <div class="grid grid-cols-2 gap-10 text-2xl p-4 border-3 border-black shadow-2xl">
-            <ul>What happened to my dreams of…?</ul>
-            <ul>Is this all there is for me…?</ul>
-            <ul>
-              Who was I before I was married? Had children? Became a caregiver?
-            </ul>
-            <ul>
-              Why am I spending my time doing more things that I dislike than I
-              enjoy?
-            </ul>
-            <ul>
-              If I had the chance to change my life’s direction, I would…?/
-            </ul>
-            <ul>When will it be my time to lead?</ul>
-            <ul>How can I reclaim my life?</ul>
-            <ul>What happened to my courage? My desire for more?</ul>
-            <ul>Why does success continually elude me?</ul>
-            <ul>How can my relationship be resuscitated?</ul>
-            <ul>What options can I create to retire?</ul>
-            <ul>What will my life look like when I retire?</ul>
-            <ul>How do I re-invent myself?</ul>
-            <ul> How can I bring more joy into my life?</ul>
-          </div>
-        </div>
-
-        <br></br>
-
         <div className="text-center p-5">
           <h1 className="">Services</h1>
           <div className="grid grid-cols-2 p-5 gap-10">
@@ -90,11 +59,6 @@ export default function Home() {
               <p className="text-4xl p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas esse praesentium ipsa, id quia, eos corporis, dolore aspernatur nisi deserunt laudantium maxime minima ea quos commodi enim voluptates sint illum amet consequatur perspiciatis. Suscipit porro ratione magni aspernatur ipsam sit explicabo voluptas, qui quisquam quia id, fugiat quod nam, numquam provident tempore consectetur est. Alias quia dicta fuga, nemo, repudiandae maiores exercitationem modi saepe deserunt soluta repellendus, facere accusamus atque incidunt corporis dolore reiciendis.</p>
             </div>
 
-            <div className="border-4 rounded-lg border-black shadow-2xl">
-              <h1 class="bg-orange-400 border-b-2 p-4 border-black">Biracial</h1>
-              <p className="text-4xl p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime modi animi, dolore delectus reprehenderit at quisquam numquam minus nesciunt harum iste perferendis deleniti dolorum earum sint quae sed laborum omnis maiores vel repudiandae enim laudantium doloremque? Aut laboriosam ipsa quo dolorum accusamus! Exercitationem rerum dicta quaerat cum iusto voluptatem quod illum, et officiis, quos iure magni optio amet quam quae! Vel ab non officiis, ipsa deserunt aliquam tempora rerum, adipisci commodi ut est quisquam sunt.</p>
-            </div>
-
           </div>
         </div>
 
@@ -106,7 +70,7 @@ export default function Home() {
           </h3>
           <h2>
             Schedule a complimentary session or call
-            <strong> 309-648-0551</strong> to share your story, explore your
+            <strong> Update Phone Number</strong> to share your story, explore your
             goals, and see if we’re a good fit for this adventure together.
             Remember, you are not alone on this journey. Let's transform
             together.

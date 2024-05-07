@@ -82,7 +82,7 @@ footer {
 }
 
 /* //TODO edit */
-/* .register-container {
+.register-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +106,7 @@ footer {
   border-radius: 100px;
   display: block;
   margin: 0 auto;
-} */
+}
 
 .auth-button {
   width: 100%;

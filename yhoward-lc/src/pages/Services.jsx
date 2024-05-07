@@ -9,8 +9,8 @@ export default function Services() {
     // State for current active Tab 
     let [activeTab, setActiveTab] = useState('1');
 
-    const activeStyles = ('active text-black')
-    const styles = ('text-slate-400')
+    const activeStyles = ('active text-black select-none')
+    const styles = ('text-slate-400 select-none')
 
   return (
     <>
@@ -35,12 +35,6 @@ export default function Services() {
 
             <NavItem>
               <NavLink className={activeTab === '3' ? activeStyles : styles}  onClick={() => setActiveTab('3')}>
-                Biracial Service
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink className={activeTab === '4' ? activeStyles : styles}  onClick={() => setActiveTab('4')}>
                 Adoptee Services
               </NavLink>
             </NavItem>
@@ -90,24 +84,6 @@ export default function Services() {
             <TabPane tabId='3'>
             <Row>
                 <CardTitle className="text-5xl p-4">
-                  Biracial Services
-                </CardTitle>
-                <Col>
-                  <img className="shadow-2xl w-full rounded-lg" src='https://trinityvillage.org/wp-content/uploads/2021/02/Peer-to-Peer-Recovery.png' alt='img' />
-                </Col>
-                <Col sm="6">
-                  <Card body>
-                    <CardText>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quia, facilis et veritatis voluptatibus at quae inventore, earum soluta officiis molestiae natus nisi deleniti vero. Earum unde quam aspernatur qui aut, autem libero, asperiores saepe et facilis ipsa voluptate officia eveniet aliquam laborum nostrum? Nobis dolor saepe odit, quaerat sapiente suscipit nisi iste quam perferendis sint accusamus possimus impedit repellendus nostrum hic architecto odio amet porro repudiandae. Quam saepe eveniet, hic libero dicta rerum expedita ullam quis? Voluptate, in magni sunt amet, incidunt animi odit sit consectetur fuga, officia id? Officiis placeat et, nulla dolor accusamus, pariatur repudiandae quae tempora sit, voluptates harum alias! A, asperiores. At nam accusantium enim quidem, similique error recusandae repudiandae, optio dolorem minus odit fugit sunt beatae delectus! Recusandae delectus, velit provident placeat quaerat, sit illum sunt repellendus reprehenderit eligendi ipsum ab non deleniti laudantium magni eius impedit eveniet quo quod totam aliquam tenetur! Repudiandae modi impedit recusandae pariatur ducimus magni qui ut placeat a error aliquid veritatis quia iusto voluptatibus, dicta earum cum at numquam sapiente maxime, natus ipsum necessitatibus! Minus, beatae ex quos sint, minima atque iure mollitia excepturi modi nisi eveniet aperiam facere dicta et fugit labore error a optio! Molestiae molestias est adipisci voluptatem obcaecati provident itaque hic, quis eius nulla, sapiente mollitia quaerat. Quis cum beatae voluptatibus, deleniti quod, maxime illum perferendis officia magnam recusandae dicta id? Porro voluptatibus fugit neque totam. Ratione, incidunt dolorem aperiam aut minima quasi, architecto magnam nemo ducimus molestiae voluptate? Magnam nam nihil perferendis optio autem a fugiat veniam soluta excepturi et, ab facilis impedit ex consequuntur doloribus minus consectetur porro. Eaque iure, rem iste quaerat, minus nam voluptates obcaecati itaque quod veritatis, mollitia blanditiis soluta voluptatem harum nemo necessitatibus quis ratione ab eligendi recusandae animi. Obcaecati eos corporis possimus quasi nulla veritatis, maxime ab!
-                    </CardText>
-                  </Card>
-                </Col>
-              </Row>
-            </TabPane>
-
-            <TabPane tabId='4'>
-            <Row>
-                <CardTitle className="text-5xl p-4">
                   Adoptee
                 </CardTitle>
                 <Col>
@@ -127,7 +103,7 @@ export default function Services() {
 
         </div>
 
-        <div class="p-5 bg-gray-700">
+        <div class="p-5 ">
           <Testimonials />
         </div>
 

@@ -6,6 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 //TODO put props for parent useState; firstname,lastname,email,password...
 //TODO make sure to use object spread syntax to keep updated fields?!?!
+//these are if we use multiform erg pages { firstname, lastname, email, password, updateField }
 function Register() {
   //TODO might have to make another obj to store data --> and then make sure to update to parent (data,setData)
   const [firstname, setFirstName] = useState("");
@@ -14,8 +15,8 @@ function Register() {
   const [password, setPassword] = useState("");
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [emailError, setEmailError] = useState("");
-  const recaptchaRef = useRef();
   const nav = useNavigate();
+  const recaptchaRef = useRef();
   const reCAPTCHA = process.env.REACT_APP_SITE_KEY;
   console.log(process.env.REACT_APP_SITE_KEY);
 
@@ -26,6 +27,7 @@ function Register() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Check if email is valid
+    //TODO move email
     if (!emailPattern.test(email)) {
       setEmailError("Please enter a valid email address");
       return;

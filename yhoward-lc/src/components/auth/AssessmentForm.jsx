@@ -3,11 +3,12 @@ import { Form, FormGroup, Label, Input, FormText } from "reactstrap"
 export default function AssessmentForm() {
   //todo make sure they have to submit before hitting next
   //todo save form answer to profile
+  //todo update required items
 
   return (
     <>
       <div>
-        <Form>
+        {/* <Form> */}
 
           <FormGroup>
             <Label for="exampleEmail">
@@ -20,7 +21,8 @@ export default function AssessmentForm() {
               Number
             </Label>
             <Input
-            required autoFocus
+              // required
+              autoFocus
               id="exampleNumber"
               name="number"
               placeholder="number placeholder"
@@ -33,7 +35,7 @@ export default function AssessmentForm() {
               Date
             </Label>
             <Input
-            required
+              // required
               id="exampleDate"
               name="date"
               placeholder="date placeholder"
@@ -152,7 +154,7 @@ export default function AssessmentForm() {
               Check me out
             </Label>
           </FormGroup>
-        </Form>
+        {/* </Form> */}
       </div>
     </>
   )
