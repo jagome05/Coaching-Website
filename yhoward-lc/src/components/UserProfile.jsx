@@ -173,7 +173,7 @@ const UserProfile = () => {
         setSuccessMessage("Goal deleted successfully");
 
         // Update localStorage with the updated goals
-        localStorage.setItem("goals", JSON.stringify(updatedGoals));
+        // localStorage.setItem("goals", JSON.stringify(updatedGoals));
       } else {
         const errorMessage = await response.text();
         throw new Error(errorMessage || "Failed to delete goal");

@@ -1,18 +1,154 @@
+// import { useState } from 'react';
+// import useMultistepForm from "./useMultiStep";
+import slideVid from "../../static/Merge videos project.mp4"
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink, CardImgOverlay, CardImg, Col, Row, Form, FormGroup, Label, Input } from "reactstrap";
 
 export default function MultiStepForm() {
+
+    // const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultistepForm([])
 
 
   return (
     <>
+      <div className="">
+
+        <h1>Practice with image texts</h1>
+      <div className="grid grid-cols-3 gap-5 items-stretch">
+
+        <Card
+  style={{
+    width: '18rem'
+  }}
+>
+  <img
+    alt="Sample"
+    src="https://picsum.photos/300/200"
+  />
+  <CardBody>
+    <CardTitle tag="h5">
+      Card title
+    </CardTitle>
+    <CardSubtitle
+      className="mb-2 text-muted"
+      tag="h6"
+    >
+      Card subtitle
+    </CardSubtitle>
+    <CardText>
+      Some quick example text to build on the card title and make up the bulk of the card‘s content.
+    </CardText>
+  </CardBody>
+</Card>
+
+<Card
+  style={{
+    width: '18rem'
+  }}
+>
+  <CardBody>
+    <CardTitle tag="h5">
+      Card title
+    </CardTitle>
+    <CardSubtitle
+      className="mb-2 text-muted"
+      tag="h6"
+    >
+      Card subtitle
+    </CardSubtitle>
+  </CardBody>
+  <img
+    alt="Card cap"
+    src="https://picsum.photos/318/180"
+    width="100%"
+  />
+  <CardBody>
+    <CardText>
+      Some quick example text to build on the card title and make up the bulk of the card‘s content.
+    </CardText>
+    <CardLink href="#">
+      Card Link
+    </CardLink>
+    <CardLink href="#">
+      Another Link
+    </CardLink>
+  </CardBody>
+</Card>
+
+<div className="">
+<Card inverse>
+    <CardImg
+      alt="Card image cap"
+      src="https://picsum.photos/900/270?grayscale"
+      style={{
+        height: 270
+      }}
+      width="100%"
+    />
+    <CardImgOverlay>
+      <CardTitle tag="h5">
+        Card Title
+      </CardTitle>
+      <CardText>
+        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </CardText>
+    </CardImgOverlay>
+  </Card>
+  </div>
+
       <div>
-        
+        <Card>
+        <Row>
+          <Col>
+          <CardImg 
+                alt="Card image cap"
+                src="https://picsum.photos/500"
+                width="100%"/>
+          </Col>
+
+          <Col>
+          <CardBody>
+            <CardTitle tag="h5">Hello</CardTitle>
+            <CardSubtitle tag="h6">Card Subtitle</CardSubtitle>
+            <CardText>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ratione laudantium provident repellendus. Numquam maxime temporibus cum, quasi culpa inventore!</CardText>
+          </CardBody>
+          </Col>
+        </Row>
+
+        </Card>
       </div>
+
+</div>
+
+
+      </div>
+
+      <div>
+        <h1>Practice with file uploads</h1>
+          {/* <Form action="http://localhost:4000/api/upload" method="post" enctype="multipart/form-data">
+            <FormGroup>
+              <Label for="file" id="file-label">
+                File
+              </Label>
+              <Input id="file" name="file" type="file"/>
+            </FormGroup>
+            <Input type="submit" />
+          </Form> */}
+      </div>
+
+      <div className="">
+        <h1 className="z-2">Practice with moving videos/gifs slideshow</h1>
+        <video autoPlay loop muted className="">
+          <source src={slideVid} type="video/mp4"/>
+        </video>
+      </div>
+
     </>
   )
 }
 
 
 //! wait to see if Yvonne figures out how consent form and assessment are
+
 // import React, { useState, useRef } from "react";
 // import { Link } from "react-router-dom"
 // import useMultistepForm from "./useMultiStep";

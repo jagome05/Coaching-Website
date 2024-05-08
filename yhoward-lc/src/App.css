@@ -315,3 +315,12 @@ Link {
 .link-button {
   color: #000000 !important;
 }
+
+/* Animations */
+/* @keyframes change{
+  0% { background-image: url();}
+  25% { background-image: url();}
+  50% { background-image: url();}
+  75% { background-image: url();}
+  100% {background-image: url();}
+} */
