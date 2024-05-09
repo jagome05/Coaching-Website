@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { TOKEN_KEY } from "../constants";
+import Logo from "../image/Logo.png";
 
 
 export default function Header({ style }) {
@@ -34,13 +35,7 @@ export default function Header({ style }) {
     <>
       {/* <header class="flex flex-row justify-end items-center gap-4 px-2 bg- z-1"> */}
       <header class={style}>
-
-        <img
-          className='h-20 justify-start'
-          alt="landing page logo"
-          src='https://www.creativefabrica.com/wp-content/uploads/2021/03/20/Mountain-logo-Design-Graphics-9785421-1-1-580x435.png'
-        ></img>
-
+        <img className="logo" src={Logo} alt="Site Logo"></img>
         <NavLink
           to="/"
           class="text-white no-underline visited:text-white visited:no-underline active:text-white"

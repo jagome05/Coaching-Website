@@ -139,7 +139,7 @@ router.get("/:userId/goals", async (req, res) => {
 router.put("/update/:id", async (req, res) => {
   try {
     const userId = req.params.id;
-    const { firstname, lastname, email, password, isAdmin } = req.body;
+    const { firstname, lastname, email, password, isAdmin, enabled } = req.body;
 
     const userToUpdate = await Users.findById(userId);
     if (!userToUpdate) throw Error("User not found");
@@ -149,6 +149,7 @@ router.put("/update/:id", async (req, res) => {
     if (email) userToUpdate.email = email;
     if (password) userToUpdate.password = bcrypt.hashSync(password, SALT);
     if (isAdmin) userToUpdate.isAdmin = isAdmin;
+    if (enabled !== undefined) userToUpdate.enabled = enabled; // Update the enable status if provided
 
     await userToUpdate.save();
 
