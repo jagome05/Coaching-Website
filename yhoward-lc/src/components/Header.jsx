@@ -1,21 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { TOKEN_KEY } from "../constants";
 import Logo from "../image/Logo.png";
 
+
 export default function Header({ style }) {
+
   const [userInfo, setUserInfo] = useState({});
   const [showDropdown, setShowDropdown] = useState(false); // State to toggle dropdown
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
-  const contact = useRef(null);
-
-  const scrollToSection = (elementRef) => {
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: "smooth",
-    });
-  };
 
   useEffect(() => {
     if (loggedIn) {
@@ -30,8 +24,7 @@ export default function Header({ style }) {
     localStorage.removeItem(TOKEN_KEY);
     localStorage.removeItem("user");
     localStorage.removeItem("goals");
-    navigate("/");
-    window.location.reload();
+    navigate("/users"); // Redirect to login page after logout
   };
 
   const toggleDropdown = () => {
@@ -58,6 +51,7 @@ export default function Header({ style }) {
         <NavLink to="resource" class="">
           Resources
         </NavLink>
+        <NavLink to="testing">Testing</NavLink>
         {loggedIn ? (
           <a className="user-info">
             <button onClick={toggleDropdown}>{userInfo.firstname}</button>

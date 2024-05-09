@@ -3,17 +3,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { TOKEN_KEY } from "../../constants";
 import ReCAPTCHA from "react-google-recaptcha";
 
+
+//TODO put props for parent useState; firstname,lastname,email,password...
+//TODO make sure to use object spread syntax to keep updated fields?!?!
+//these are if we use multiform erg pages { firstname, lastname, email, password, updateField }
 function Register() {
+  //TODO might have to make another obj to store data --> and then make sure to update to parent (data,setData)
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [adminCode, setAdminCode] = useState(""); // State for admin code input
-  const [isAdmin, setIsAdmin] = useState(false); // State for "isAdmin" status
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [emailError, setEmailError] = useState("");
-  const recaptchaRef = useRef();
   const nav = useNavigate();
+  const recaptchaRef = useRef();
   const reCAPTCHA = process.env.REACT_APP_SITE_KEY;
   console.log(process.env.REACT_APP_SITE_KEY);
 
@@ -24,6 +27,7 @@ function Register() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Check if email is valid
+    //TODO move email
     if (!emailPattern.test(email)) {
       setEmailError("Please enter a valid email address");
       return;
@@ -36,7 +40,6 @@ function Register() {
       lastname,
       email,
       password,
-      adminCode,
     };
 
     try {
@@ -66,18 +69,8 @@ function Register() {
     }
   };
 
-  // Function to handle admin code input change
-  const handleAdminCodeChange = (e) => {
-    const enteredCode = e.target.value.trim(); // Trim whitespace from entered code
-    setAdminCode(enteredCode);
-    if (enteredCode === "0524") {
-      setIsAdmin(true);
-    } else {
-      setIsAdmin(false);
-    }
-  };
-
   return (
+
     <div className="register-container">
       <div className="register-box">
         <h3>Register</h3>
@@ -86,15 +79,20 @@ function Register() {
         )}
         <form onSubmit={handleRegister}>
           <input
+            required
+            autoFocus
             className="global-input"
             type="text"
             name="firstname"
             placeholder="First Name"
             value={firstname}
+            //TODO so for example try: setFirstName({...person, firstName: e.target.value})
+            //TODO or make a fxn to help with it?!!?
             onChange={(e) => setFirstName(e.target.value)}
           />
           <br />
           <input
+            required
             className="global-input"
             type="text"
             name="lastname"
@@ -104,6 +102,7 @@ function Register() {
           />
           <br />
           <input
+            required
             className="global-input"
             type="text"
             name="email"
@@ -114,6 +113,7 @@ function Register() {
           {emailError && <p className="error-message">{emailError}</p>}
           <br />
           <input
+            required
             className="global-input"
             type="password"
             name="password"
@@ -122,16 +122,6 @@ function Register() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          <input
-            className="global-input"
-            type="password"
-            name="adminCode"
-            placeholder="Admin Code"
-            value={adminCode}
-            onChange={handleAdminCodeChange} // Call handleAdminCodeChange on change
-            style={{ border: isAdmin ? "2px solid green" : "" }} // Change border color if admin code is correct
-          />
-          {isAdmin && <p style={{ color: "green" }}>Admin code accepted</p>}{" "}
           <ReCAPTCHA
             className="reCaptcha"
             sitekey={reCAPTCHA}

@@ -16,6 +16,7 @@ const goals = require("./controllers/goals.js");
 const profilepicture = require("./controllers/profilepicture.js");
 // const admin = require("./middleware/isAdmin");
 const contact = require("./controllers/contact.js")
+const docs = require("./controllers/documents.js")
 
 //* cors helps us if other project using server/db
 app.use(cors());
@@ -27,7 +28,7 @@ app.use(express.json());
 app.use("/users", users);
 app.use("/goals", goals);
 app.use("/profilepicture", profilepicture);
-app.use("/api", contact)
+app.use("/api", contact, docs)
 
 //* use this to test admin privelge ---> app.use('/admin', admin)
 

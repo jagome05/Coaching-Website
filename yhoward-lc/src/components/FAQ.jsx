@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   UncontrolledAccordion,
   AccordionBody,
@@ -7,31 +7,34 @@ import {
 } from "reactstrap";
 
 export default function FAQ() {
-  // const [open, setOpen] = useState('1');
-  // const toggle = (id) => {
-  //   if (open === id) {
-  //     setOpen();
-  //   } else {
-  //     setOpen(id);
-  //   }
-  // };
 
   return(
+
   <div>
-    <h1>FAQ</h1>
+    <h1 className="p-5">FAQ: What is the difference between Coaching, Consulting, and Counseling?</h1>
     <UncontrolledAccordion stayOpen>
+
       <AccordionItem>
-        <AccordionHeader targetId="1">FAQ 1</AccordionHeader>
+        <AccordionHeader targetId="1">Coaching</AccordionHeader>
           <AccordionBody accordionId="1">
-            <h1>Hello!</h1>
+            <h1>Coaching is...</h1>
           </AccordionBody>
       </AccordionItem>
+
       <AccordionItem>
-        <AccordionHeader targetId="2">FAQ 2</AccordionHeader>
+        <AccordionHeader targetId="2">Consulting</AccordionHeader>
           <AccordionBody accordionId="2">
-            <h1>Open Me!</h1>
+            <h1>Consulting is...</h1>
           </AccordionBody>
       </AccordionItem>
+
+      <AccordionItem>
+        <AccordionHeader targetId="3">Counseling</AccordionHeader>
+          <AccordionBody accordionId="3">
+            <h1>Counseling is....</h1>
+          </AccordionBody>
+      </AccordionItem>
+
     </UncontrolledAccordion>
   </div>
     )
