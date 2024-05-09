@@ -6,7 +6,7 @@ import headshot from "../image/Yvonne headshot.jpg";
 export default function AboutMe() {
   return (
     <>
-      <div>
+      <div class="p-5">
         <video autoPlay loop muted className="w-full">
           <source
             src="https://cdn.pixabay.com/video/2016/07/26/4006-176282263.mp4"
