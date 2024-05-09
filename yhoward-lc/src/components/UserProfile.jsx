@@ -41,9 +41,6 @@ const UserProfile = () => {
       if (response.ok) {
         const data = await response.json();
         setGoals(data.goals);
-
-        // Store the goals in localStorage
-        localStorage.setItem("goals", JSON.stringify(data.userGoals));
       } else {
         throw new Error("Failed to fetch goals");
       }
@@ -171,9 +168,6 @@ const UserProfile = () => {
         const updatedGoals = goals.filter((goal) => goal._id !== goalId);
         setGoals(updatedGoals);
         setSuccessMessage("Goal deleted successfully");
-
-        // Update localStorage with the updated goals
-        localStorage.setItem("goals", JSON.stringify(updatedGoals));
       } else {
         const errorMessage = await response.text();
         throw new Error(errorMessage || "Failed to delete goal");
