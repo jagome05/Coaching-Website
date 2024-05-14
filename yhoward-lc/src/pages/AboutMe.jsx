@@ -5,11 +5,7 @@ export default function AboutMe() {
   return (
     <>
       <div class="p-5">
-<<<<<<< HEAD
         <video autoPlay loop muted className="w-full h-auto">
-=======
-        <video autoPlay loop muted className="w-full">
->>>>>>> 30b6df5de9a2116caa24c6a5fbd347e6ab4a793b
           <source
             src="https://cdn.pixabay.com/video/2016/07/26/4006-176282263.mp4"
             type="video/mp4"
