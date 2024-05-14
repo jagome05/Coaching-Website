@@ -18,7 +18,6 @@ function Register() {
   const nav = useNavigate();
   const recaptchaRef = useRef();
   const reCAPTCHA = process.env.REACT_APP_SITE_KEY;
-  console.log(process.env.REACT_APP_SITE_KEY);
 
   const handleRegister = async (e) => {
     e.preventDefault();

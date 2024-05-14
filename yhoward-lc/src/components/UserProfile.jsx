@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Admin from "./Admin";
+import UpdatingGoal from "./UpdatingGoal";
 
 const UserProfile = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -14,6 +15,7 @@ const UserProfile = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
+  
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -250,12 +252,9 @@ const UserProfile = () => {
             <ul className="goal-list">
               {goals.map((goal) => (
                 <li key={goal._id}>
-                  <strong>{goal.name}</strong>: {goal.description}
-                  <button onClick={() => handleDeleteGoal(goal._id)}>
-                    Delete
-                  </button>
-                </li>
-              ))}
+                  {/* <strong>{goal.name}</strong>: {goal.description} */}
+                  <UpdatingGoal goal={goal} goals={goals} setGoals={setGoals} setSuccessMessage={setSuccessMessage} setErrorMessage={setErrorMessage}/>
+                </li>))}
             </ul>
             <h3>Create New Goal</h3>
             <div className="new-goal-form">
