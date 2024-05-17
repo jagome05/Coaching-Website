@@ -251,6 +251,7 @@ const UserProfile = () => {
         <Admin />
       ) : (
         <div className="user-goals">
+
           <div className="goal-card">
             <h3>Goals</h3>
             <ul className="goal-list">
@@ -260,9 +261,20 @@ const UserProfile = () => {
                   <button onClick={() => handleDeleteGoal(goal._id)}>
                     Delete
                   </button>
+                  <button onClick={() => console.log(goal)}>Edit</button>
                 </li>
               ))}
+
             </ul>
+
+            {editMode ? (
+              <>
+              <h3>Update Goal</h3>
+              <input></input>
+              </>
+            ) : (
+              <>
+            
             <h3>Create New Goal</h3>
             <div className="new-goal-form">
               <div>
@@ -286,11 +298,19 @@ const UserProfile = () => {
               </div>
               <button onClick={handleCreateNewGoal}>Create Goal</button>
             </div>
+              </>
+            )}
+            
+
           </div>
+
         </div>
       )}
+
     </div>
   );
 };
 
 export default UserProfile;
+
+

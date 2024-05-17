@@ -1,31 +1,39 @@
 import React from "react";
+import mergeVid from "../static/Merge videos project (1).mp4"
 
 //TODO update styling for bullet points
 
 export default function AboutMe() {
   return (
     <>
-      <div>
-        <video autoPlay loop muted className="w-full">
-          <source
-            src="https://cdn.pixabay.com/video/2016/07/26/4006-176282263.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
-      <div className="flex p-5 absolute top-20 gap-2">
+      <div className="flex p-5 gap-2 font-basker">
         <img
-          className="h-1/2 w-1/3 shadow-2xl"
+          className="h-1/3 w-1/4 shadow-2xl"
           src="https://mail.google.com/mail/u/3?ui=2&ik=5c02df054d&attid=0.1&permmsgid=msg-f:1796438470750721999&th=18ee3b456df157cf&view=att&disp=safe&realattid=18ee3b41aa86c5c31642"
           alt=''
         />
-        <div className="p-5 bg-white opacity-90 font-basker shadow-2xl">
+        <div className="p-5 bg-white font-basker">
           <h2 className="text-5xl">About Me</h2>
+          <h3 className="italic">“My 3Cs of Life: 
           <br></br>
-          <p className="text-2xl">
-            Think of me as your trusted, perceptive partner in transformation.
-            With over 25+ years of experience, I bring unique insights and
-            expertise as a former:
+          <strong>C</strong>hoices, <strong>C</strong>onsequences, <strong>C</strong>oping
+          <br></br> 
+          Your Life is Euqal to How You Cope
+with the Consequences of Your Choices.”</h3>
+        </div>
+      </div>
+
+      <div className="flex bg-[#B7ADCF] p-5 border-2 border-black relative z-20">
+
+        {/* <div className="flex flex-col gap-8 font-basker text-white absolute bg-transparent z-2 w-9/12 top-48 left-10"> */}
+        {/* //TODo thonk about Breakpoints to min text */}
+
+        <div className="basis-1/2 m-5 flex flex-col gap-8 font-basker bg-transparent">
+
+          <h2 class="text-sm lg:text-3xl">
+            Think of me as your trusted, perceptive partner in transformation. <strong>With over 25+ years of experience</strong>, I bring unique insights and expertise as a former:
+          </h2>
+          <h3 className="text-sm lg:text-3xl">
             <ul className="p-4">
               <strong>Licensed Counselor:</strong> I offer a compassionate and understanding
               space to explore your emotions and heal from challenges.
@@ -43,11 +51,20 @@ export default function AboutMe() {
               <strong>‘Across the Country’ Resident: </strong> I have had the opportunity to call
               the East, Midwest, West, and Southwest (currently) my home.
             </ul>
-          </p>
+          </h3>
+          {/* //TODO Update button to go somewhere lol */}
+          {/* <button className="">Learn More</button> */}
         </div>
+
+        <div className="basis-1/2 z-20">
+          <video autoPlay loop muted className="w-full">
+            <source src={mergeVid} />
+          </video>
+        </div>
+
       </div>
 
-      <div class="p-5 font-basker">
+      <div class="p-5 font-basker bg-white relative z-10">
         <h3 className="text-4xl">Why choose me as your guide?</h3>
         <br></br>
 

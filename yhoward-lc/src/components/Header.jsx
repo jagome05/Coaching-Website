@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { TOKEN_KEY } from "../constants";
+import Contact from "./Contact";
 
 
-export default function Header({ style }) {
+export default function Header({ style, modal,setModal }) {
 
   const [userInfo, setUserInfo] = useState({});
   const [showDropdown, setShowDropdown] = useState(false); // State to toggle dropdown
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
+
+  const toggle = () => setModal(!modal);
 
   useEffect(() => {
     if (loggedIn) {
@@ -56,7 +59,6 @@ export default function Header({ style }) {
         <NavLink to="resource" class="">
           Resources
         </NavLink>
-        <NavLink to="testing">Testing</NavLink>
         {loggedIn ? (
           <a className="user-info">
             <button onClick={toggleDropdown}>{userInfo.firstname}</button>

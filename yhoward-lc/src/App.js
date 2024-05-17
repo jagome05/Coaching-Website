@@ -17,7 +17,6 @@ import UserProfile from "./components/UserProfile";
 import AboutMe from "./pages/AboutMe";
 import Services from "./pages/Services";
 import Resources from "./pages/Resources";
-import MultiStepForm from "./components/auth/MultiStepForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +30,6 @@ const router = createBrowserRouter(
         <Route path="profile" element={<UserProfile />} />
       </Route>
       <Route path="resource" element={<Resources />} />
-      <Route path="testing" element={<MultiStepForm />} />
     </Route>
   )
 );

@@ -12,7 +12,7 @@ a {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  z-index: -2;
+  /* z-index: -2; */
 }
 
 footer {

@@ -124,15 +124,14 @@ export default function MultiStepForm() {
 
       <div>
         <h1>Practice with file uploads</h1>
-          {/* <Form action="http://localhost:4000/api/upload" method="post" enctype="multipart/form-data">
-            <FormGroup>
-              <Label for="file" id="file-label">
-                File
-              </Label>
-              <Input id="file" name="file" type="file"/>
-            </FormGroup>
-            <Input type="submit" />
-          </Form> */}
+          <form action="Localhost:4000/api/upload" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+              <input type="file" class="form-control-file" name="file"/>
+              <input type="text" class="form-control" placeholder="Number of speakers" name="nspeakers"/>
+              <input type="submit" value="Get me the stats!" class="btn btn-default"/>            
+            </div>
+          </form>
+          
       </div>
 
       <div className="">
