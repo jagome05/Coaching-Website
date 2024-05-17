@@ -5,6 +5,8 @@
 a {
   color: white !important;
   text-decoration: none !important;
+  font-size:large;
+  /* TODO on hover add FX*/
 }
 
 .heading {

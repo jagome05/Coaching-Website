@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../components/Header";
 import heroVid from "../static/Merge videos project (1).mp4"
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
 
   return (
-    //relative bottom-20 flex flex-row justify-end items-center gap-4 px-2 bg-[rgb(235, 246, 255), 0] z-2
     <>
-      <div className="flex flex-col gap-8 font-basker text-white absolute bg-transparent z-2 w-11/12 md:w-9/12 top-40 md:top-56 left-4 md:left-10">
+      <div className="p-5 flex flex-col gap-8 font-basker text-white absolute bg-transparent z-2 w-11/12 md:w-9/12 top-40 md:top-56 left-4 md:left-10">
         <h1 className="font-bold text-2xl md:text-4xl">
           Welcome to Timeless Coaching & Consulting
         </h1>
@@ -63,6 +63,12 @@ export default function Home() {
               belonging, and inner peace.
             </p>
           </div>
+        </div>
+
+        <br></br>
+
+        <div className="font-basker p-5">
+        <Testimonials />
         </div>
 
         <br></br>

@@ -1,11 +1,12 @@
 import React from "react";
 import ResourceBox from "../components/ResourceBox";
+import Testimonials from "../components/Testimonials"
 
 export default function Resources() {
   return (
     <>
       <div class="p-5 font-basker">
-        <h1 className="heading">
+        <h1 className="text-5xl">
           Below are some resources to help you along your journey
         </h1>
         <div class="grid grid-cols-2 grid-flow-row gap-12">
@@ -20,6 +21,17 @@ export default function Resources() {
             title="A Psychologist Explains How To Beat ‘Perfectionism-Procrastination’"
           />
         </div>
+
+        <br></br>
+
+        <div className="py-5">
+          <Testimonials />
+        </div>
+
+        <br></br>
+
+        <img></img>
+
       </div>
     </>
   );
