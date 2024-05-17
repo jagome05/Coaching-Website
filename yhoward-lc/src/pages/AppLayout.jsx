@@ -1,21 +1,21 @@
 import { Outlet } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Book from "../components/Book";
-import Contact from "../components/Contact";
 import Header from "../components/Header";
+import Contact from "../components/Contact";
+
+//TODO think about breakpoints and mediaqueries
 
 //TODO think about breakpoints and mediaqueries
 
 function AppLayout() {
   return (
+    //flex flex-row justify-end items-center gap-4 px-2 bg-[#535657] border-black border-b-2
     <div>
       <Header />
       <main>
-        <Outlet />
-        <div class="fixed bottom-1 left-2 z-2">
-          <Contact />
-        </div>
+        <Outlet/>
         <Book />
         <h1 class="sticky bottom-0 -z-1 font-basker text-5xl italic text-blue-400/70 select-none">
           With Grace, Gratitude, and Goodness

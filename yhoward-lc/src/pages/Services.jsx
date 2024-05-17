@@ -23,19 +23,13 @@ export default function Services() {
             <NavItem>
               {/* <NavLink active={activeTab === '1' ? 'True' : 'False'} className="text-black" onClick={() => setActiveTab('1')}>*/}
               <NavLink className={activeTab === '1' ? activeStyles : styles} onClick={() => setActiveTab('1')}>
-                Transition Coach
+                Transitioning Services
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink className={activeTab === '2' ? activeStyles : styles}  onClick={() => setActiveTab('2')}>
-                Group Session
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink className={activeTab === '3' ? activeStyles : styles}  onClick={() => setActiveTab('3')}>
-                Adoptee Services
+                Let's talk about Adoption
               </NavLink>
             </NavItem>
 
@@ -46,7 +40,7 @@ export default function Services() {
             <TabPane tabId='1'>
               <Row>
                 <CardTitle className="text-5xl p-4">
-                  Transition Coach
+                  Transitioning Services
                 </CardTitle>
 
                 <Col>
@@ -66,7 +60,7 @@ export default function Services() {
             <TabPane tabId='2'>
             <Row>
                 <CardTitle className="text-5xl p-4">
-                  Group Session
+                  Let's talk about Adoption
                 </CardTitle>
                 <Col>
                   <img className="shadow-2xl w-full rounded-lg" src='https://t3.ftcdn.net/jpg/05/22/92/86/360_F_522928616_xqzObEMWOQs25Aiz4iubcgLndw2jGsih.jpg' alt='img' />
@@ -75,24 +69,6 @@ export default function Services() {
                   <Card body>
                     <CardText>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptas dolorum nemo quis nesciunt, minima repellat corrupti nobis dicta natus necessitatibus, optio possimus maiores eveniet nulla officiis sed? Id accusantium praesentium voluptates optio totam quod natus doloribus nostrum fugiat sunt necessitatibus numquam modi placeat aperiam veniam reiciendis illo facilis nisi cumque, accusamus tempore eius? Temporibus nam suscipit in quas iusto. Similique corporis inventore, modi, enim optio iure possimus amet sed accusamus autem veritatis nulla quas doloribus fuga aliquid ad iste libero labore. Labore, itaque! Hic sint cumque numquam nihil maiores molestias facere illo, repudiandae reiciendis vero consectetur consequatur ab repellat vel obcaecati veritatis fuga eos in quos. Exercitationem nulla ratione sed, mollitia maiores magnam a voluptatibus quos, est dignissimos similique quo hic eos aliquid aperiam dicta id vel praesentium labore. Quo corporis quam sapiente nihil rerum? In optio odio dicta dolore architecto ex inventore delectus ea harum voluptatum nemo facere cumque doloremque soluta ipsam voluptatem, quas quo laboriosam, culpa voluptates, labore minus aut placeat. Officia atque distinctio ex magnam placeat, totam, natus ipsum inventore neque adipisci quam porro. Quaerat, veritatis? Autem rerum id, iste nisi vitae est consequatur saepe ducimus ipsum vel laudantium, neque illo optio nemo unde inventore natus?
-                    </CardText>
-                  </Card>
-                </Col>
-              </Row>
-            </TabPane>
-
-            <TabPane tabId='3'>
-            <Row>
-                <CardTitle className="text-5xl p-4">
-                  Adoptee
-                </CardTitle>
-                <Col>
-                  <img className="shadow-2xl w-full rounded-lg" src='https://showhope.org/content/uploads/2021/08/IMGL9816-2-scaled.jpg' alt='img' />
-                </Col>
-                <Col sm="6">
-                  <Card body>
-                    <CardText>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur a temporibus, sapiente tempora provident corporis aliquam placeat veniam repudiandae dolore nam ad obcaecati dolorem dolores architecto saepe commodi aspernatur animi dolor necessitatibus esse voluptatibus. Esse, architecto iste vitae voluptate labore dolorum inventore recusandae aperiam, error dolor impedit quis, tempore soluta quisquam eius dolorem voluptas delectus ab ratione quibusdam laudantium itaque. Hic error optio temporibus earum iure voluptatibus alias placeat iusto rem porro, rerum dicta obcaecati possimus! Eveniet quia at tempora, amet esse itaque ex sapiente soluta totam a est exercitationem consequuntur ad necessitatibus debitis suscipit veniam tempore excepturi, officia nesciunt! Dolorum est incidunt harum? Atque, quae quibusdam aut doloribus amet eaque tempora porro placeat harum ea soluta in accusamus pariatur sunt! Obcaecati sint expedita quia alias nobis laboriosam. Doloremque perspiciatis fugit aspernatur, officiis qui assumenda delectus voluptates rerum. Qui ipsum dignissimos, molestiae culpa modi deserunt delectus enim soluta eligendi inventore ullam quisquam error repellendus dicta dolore sapiente illo. Incidunt sunt similique possimus dolores eius, tenetur repellendus, fuga tempora laboriosam aspernatur omnis! Voluptates deserunt repudiandae quia. Fugit hic eos dolore aperiam a non obcaecati laudantium voluptatum labore mollitia libero iste doloribus, dicta quia quo rem recusandae facilis harum accusamus architecto reprehenderit ipsam magnam quas quis. Distinctio iusto odio laborum deleniti eius ea minus voluptas fuga alias, eligendi voluptate, excepturi laudantium perferendis unde eum consectetur neque ipsum facilis similique consequuntur suscipit sed illo, nam earum. Consectetur labore numquam fuga libero fugit quod ab repellendus expedita est porro mollitia rerum quaerat dolor ut quis temporibus amet tempore cum repudiandae, doloremque a quas. Provident iusto nesciunt molestiae, expedita voluptate, saepe, esse nihil temporibus molestias at omnis architecto commodi? Eaque, est dolor id porro delectus eveniet, doloremque perferendis eos voluptatem exercitationem ab? Molestias autem, molestiae impedit atque animi sed quibusdam provident dolores nisi dicta ipsa, mollitia commodi eos laboriosam placeat sit fugiat tempore. Cumque vitae officiis optio laboriosam culpa et reiciendis, ad repellat nobis blanditiis porro. Doloribus, cum? Sunt quibusdam repudiandae optio eius fugiat id obcaecati dolorem itaque! Veniam repellat placeat blanditiis animi explicabo? Repellendus repudiandae dolores ducimus iste provident soluta iure assumenda officiis deleniti, laborum, sapiente error eaque vitae quibusdam libero, sunt voluptatem commodi impedit veritatis ratione. Eius doloremque in pariatur sequi hic vero perspiciatis. Aspernatur tenetur quam voluptates minima odio iure provident? Sequi culpa nam voluptatem corporis animi quam obcaecati accusamus. Quod inventore nam aspernatur! Accusantium perspiciatis suscipit earum expedita, libero veritatis minima consectetur doloremque repellat, magni, totam quos incidunt molestias alias tenetur magnam cum amet animi tempora voluptates quisquam? A aliquid inventore enim similique animi? Laudantium rerum delectus reprehenderit sequi ipsa doloremque, reiciendis saepe? Nemo omnis odit explicabo temporibus, nesciunt fugit, odio perspiciatis quaerat quia dolores nam qui ipsa commodi illo tenetur?
                     </CardText>
                   </Card>
                 </Col>

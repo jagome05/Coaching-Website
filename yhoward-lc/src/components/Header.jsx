@@ -1,14 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import { NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { TOKEN_KEY } from "../constants";
+import Contact from "./Contact";
 import Logo from "../image/Logo.png";
 
 const Header = () => {
+  //{ style, modal,setModal }
   const location = useLocation();
   const [userInfo, setUserInfo] = useState({});
   const [showDropdown, setShowDropdown] = useState(false);
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
+
+  const toggle = () => setModal(!modal);
 
   useEffect(() => {
     if (loggedIn) {

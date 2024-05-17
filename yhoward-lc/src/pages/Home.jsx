@@ -1,8 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
+import heroVid from "../static/Merge videos project (1).mp4"
 
 export default function Home() {
+
   return (
+    //relative bottom-20 flex flex-row justify-end items-center gap-4 px-2 bg-[rgb(235, 246, 255), 0] z-2
     <>
       <div className="flex flex-col gap-8 font-basker text-white absolute bg-transparent z-2 w-11/12 md:w-9/12 top-40 md:top-56 left-4 md:left-10">
         <h1 className="font-bold text-2xl md:text-4xl">
@@ -66,30 +69,27 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
 
-      <br></br>
+        <br></br>
 
-      <div className="p-5 relative top-10 md:top-20 font-basker text-center">
-        <h3 className="p-5">
-          <strong className="text-3xl md:text-5xl">Let’s chat!</strong>
-        </h3>
-        <h2 className="text-base md:text-lg">
-          Schedule a complimentary session or call
-          <strong> Update Phone Number</strong> to share your story, explore
-          your goals, and see if we’re a good fit for this adventure together.
-          Remember, you are not alone on this journey. Let's transform together.
-        </h2>
-        <br></br>
-        <button className="bg-blue-500 text-white py-2 px-4 rounded-md text-lg md:text-2xl">
-          Book Now!
-        </button>
-        <br></br>
-        <p className="text-base md:text-lg">
-          <strong>
-            Yvonne Transformative Transition Coach & Thought Partner
-          </strong>
-        </p>
+        <div className="p-5 relative font-basker text-center z-10 bg-white">
+          <h3 className="p-5">
+            <strong className="text-5xl">Let’s chat!</strong>
+          </h3>
+          <h2>
+            Schedule a complimentary session or call
+            <strong> 214-289-5599</strong> to share your story, explore your
+            goals, and see if we’re a good fit for this adventure together.
+            Remember, you are not alone on this journey. Let's transform
+            together.
+          </h2>
+          <br></br>
+          {/* //TODO update button to go somewhere */}
+          <h1 class="text-4xl">Book Now!</h1>
+          <br></br>
+          <p><strong>Yvonne Is Your Transformative Transition Coach & Thought Partner</strong></p>
+        </div>
+
       </div>
     </>
   );
