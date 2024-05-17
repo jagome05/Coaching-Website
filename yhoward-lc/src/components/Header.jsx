@@ -12,7 +12,9 @@ const Header = () => {
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
 
+
   // const toggle = () => setModal(!modal);
+
 
   useEffect(() => {
     if (loggedIn) {
