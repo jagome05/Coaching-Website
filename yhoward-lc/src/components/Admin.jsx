@@ -37,25 +37,49 @@ const Admin = () => {
   }, [searchTerm, users]);
 
   const handleUserSelection = async (userId) => {
-    setSelectedUser(userId); // Set the selected user ID
+    setSelectedUser(userId);
     try {
       const response = await fetch(
         `http://localhost:4000/goals/user/${userId}`
       );
       const data = await response.json();
       if (response.ok) {
-        setSelectedUserGoals(data.goals); // Store goals only for the selected user
+        setSelectedUserGoals(data.goals);
       } else {
         throw new Error("Failed to fetch goals");
       }
     } catch (error) {
       console.error("Failed to fetch goals:", error);
-      setSelectedUserGoals([]); // Clear any previous goals on error
+      setSelectedUserGoals([]);
     }
   };
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
+  };
+
+  const handleToggleEnabled = async (userId, enabled) => {
+    try {
+      const response = await fetch(`http://localhost:4000/update/${userId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ enabled: enabled }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        // Update the user list after successful update
+        const updatedUsers = users.map((user) =>
+          user._id === userId ? { ...user, enabled: enabled } : user
+        );
+        setUsers(updatedUsers);
+      } else {
+        throw new Error(data.message || "Failed to update enabled status");
+      }
+    } catch (error) {
+      console.error("Failed to update enabled status:", error);
+    }
   };
 
   return (
@@ -84,16 +108,21 @@ const Admin = () => {
                 <td>{`${user.firstname} ${user.lastname}`}</td>
                 <td>{user.email}</td>
                 <td>
-                  {user._id === selectedUser
-                    ? selectedUserGoals.map((goal) => (
-                        <div className="tooltip-container" key={goal._id}>
-                          {goal.name}
+                  {user._id === selectedUser ? (
+                    <ul>
+                      {selectedUserGoals.map((goal) => (
+                        <li key={goal._id} className="tooltip-container">
+                          <strong>{goal.name}</strong>{" "}
+                          {/* Bold the goal name */}
                           <span className="tooltip-text">
                             {goal.description}
                           </span>
-                        </div>
-                      ))
-                    : ""}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    ""
+                  )}
                 </td>
               </tr>
             ))}

@@ -23,6 +23,10 @@ const Users = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  enabled: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 // Define a virtual property for fullname
