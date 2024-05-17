@@ -48,7 +48,7 @@ export default function Services() {
 
                 <Col sm="6">
                   <Card body>
-                    <CardText>
+                    <CardText className="text-2xl p-3">
                       People 35 years and older may face a unique set of challenges as they navigate through
                       midlife and plans for retirement. Have you experienced the sweet taste of success only
                       to have it replaced by a lack of growth opportunities and/or complacency? Do you feel
@@ -71,7 +71,7 @@ export default function Services() {
                 </Col>
                 <Col sm="6">
                   <Card body>
-                    <CardText>
+                    <CardText className="text-2xl p-3">
                       Adoption is often considered a gift – for both the adoptee and the adoptive parents. Yet
                       many times the adoptee is left with a multitude of unresolved thoughts and beliefs. Are
                       you considering seeking out your birth parents? Concerned about the potential
@@ -95,11 +95,6 @@ export default function Services() {
         </div>
 
         <div className="p-5 gap-5">
-          {/* <img
-            className="shadow-2xl"
-            src="https://t3.ftcdn.net/jpg/05/22/92/86/360_F_522928616_xqzObEMWOQs25Aiz4iubcgLndw2jGsih.jpg"
-            alt=''
-          ></img> */}
           <div class="bg-white p-5 border-5 border-black shadow-2xl">
             <h3 className="text-4xl">
               My approach is deeply collaborative, holistic, and

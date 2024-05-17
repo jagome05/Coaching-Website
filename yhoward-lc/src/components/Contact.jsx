@@ -10,13 +10,19 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter
+  ModalFooter,
+  Alert
 } from "reactstrap";
 
 export default function Contact() {
 
   const [modal, setModal] = useState(false);
-  const toggle = () => setModal(!modal);
+  const [visible, setVisible] = useState(false);
+  const onDismiss = () => setVisible(false);
+  const toggle = () => (
+    setModal(!modal),
+    onDismiss()
+);
 
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
@@ -43,7 +49,8 @@ export default function Contact() {
       .then((data) => {
         console.log(first, last, from, message);
         console.log(data);
-        alert("Message successfully sent!");
+        setVisible(true)
+        // alert("Message successfully sent!");
       })
       .catch((error) => {
         console.log(error);
@@ -51,76 +58,90 @@ export default function Contact() {
       });
   }
 
-  return (
-    <>
-      <button onClick={toggle} className="text-white">
-        Contact
-      </button>
-      <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Contact Me!</ModalHeader>
-        <ModalBody>
-          <div class="basis-3/4 sticky">
-            <Form onSubmit={handleSend}>
-              <Row>
-                <Col md={6}>
-                  <FormGroup>
-                    <Label for="first">First Name</Label>
-                    <Input
-                      id="first"
-                      name="first"
-                      placeholder="First Name"
-                      type="text"
-                      value={first}
-                      onChange={(e) => setFirst(e.target.value)}
-                    />
-                  </FormGroup>
-                </Col>
-                <Col md={6}>
-                  <FormGroup>
-                    <Label for="last">Last Name</Label>
-                    <Input
-                      id="last"
-                      name="last"
-                      placeholder="Last Name"
-                      type="text"
-                      value={last}
-                      onChange={(e) => setLast(e.target.value)}
-                    />
-                  </FormGroup>
-                </Col>
-              </Row>
-              <FormGroup>
-                <Label for="from">Email</Label>
-                <Input
-                  id="from"
-                  name="from"
-                  placeholder="Email Address"
-                  value={from}
-                  onChange={(e) => setFrom(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="message">Message</Label>
-                <Input
-                  id="message"
-                  name="message"
-                  type="textarea"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-              </FormGroup>
-              <Button type="submit">Send</Button>
-            </Form>
-          </div>
-        </ModalBody>
-        <ModalFooter>
-          <Button color="secondary" onClick={toggle}>
-            Cancel
-          </Button>
-        </ModalFooter>
-      </Modal>
-    </>
-  );
+
+return (
+  <>
+    <button onClick={toggle} className="text-white text-lg">
+      Contact
+    </button>
+    <Modal isOpen={modal} toggle={toggle}>
+      <ModalHeader toggle={toggle}>
+      <Row>
+        <Col xs="6">Contact Me!</Col>
+        <Col xs="6">
+        <Alert color="success" isOpen={visible}>
+        Success!
+      </Alert>
+        </Col>
+      </Row>
+      </ModalHeader>
+      <ModalBody>
+        <div class="basis-3/4 sticky">
+          <Form onSubmit={handleSend}>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="first">First Name</Label>
+                  <Input
+                  required
+                    id="first"
+                    name="first"
+                    placeholder="First Name"
+                    type="text"
+                    value={first}
+                    onChange={(e) => setFirst(e.target.value)}
+                  />
+                </FormGroup>
+              </Col>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="last">Last Name</Label>
+                  <Input
+                  required
+                    id="last"
+                    name="last"
+                    placeholder="Last Name"
+                    type="text"
+                    value={last}
+                    onChange={(e) => setLast(e.target.value)}
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+            <FormGroup>
+              <Label for="from">Email</Label>
+              <Input
+              required
+                id="from"
+                name="from"
+                placeholder="Email Address"
+                value={from}
+                onChange={(e) => setFrom(e.target.value)}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="message">Message</Label>
+              <Input
+              required
+                id="message"
+                name="message"
+                type="textarea"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </FormGroup>
+            <Button type="submit">Send</Button>
+          </Form>
+        </div>
+      </ModalBody>
+      <ModalFooter>
+        <Button color="secondary" onClick={toggle}>
+          Cancel
+        </Button>
+      </ModalFooter>
+    </Modal>
+  </>
+);
 }
 
 // ? ref
