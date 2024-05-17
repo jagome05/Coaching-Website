@@ -7,8 +7,6 @@ import Contact from "../components/Contact";
 
 //TODO think about breakpoints and mediaqueries
 
-//TODO think about breakpoints and mediaqueries
-
 function AppLayout() {
   return (
     //flex flex-row justify-end items-center gap-4 px-2 bg-[#535657] border-black border-b-2

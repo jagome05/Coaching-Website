@@ -14,12 +14,12 @@ export default function AboutMe() {
         />
         <div className="p-5 bg-white font-basker">
           <h2 className="text-5xl">About Me</h2>
-          <h3 className="italic">“My 3Cs of Life: 
-          <br></br>
-          <strong>C</strong>hoices, <strong>C</strong>onsequences, <strong>C</strong>oping
-          <br></br> 
-          Your Life is Euqal to How You Cope
-with the Consequences of Your Choices.”</h3>
+          <h3 className="italic">“My 3Cs of Life:
+            <br></br>
+            <strong>C</strong>hoices, <strong>C</strong>onsequences, <strong>C</strong>oping
+            <br></br>
+            Life is about how well you Cope
+            with the Consequences of your Choices. Let’s start making better choices.”</h3>
         </div>
       </div>
 

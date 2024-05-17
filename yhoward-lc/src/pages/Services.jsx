@@ -6,11 +6,11 @@ import Testimonials from "../components/Testimonials";
 
 export default function Services() {
 
-    // State for current active Tab 
-    let [activeTab, setActiveTab] = useState('1');
+  // State for current active Tab 
+  let [activeTab, setActiveTab] = useState('1');
 
-    const activeStyles = ('active text-black select-none')
-    const styles = ('text-slate-400 select-none')
+  const activeStyles = ('active text-black select-none')
+  const styles = ('text-slate-400 select-none')
 
   return (
     <>
@@ -28,11 +28,10 @@ export default function Services() {
             </NavItem>
 
             <NavItem>
-              <NavLink className={activeTab === '2' ? activeStyles : styles}  onClick={() => setActiveTab('2')}>
+              <NavLink className={activeTab === '2' ? activeStyles : styles} onClick={() => setActiveTab('2')}>
                 Let's talk about Adoption
               </NavLink>
             </NavItem>
-
           </Nav>
 
           <TabContent activeTab={activeTab}>
@@ -50,7 +49,12 @@ export default function Services() {
                 <Col sm="6">
                   <Card body>
                     <CardText>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, eveniet error! Eum, eos? Dignissimos possimus quibusdam ipsam doloribus eum iure autem dolor recusandae a deleniti, animi fugit? Deserunt rem placeat et! Tempore commodi itaque neque optio incidunt laborum odio, quis nulla minima dicta perferendis veritatis eos cum est harum ex accusantium, minus doloribus dolorem inventore placeat voluptatem modi. Dolorem, ea nulla omnis animi fugiat asperiores cum, rem fugit fuga earum impedit porro sapiente sed. Maxime aliquam veniam eligendi nobis consectetur sunt omnis! Facere autem cumque nam commodi quod obcaecati optio culpa eius perspiciatis voluptate tenetur, corrupti illum earum aut voluptates.
+                      People 35 years and older may face a unique set of challenges as they navigate through
+                      midlife and plans for retirement. Have you experienced the sweet taste of success only
+                      to have it replaced by a lack of growth opportunities and/or complacency? Do you feel
+                      pulled in too many directions? Is the life you are living, the life you want? When you are
+                      ready to leave your daily monotony of existence, I will help guide you to recognize the
+                      untapped opportunities and gifts needed to break through and break free!
                     </CardText>
                   </Card>
                 </Col>
@@ -58,7 +62,7 @@ export default function Services() {
             </TabPane>
 
             <TabPane tabId='2'>
-            <Row>
+              <Row>
                 <CardTitle className="text-5xl p-4">
                   Let's talk about Adoption
                 </CardTitle>
@@ -68,7 +72,14 @@ export default function Services() {
                 <Col sm="6">
                   <Card body>
                     <CardText>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptas dolorum nemo quis nesciunt, minima repellat corrupti nobis dicta natus necessitatibus, optio possimus maiores eveniet nulla officiis sed? Id accusantium praesentium voluptates optio totam quod natus doloribus nostrum fugiat sunt necessitatibus numquam modi placeat aperiam veniam reiciendis illo facilis nisi cumque, accusamus tempore eius? Temporibus nam suscipit in quas iusto. Similique corporis inventore, modi, enim optio iure possimus amet sed accusamus autem veritatis nulla quas doloribus fuga aliquid ad iste libero labore. Labore, itaque! Hic sint cumque numquam nihil maiores molestias facere illo, repudiandae reiciendis vero consectetur consequatur ab repellat vel obcaecati veritatis fuga eos in quos. Exercitationem nulla ratione sed, mollitia maiores magnam a voluptatibus quos, est dignissimos similique quo hic eos aliquid aperiam dicta id vel praesentium labore. Quo corporis quam sapiente nihil rerum? In optio odio dicta dolore architecto ex inventore delectus ea harum voluptatum nemo facere cumque doloremque soluta ipsam voluptatem, quas quo laboriosam, culpa voluptates, labore minus aut placeat. Officia atque distinctio ex magnam placeat, totam, natus ipsum inventore neque adipisci quam porro. Quaerat, veritatis? Autem rerum id, iste nisi vitae est consequatur saepe ducimus ipsum vel laudantium, neque illo optio nemo unde inventore natus?
+                      Adoption is often considered a gift – for both the adoptee and the adoptive parents. Yet
+                      many times the adoptee is left with a multitude of unresolved thoughts and beliefs. Are
+                      you considering seeking out your birth parents? Concerned about the potential
+                      blowback from both adoptive and birth families if you do? Are you a transracial or
+                      biracial adoptee who has had to grapple with living life between two or more worlds?
+                      As a biracial adoptee from a closed adoption, come and be present in my safe place. I
+                      can be a thought and a heart partner for you, as you find your sense of wholeness,
+                      belonging, and inner peace.
                     </CardText>
                   </Card>
                 </Col>
