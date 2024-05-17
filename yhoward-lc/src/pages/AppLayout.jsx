@@ -7,18 +7,19 @@ import Contact from "../components/Contact";
 
 //TODO think about breakpoints and mediaqueries
 
+//TODO think about breakpoints and mediaqueries
+
 function AppLayout() {
   return (
-    <div className={"app-layout"}>
-      <Header
-        style={
-          "flex flex-row justify-end items-center gap-4 px-2 bg-[#535657] border-black border-b-2"
-        }
-      />
+    //flex flex-row justify-end items-center gap-4 px-2 bg-[#535657] border-black border-b-2
+    <div>
+      <Header />
       <main>
         <Outlet/>
         <Book />
-        <h1 class="sticky bottom-0 -z-1 font-basker text-5xl italic text-blue-400/70 select-none">With Grace, Gratitude, and Goodness</h1>
+        <h1 class="sticky bottom-0 -z-1 font-basker text-5xl italic text-blue-400/70 select-none">
+          With Grace, Gratitude, and Goodness
+        </h1>
       </main>
       <footer className="footer">
         <Footer />

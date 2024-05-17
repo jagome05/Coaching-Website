@@ -37,20 +37,27 @@ const Admin = () => {
   }, [searchTerm, users]);
 
   const handleUserSelection = async (userId) => {
-    setSelectedUser(userId);
-    try {
-      const response = await fetch(
-        `http://localhost:4000/goals/user/${userId}`
-      );
-      const data = await response.json();
-      if (response.ok) {
-        setSelectedUserGoals(data.goals);
-      } else {
-        throw new Error("Failed to fetch goals");
-      }
-    } catch (error) {
-      console.error("Failed to fetch goals:", error);
+    if (userId === selectedUser) {
+      // Deselect the current user
+      setSelectedUser(null);
       setSelectedUserGoals([]);
+    } else {
+      // Select a new user and fetch their goals
+      setSelectedUser(userId);
+      try {
+        const response = await fetch(
+          `http://localhost:4000/goals/user/${userId}`
+        );
+        const data = await response.json();
+        if (response.ok) {
+          setSelectedUserGoals(data.goals);
+        } else {
+          throw new Error("Failed to fetch goals");
+        }
+      } catch (error) {
+        console.error("Failed to fetch goals:", error);
+        setSelectedUserGoals([]);
+      }
     }
   };
 

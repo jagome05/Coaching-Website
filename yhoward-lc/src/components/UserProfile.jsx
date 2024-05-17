@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Admin from "./Admin";
+import UpdatingGoal from "./UpdatingGoal";
 
 const UserProfile = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -14,6 +15,7 @@ const UserProfile = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
+  
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -41,9 +43,6 @@ const UserProfile = () => {
       if (response.ok) {
         const data = await response.json();
         setGoals(data.goals);
-
-        // Store the goals in localStorage
-        localStorage.setItem("goals", JSON.stringify(data.userGoals));
       } else {
         throw new Error("Failed to fetch goals");
       }
@@ -171,9 +170,6 @@ const UserProfile = () => {
         const updatedGoals = goals.filter((goal) => goal._id !== goalId);
         setGoals(updatedGoals);
         setSuccessMessage("Goal deleted successfully");
-
-        // Update localStorage with the updated goals
-        // localStorage.setItem("goals", JSON.stringify(updatedGoals));
       } else {
         const errorMessage = await response.text();
         throw new Error(errorMessage || "Failed to delete goal");
@@ -257,24 +253,10 @@ const UserProfile = () => {
             <ul className="goal-list">
               {goals.map((goal) => (
                 <li key={goal._id}>
-                  <strong>{goal.name}</strong>: {goal.description}
-                  <button onClick={() => handleDeleteGoal(goal._id)}>
-                    Delete
-                  </button>
-                  <button onClick={() => console.log(goal)}>Edit</button>
-                </li>
-              ))}
-
+                  {/* <strong>{goal.name}</strong>: {goal.description} */}
+                  <UpdatingGoal goal={goal} goals={goals} setGoals={setGoals} setSuccessMessage={setSuccessMessage} setErrorMessage={setErrorMessage}/>
+                </li>))}
             </ul>
-
-            {editMode ? (
-              <>
-              <h3>Update Goal</h3>
-              <input></input>
-              </>
-            ) : (
-              <>
-            
             <h3>Create New Goal</h3>
             <div className="new-goal-form">
               <div>
@@ -297,10 +279,7 @@ const UserProfile = () => {
                 />
               </div>
               <button onClick={handleCreateNewGoal}>Create Goal</button>
-            </div>
-              </>
-            )}
-            
+            </div>            
 
           </div>
 

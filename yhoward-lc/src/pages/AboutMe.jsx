@@ -1,7 +1,7 @@
 import React from "react";
 import mergeVid from "../static/Merge videos project (1).mp4"
-
 //TODO update styling for bullet points
+import headshot from "../image/Yvonne headshot.jpg";
 
 export default function AboutMe() {
   return (
@@ -96,7 +96,3 @@ with the Consequences of Your Choices.”</h3>
     </>
   );
 }
-
-// ? ref
-//https://stackoverflow.com/questions/59316293/how-to-position-text-over-top-an-image-like-this
-//https://www.w3schools.com/howto/howto_css_image_text.asp
