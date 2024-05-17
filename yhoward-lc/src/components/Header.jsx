@@ -5,15 +5,13 @@ import Contact from "./Contact";
 import Logo from "../image/Logo.png";
 
 const Header = () => {
-  //{ style, modal,setModal }
+
   const location = useLocation();
   const [userInfo, setUserInfo] = useState({});
   const [showDropdown, setShowDropdown] = useState(false);
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
 
-
-  // const toggle = () => setModal(!modal);
 
 
   useEffect(() => {
@@ -50,9 +48,7 @@ const Header = () => {
       <NavLink to="/resource" className="text-white no-underline">
         Resources
       </NavLink>
-      <button className="text-white">
-        Contact
-      </button>
+    <Contact />
     </>
   );
 

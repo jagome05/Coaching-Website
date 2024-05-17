@@ -17,6 +17,7 @@ export default function Contact() {
 
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
+
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
   const [from, setFrom] = useState("");
@@ -52,9 +53,9 @@ export default function Contact() {
 
   return (
     <>
-      {/* <Button color="primary" onClick={toggle} style={{ marginBottom: "1rem" }}>
-        Contact Me!
-      </Button> */}
+      <button onClick={toggle} className="text-white">
+        Contact
+      </button>
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Contact Me!</ModalHeader>
         <ModalBody>
