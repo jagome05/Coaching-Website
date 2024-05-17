@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Book from "../components/Book";
 import Header from "../components/Header";
-import Contact from "../components/Contact";
 
 //TODO think about breakpoints and mediaqueries
 
 function AppLayout() {
+
   return (
     <div>
       <Header />
