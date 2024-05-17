@@ -5,7 +5,6 @@ import heroVid from "../static/Merge videos project (1).mp4"
 export default function Home() {
 
   return (
-    //relative bottom-20 flex flex-row justify-end items-center gap-4 px-2 bg-[rgb(235, 246, 255), 0] z-2
     <>
       <div className="flex flex-col gap-8 font-basker text-white absolute bg-transparent z-2 w-11/12 md:w-9/12 top-40 md:top-56 left-4 md:left-10">
         <h1 className="font-bold text-2xl md:text-4xl">
@@ -27,9 +26,6 @@ export default function Home() {
           grief/loss, or relocation - I&#39;m here to help de-construct your
           barriers and move forward with clarity, confidence, and joy.
         </h3>
-        <button className="bg-blue-500 text-white py-2 w-1/5 rounded-md">
-          Learn More
-        </button>
       </div>
 
       <br></br>
@@ -42,20 +38,12 @@ export default function Home() {
               Transition Coach
             </h1>
             <p className="text-base md:text-lg p-3">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Dignissimos pariatur ullam quidem dolorem maiores illum quisquam
-              assumenda neque, iure similique nulla maxime quae unde, placeat
-              commodi, minus fuga!
-            </p>
-          </div>
-
-          <div className="border-4 rounded-lg border-black shadow-2xl p-4">
-            <h1 className="bg-blue-400 border-b-2 p-4 border-black text-xl md:text-2xl">
-              Group Counseling
-            </h1>
-            <p className="text-base md:text-lg p-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam
-              consequatur quis.
+              People 35 years and older may face a unique set of challenges as they navigate through
+              midlife and plans for retirement. Have you experienced the sweet taste of success only
+              to have it replaced by a lack of growth opportunities and/or complacency? Do you feel
+              pulled in too many directions? Is the life you are living, the life you want? When you are
+              ready to leave your daily monotony of existence, I will help guide you to recognize the
+              untapped opportunities and gifts needed to break through and break free!
             </p>
           </div>
 
@@ -64,8 +52,14 @@ export default function Home() {
               Adoptee
             </h1>
             <p className="text-base md:text-lg p-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-              quas esse praesentium ipsa, id quia.
+              Adoption is often considered a gift – for both the adoptee and the adoptive parents. Yet
+              many times the adoptee is left with a multitude of unresolved thoughts and beliefs. Are
+              you considering seeking out your birth parents? Concerned about the potential
+              blowback from both adoptive and birth families if you do? Are you a transracial or
+              biracial adoptee who has had to grapple with living life between two or more worlds?
+              As a biracial adoptee from a closed adoption, come and be present in my safe place. I
+              can be a thought and a heart partner for you, as you find your sense of wholeness,
+              belonging, and inner peace.
             </p>
           </div>
         </div>

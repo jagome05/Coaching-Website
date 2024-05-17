@@ -12,7 +12,7 @@ const Header = () => {
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
 
-  const toggle = () => setModal(!modal);
+  // const toggle = () => setModal(!modal);
 
   useEffect(() => {
     if (loggedIn) {
@@ -48,25 +48,28 @@ const Header = () => {
       <NavLink to="/resource" className="text-white no-underline">
         Resources
       </NavLink>
+      <button className="text-white">
+        Contact
+      </button>
     </>
   );
 
   const logoStyle =
     location.pathname === "/"
-      ? { position: "absolute", left: 0, top: "-7em", width: "320px" }
-      : { position: "absolute", left: 0, top: "-3em", width: "200px" };
+      ? { position: "absolute", left: 0, top: "-5em", width: "320px" }
+      : { position: "absolute", left: 0, top: "-3em", width: "220px" };
 
-  const homeHeaderStyle =
-    "absolute top-[5%] w-full flex flex-row justify-end items-center px-2 z-10";
+      const homeHeaderStyle =
+      "relative flex flex-row justify-end items-center gap-4 p-5 bg-[rgb(235, 246, 255), 0] z-20"
   const otherPagesHeaderStyle =
-    "absolute top-0 h-[14%] w-full flex flex-row justify-end items-center px-2 bg-[#3A7CA5] border-b-4";
+    "relative flex flex-row justify-end items-center gap-4 p-5 bg-sky-800 border-black border-b-2";
 
   const headerStyle =
     location.pathname === "/" ? homeHeaderStyle : otherPagesHeaderStyle;
 
   return (
     <>
-      <header className={headerStyle}>
+      <div className={headerStyle}>
         <img className="logo" src={Logo} alt="Site Logo" style={logoStyle} />
         <div className="flex-1 flex justify-end gap-4">
           {navLinks}
@@ -92,16 +95,16 @@ const Header = () => {
             <NavLink to="/users">Sign Up/Login</NavLink>
           )}
         </div>
-      </header>
+      </div>
 
       {location.pathname === "/" && (
-        <div className="relative h-[107vh]">
+        <div className="relative bottom-48">
           {" "}
           <video
             autoPlay
             loop
             muted
-            className="w-full h-full object-cover brightness-120"
+            className="brightness-120"
           >
             <source
               src="https://cdn.pixabay.com/video/2019/09/13/26830-361092105_large.mp4"

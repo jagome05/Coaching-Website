@@ -2,13 +2,14 @@ import React from "react";
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap"
 
 
-export default function ResourceBox( {url, img }) {
+export default function ResourceBox( {url, img, title }) {
 
+  //TODO edit card heights
 
   return (
     <>
-      <div>
-        <h1>Link</h1>
+      <div className="font-basker">
+        <br></br>
         <a href={url} target="_blank">
           <Card className="my-2">
             <CardImg
@@ -16,14 +17,9 @@ export default function ResourceBox( {url, img }) {
               src={img}
               top
               width="100%"
-            />
+              />
             <CardBody>
-              <CardTitle tag="h5">
-                Card Title
-              </CardTitle>
-              <CardText>
-                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-              </CardText>
+              <h3><strong>{title}</strong></h3>
             </CardBody>
           </Card>
         </a>
