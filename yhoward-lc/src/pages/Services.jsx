@@ -32,7 +32,6 @@ export default function Services() {
                 Let's talk about Adoption
               </NavLink>
             </NavItem>
-
           </Nav>
 
           <TabContent activeTab={activeTab}>

@@ -9,6 +9,7 @@ import Header from "../components/Header";
 function AppLayout() {
 
   return (
+    //flex flex-row justify-end items-center gap-4 px-2 bg-[#535657] border-black border-b-2
     <div>
       <Header />
       <main>
