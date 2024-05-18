@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import FAQ from "../components/FAQ";
 import { Card, CardTitle, CardText, Nav, NavItem, NavLink, TabContent, TabPane, Row, Col } from "reactstrap";
 import Testimonials from "../components/Testimonials";
-//TODO update FAQ info and Testimonials...
+import lightbulb from "../../src/image/lightbulb.png";
+import stoneman from "../../src/image/stonefig.jpg"
 
+//TODO update FAQ info and Testimonials...
 export default function Services() {
 
   // State for current active Tab 
   let [activeTab, setActiveTab] = useState('1');
 
-  const activeStyles = ('active text-black select-none')
-  const styles = ('text-slate-400 select-none')
+  const activeStyles = ('active text-black text-2xl select-none')
+  const styles = ('text-slate-400 text-2xl select-none')
 
   return (
     <>
@@ -21,7 +23,6 @@ export default function Services() {
           <Nav tabs justified>
 
             <NavItem>
-              {/* <NavLink active={activeTab === '1' ? 'True' : 'False'} className="text-black" onClick={() => setActiveTab('1')}>*/}
               <NavLink className={activeTab === '1' ? activeStyles : styles} onClick={() => setActiveTab('1')}>
                 Transitioning Services
               </NavLink>
@@ -43,7 +44,7 @@ export default function Services() {
                 </CardTitle>
 
                 <Col>
-                  <img className="shadow-2xl w-full rounded-lg" src='https://media.istockphoto.com/id/1372615051/photo/caring-female-high-school-teacher-tutors-female-student.jpg?s=612x612&w=0&k=20&c=80rQ9bYR2K5L-K3l_BHfF6RZ_uwl9M5R-VWWgVB0_IU=' alt='img' />
+                  <img className="shadow-2xl w-full rounded-lg" src={lightbulb} alt='img' />
                 </Col>
 
                 <Col sm="6">
@@ -67,7 +68,7 @@ export default function Services() {
                   Let's talk about Adoption
                 </CardTitle>
                 <Col>
-                  <img className="shadow-2xl w-full rounded-lg" src='https://t3.ftcdn.net/jpg/05/22/92/86/360_F_522928616_xqzObEMWOQs25Aiz4iubcgLndw2jGsih.jpg' alt='img' />
+                  <img className="shadow-2xl w-full rounded-lg" src={stoneman} alt='img' />
                 </Col>
                 <Col sm="6">
                   <Card body>

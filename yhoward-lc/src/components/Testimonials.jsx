@@ -53,15 +53,13 @@ export default function Testimonials() {
   const slides = items.map((item) => {
     return (
       <CarouselItem
-        // className="custom-tag"
-        // tag="div"
         className='max-w-full h-96 bg-[url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV8yOF9wYWludGluZ19vZl9sYXZlbmRlcl9ib3JkZXJfaW5fdGhlX3N0eWxlX29mX19mMzBiYjlmZi1mYWE4LTQ4NzEtYmI5YS0zZTFkMjI3MjNlMDJfMS5qcGc.jpg)]'
         key={item.id}
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
         <CarouselCaption
-          className="text-black italic top-20"
+          className="text-black italic top-20 bg-white opacity-80"
           captionText={item.caption}
           captionHeader={item.name}
         />
@@ -71,13 +69,7 @@ export default function Testimonials() {
 
   return (
     <div className='shadow-2xl border-2 border-black'>
-      {/* <style>
-        {`.custom-tag {
-              max-width: 100%;
-              height: 500px;
-              background: white;
-            }`}
-      </style> */}
+
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators
           items={items}
