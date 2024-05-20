@@ -92,11 +92,17 @@ export default function Services() {
         </div>
 
         <div class="p-5 ">
-          <Testimonials />
+        <Testimonials 
+        name="Brittany H."
+         caption="I can’t say enough good things about working with Yvonne! As a coach, she is fantasticat keeping me grounded, supporting me in problem-solving, and collaborating with mygoals and ambitions. She brings a wealth of knowledge and experience into oursessions together. As a person, she is genuinely kind, has a high level of integrity, and ahuge heart that loves to help others reach their full potential. Through working withYvonne, I’ve been able to gain the confidence to launch my new business and maintainconsistent healthy habits. I highly recommend her!"
+         quote="The less you respond to negative people, the more positive your life will
+         become.”"
+         quoteName="- Paulo Coelho"
+        />
         </div>
 
         <div className="p-5 gap-5">
-          <div class="bg-white p-5 border-5 border-black shadow-2xl">
+          <div class="bg-white p-5 border-5 border-black shadow-2xl z-10 relative">
             <h3 className="text-4xl">
               My approach is deeply collaborative, holistic, and
               strengths-based:
@@ -124,7 +130,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div class="p-5 shadow-2xl">
+        <div class="p-5 shadow-md relative z-10">
           <FAQ />
         </div>
       </div>

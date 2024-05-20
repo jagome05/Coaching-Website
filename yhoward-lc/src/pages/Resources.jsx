@@ -25,8 +25,21 @@ export default function Resources() {
         <br></br>
 
         <div className="py-5">
-          <Testimonials />
+        <Testimonials 
+        name="Jenn L."
+         caption="Yvonne creates a space for me where I hear myself, free of distraction. She asks questionsthat center me and propel me on my path. Yvonne is a great listener, and her energyresonates depending on what I’m moving through. With Yvonne’s skilled and genuinesupport, I’m able to identify what is truly important to me, focus my headspace and achievewhat I set my sights on. Our weekly coaching sessions have been empowering! I’m happier, healthier, moreproductive, and at ease going for what I wantYvonne’s coaching expertise and level of engagement have been life-changing andtransformative!"
+         quote="Forgive yourself for not knowing what you didn’t know before you learned it."
+        quoteName=" - Maya Angelou"
+        />
         </div>
+
+        {/*
+    id: 3,
+    altText: 'Slide 3',
+    name: 'Jenn L.',
+    caption: 'Yvonne creates a space for me where I hear myself, free of distraction. She asks questionsthat center me and propel me on my path. Yvonne is a great listener, and her energyresonates depending on what I’m moving through. With Yvonne’s skilled and genuinesupport, I’m able to identify what is truly important to me, focus my headspace and achievewhat I set my sights on. Our weekly coaching sessions have been empowering! I’m happier, healthier, moreproductive, and at ease going for what I wantYvonne’s coaching expertise and level of engagement have been life-changing andtransformative!',
+  quote “Forgive yourself for not knowing what you didn’t know before you learned it.”
+  */}
 
         <br></br>
 

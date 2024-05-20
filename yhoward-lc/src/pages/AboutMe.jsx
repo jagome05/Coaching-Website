@@ -34,33 +34,33 @@ export default function AboutMe() {
 
         {/* //TODo thonk about Breakpoints to min text */}
 
-        <div className="basis-1/2 w-full m-5 flex flex-col gap-8 font-basker bg-transparent">
+        <div className="basis-1/2 flex flex-col font-basker bg-transparent">
 
-          <h2 class="text-sm lg:text-3xl">
+          <h2 class="text-sm lg:text-2xl p-5">
             Think of me as your trusted, perceptive partner in transformation. <strong>With over 25+ years of experience</strong>, I bring unique insights and expertise as a former:
           </h2>
-          <h3 className="text-sm lg:text-3xl">
-            <ul className="p-4">
+          <h3 className="text-sm lg:text-xl px-5">
+            <ul className="">
               <strong>Licensed Counselor:</strong> I offer a compassionate and understanding
               space to explore your emotions and heal from challenges.
             </ul>
-            <ul className="p-4">
+            <ul className="">
               <strong>Educator:</strong> I am passionate about guiding you through self-discovery
               exercises and equipping you with tools for lasting change.
             </ul>
-            <ul className="p-4">
+            <ul className="">
               <strong>Consultant:</strong> I utilize strategic thinking to help you create
               actionable plans and overcome obstacles, ensuring a smooth and
               empowering transition.
             </ul>
-            <ul className="p-4">
+            <ul className="">
               <strong>‘Across the Country’ Resident: </strong> I have had the opportunity to call
               the East, Midwest, West, and Southwest (currently) my home.
             </ul>
           </h3>
         </div>
 
-        <div className="basis-1/2 z-20">
+        <div className="basis-1/2 z-20 border-black border-x-2">
           <video autoPlay loop muted className="w-full">
             <source src={mergeVid} />
           </video>

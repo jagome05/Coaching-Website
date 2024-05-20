@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import heroVid from "../static/Merge videos project (1).mp4"
 import Testimonials from "../components/Testimonials";
 import butterfly from "../image/butterflies.jpg"
 
@@ -88,7 +87,12 @@ export default function Home() {
       <br></br>
 
       <div className="font-basker p-5">
-        <Testimonials />
+        <Testimonials 
+        name={`Danyelle`}
+         caption="Yvonne is such a delight to work with as a coach! Her keen listening skills andremarkable ability to reflect back enrich our coaching sessions tremendously. What I love about Yvonne is her ability to ask probing questions which facilitate newperceptions allowing me to uncover hidden answers. Exemplifying compassion and aprofound orientation towards people, Yvonne is remarkable in her &#39;3G&#39; approach: Grace,Gratitude, and Goodness. In my opinion, her unique style and passion particularly resonate with the BIPOCcommunities. I highly recommend Yvonne: a masterful coach whose heart creates aspace for exceptional personal growth and discovery. She's a difference-maker; your journey with her will be transformative!"
+         quote="”You can, you should, and if you’re brave enough to start, you will.”"
+        quoteName="- Stephen King"
+        />
       </div>
 
       <br></br>
