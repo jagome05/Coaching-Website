@@ -1,61 +1,64 @@
 import React from "react";
-import mergeVid from "../static/Merge videos project (1).mp4"
+import mergeVid from "../static/Merge videos project (1).mp4";
 import headshot from "../image/Yvonne headshot.jpg";
-import pendulum from "../image/pendulum.jpg"
+import pendulum from "../image/pendulum.jpg";
 
 export default function AboutMe() {
   return (
     <>
       <div className="flex p-5 gap-5 font-basker">
-        <img
-          className="h-1/3 w-1/4 shadow-2xl"
-          src={headshot}
-          alt='headshot'
-        />
+        <img className="h-1/3 w-1/4 shadow-2xl" src={headshot} alt="headshot" />
         <div className="relative font-basker">
           <img className="absolute h-full" src={pendulum}></img>
           <div className="relative bg-white opacity-80 h-full w-11/12 p-5">
-            <h2 className="text-5xl">About Me</h2>
+            <h2 className="text-5xl text-center">About Me</h2>
             <br></br>
-            <h2 className="italic">“My 3Cs of Life:</h2>
-              <br></br>
-              <h1 className="italic"><strong>C</strong>hoices, <strong>C</strong>onsequences, <strong>C</strong>oping</h1>
-              <br></br>
-              <h2 className="italic">
-              Life is about how well you Cope
-              with the Consequences of your Choices. Let’s start making better choices.”</h2>
-              <br></br>
-              <h1> - Yvonne Howard</h1>
+            <h2 className="italic">My 3Cs of Life:</h2>
+            <br></br>
+            <h1 className="italic">
+              <strong>C</strong>hoices, <strong>C</strong>onsequences,{" "}
+              <strong>C</strong>oping
+            </h1>
+            <br></br>
+            <h2 className="italic text-2xl">
+              "Life is about how well you Cope with the Consequences of your
+              Choices. Let’s start making better choices.”
+            </h2>
+            <br></br>
+            <h1> - Yvonne Howard</h1>
           </div>
         </div>
       </div>
 
       <div className="flex bg-[#B7ADCF] border-2 border-black relative z-20">
-
         {/* //TODo thonk about Breakpoints to min text */}
 
-        <div className="basis-1/2 w-full m-5 flex flex-col gap-8 font-basker bg-transparent">
-
-          <h2 class="text-sm lg:text-3xl">
-            Think of me as your trusted, perceptive partner in transformation. <strong>With over 25+ years of experience</strong>, I bring unique insights and expertise as a former:
+        <div className="basis-1/2 w-full m-5 flex flex-col gap-2 font-basker bg-transparent">
+          <h2 class="text-sm lg:text-xl">
+            Think of me as your trusted, perceptive partner in transformation.{" "}
+            <strong>With over 25+ years of experience</strong>, I bring unique
+            insights and expertise as a former:
           </h2>
-          <h3 className="text-sm lg:text-3xl">
-            <ul className="p-4">
-              <strong>Licensed Counselor:</strong> I offer a compassionate and understanding
-              space to explore your emotions and heal from challenges.
+          <h3 className="text-sm lg:text-xl">
+            <ul>
+              <strong>Licensed Counselor:</strong> I offer a compassionate and
+              understanding space to explore your emotions and heal from
+              challenges.
             </ul>
-            <ul className="p-4">
-              <strong>Educator:</strong> I am passionate about guiding you through self-discovery
-              exercises and equipping you with tools for lasting change.
+            <ul>
+              <strong>Educator:</strong> I am passionate about guiding you
+              through self-discovery exercises and equipping you with tools for
+              lasting change.
             </ul>
-            <ul className="p-4">
-              <strong>Consultant:</strong> I utilize strategic thinking to help you create
-              actionable plans and overcome obstacles, ensuring a smooth and
-              empowering transition.
+            <ul>
+              <strong>Consultant:</strong> I utilize strategic thinking to help
+              you create actionable plans and overcome obstacles, ensuring a
+              smooth and empowering transition.
             </ul>
-            <ul className="p-4">
-              <strong>‘Across the Country’ Resident: </strong> I have had the opportunity to call
-              the East, Midwest, West, and Southwest (currently) my home.
+            <ul>
+              <strong>‘Across the Country’ Resident: </strong> I have had the
+              opportunity to call the East, Midwest, West, and Southwest
+              (currently) my home.
             </ul>
           </h3>
         </div>
@@ -65,36 +68,36 @@ export default function AboutMe() {
             <source src={mergeVid} />
           </video>
         </div>
-
       </div>
 
       <div class="p-5 font-basker bg-white relative z-10">
         <h3 className="text-4xl">Why choose me as your guide?</h3>
         <br></br>
 
-        <ul className="text-3xl">
-          <strong>Purpose:</strong> I genuinely care about your story and success. This is not
-          just a job; it’s my passion to see you thrive!
+        <ul className="text-2xl">
+          <strong>Purpose:</strong> I genuinely care about your story and
+          success. This is not just a job; it’s my passion to see you thrive!
         </ul>
-        <ul className="text-3xl">
-          <strong>Proven results:</strong> I cultivate and empower individuals to triumph through
-          challenging transitions, achieving personal and professional
-          fulfillment.
+        <ul className="text-2xl">
+          <strong>Proven results:</strong> I cultivate and empower individuals
+          to triumph through challenging transitions, achieving personal and
+          professional fulfillment.
         </ul>
-        <ul className="text-3xl">
-          <strong>Compassionate listening:</strong> I create a judgment-free space for you to
-          share your hopes, fears, and questions without hesitation.
+        <ul className="text-2xl">
+          <strong>Compassionate listening:</strong> I create a judgment-free
+          space for you to share your hopes, fears, and questions without
+          hesitation.
         </ul>
-        <ul className="text-3xl">
-          <strong>Tailored approach:</strong> I personalize my coaching to your unique needs,
-          goals, and learning style.
+        <ul className="text-2xl">
+          <strong>Tailored approach:</strong> I personalize my coaching to your
+          unique needs, goals, and learning style.
         </ul>
-        <ul className="text-3xl">
-          <strong>Deeply inclusive:</strong> I hold a strong commitment to creating a safe and
-          affirming space for all individuals, regardless of race, ethnicity,
-          sexual orientation, or gender identity. I understand the nuances of
-          BIPOC experiences and walk alongside you with cultural sensitivity,
-          warmth, and unconditional regard.
+        <ul className="text-2xl">
+          <strong>Deeply inclusive:</strong> I hold a strong commitment to
+          creating a safe and affirming space for all individuals, regardless of
+          race, ethnicity, sexual orientation, or gender identity. I understand
+          the nuances of BIPOC experiences and walk alongside you with cultural
+          sensitivity, warmth, and unconditional regard.
         </ul>
       </div>
     </>

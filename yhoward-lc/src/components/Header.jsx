@@ -5,14 +5,12 @@ import Contact from "./Contact";
 import Logo from "../image/Logo.png";
 
 const Header = () => {
-
   const location = useLocation();
   const [userInfo, setUserInfo] = useState({});
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const loggedIn = localStorage.getItem(TOKEN_KEY);
   const navigate = useNavigate();
-
-
 
   useEffect(() => {
     if (loggedIn) {
@@ -22,6 +20,14 @@ const Header = () => {
       setUserInfo({});
     }
   }, [loggedIn]);
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      setUserInfo(user);
+      setIsAdmin(user.isAdmin); // Set isAdmin state
+    }
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem(TOKEN_KEY);
@@ -48,7 +54,7 @@ const Header = () => {
       <NavLink to="/resource" className="text-white no-underline">
         Resources
       </NavLink>
-    <Contact />
+      <Contact />
     </>
   );
 
@@ -57,8 +63,8 @@ const Header = () => {
       ? { position: "absolute", left: 0, top: "-5em", width: "320px" }
       : { position: "absolute", left: 0, top: "-3em", width: "220px" };
 
-      const homeHeaderStyle =
-      "relative flex flex-row justify-end items-center gap-4 p-5 bg-[rgb(235, 246, 255), 0] z-20"
+  const homeHeaderStyle =
+    "relative flex flex-row justify-end items-center gap-4 p-5 bg-[rgb(235, 246, 255), 0] z-20";
   const otherPagesHeaderStyle =
     "relative flex flex-row justify-end items-center gap-4 p-5 bg-sky-800 border-black border-b-2";
 
@@ -68,7 +74,9 @@ const Header = () => {
   return (
     <>
       <div className={headerStyle}>
-        <img className="logo" src={Logo} alt="Site Logo" style={logoStyle} />
+        <NavLink to="/">
+          <img className="logo" src={Logo} alt="Site Logo" style={logoStyle} />
+        </NavLink>
         <div className="flex-1 flex justify-end gap-4">
           {navLinks}
           {loggedIn ? (
@@ -79,9 +87,17 @@ const Header = () => {
               {showDropdown && (
                 <div
                   className="dropdown-content"
-                  style={{ position: "absolute", right: 0, zIndex: 1000 }}
+                  style={{
+                    position: "absolute",
+                    right: 0,
+                    zIndex: 1000,
+                    fontSize: "12px",
+                    background: "#3A7CA5",
+                  }}
                 >
-                  <NavLink to="/users/profile">Profile</NavLink>
+                  <NavLink to="/users/profile">
+                    {isAdmin ? "Admin Center" : "User Profile"}
+                  </NavLink>
                   <br />
                   <a href="#" onClick={handleLogout}>
                     Logout
@@ -98,12 +114,7 @@ const Header = () => {
       {location.pathname === "/" && (
         <div className="relative bottom-48">
           {" "}
-          <video
-            autoPlay
-            loop
-            muted
-            className="brightness-120"
-          >
+          <video autoPlay loop muted className="brightness-120">
             <source
               src="https://cdn.pixabay.com/video/2019/09/13/26830-361092105_large.mp4"
               type="video/mp4"
