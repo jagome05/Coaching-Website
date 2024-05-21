@@ -38,7 +38,7 @@ export default function Home() {
           <img src={butterfly} className="absolute w-full"></img>
 
           <div className="basis-1/2 border-4 rounded-lg border-black shadow-2xl z-20 bg-white opacity-90">
-            <h1 className="bg-red-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
+            <h1 className="bg-blue-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
               Transitioning Services
             </h1>
             <article className="text-base md:text-xl p-5">
@@ -69,7 +69,7 @@ export default function Home() {
           </div>
 
           <div className="basis-1/2 border-4 rounded-lg border-black shadow-2xl z-20 bg-white opacity-90">
-            <h1 className="bg-green-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
+            <h1 className="bg-blue-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
               Talking About Adoption
             </h1>
             <article className="text-base md:text-xl p-5">
