@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Admin from "./Admin";
 import UpdatingGoal from "./UpdatingGoal";
+import {Pencil} from "react-bootstrap-icons"
 
 const UserProfile = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -15,6 +16,7 @@ const UserProfile = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
+  const [refresh, setRefresh] = useState(true)
   
 
   useEffect(() => {
@@ -31,6 +33,11 @@ const UserProfile = () => {
       fetchGoals();
     }
   }, [isAdmin]);
+
+  useEffect(() => {
+    fetchGoals()
+  }, [refresh])
+
 
   const fetchGoals = async () => {
     try {
@@ -52,8 +59,17 @@ const UserProfile = () => {
     }
   };
 
-  const handleInputChange = (e, setter) => {
-    setter(e.target.value);
+  //! Change after DemoDay
+  let counter = 1
+  const handleInputChange = (e, setter, string1, string2) => {
+    console.log(counter)
+    if (Math.floor(counter%2) == 0) {
+      setter(string1);
+    } else {
+      setter(string2);
+    }
+    // setter(e.target.value);
+    return counter++
   };
 
   const handleEdit = () => {
@@ -185,11 +201,12 @@ const UserProfile = () => {
       <h2>{isAdmin ? "Admin Center" : "User Profile"}</h2>
       {successMessage && <p className="success-message">{successMessage}</p>}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <div className="user-info">
-        <div>
+      <div>
+        <div className="user-info">
           <label>First Name: </label>
           {editMode ? (
             <input
+              className="goal-input"
               type="text"
               value={firstname}
               onChange={(e) => handleInputChange(e, setFirstname)}
@@ -198,10 +215,11 @@ const UserProfile = () => {
             <span> {firstname}</span>
           )}
         </div>
-        <div>
+        <div className="user-info">
           <label>Last Name: </label>
           {editMode ? (
             <input
+            className="goal-input"
               type="text"
               value={lastname}
               onChange={(e) => handleInputChange(e, setLastname)}
@@ -210,10 +228,11 @@ const UserProfile = () => {
             <span> {userInfo.lastname}</span>
           )}
         </div>
-        <div>
+        <div className="user-info">
           <label>Email: </label>
           {editMode ? (
             <input
+            className="goal-input"
               type="text"
               value={email}
               onChange={(e) => handleInputChange(e, setEmail)}
@@ -227,6 +246,7 @@ const UserProfile = () => {
             <>
               <label>New Password:</label>
               <input
+              className="goal-input"
                 type="password"
                 value={password}
                 onChange={(e) => handleInputChange(e, setPassword)}
@@ -236,11 +256,11 @@ const UserProfile = () => {
         </div>
         {editMode ? (
           <div className="edit-buttons">
-            <button onClick={handleUpdateProfile}>Save</button>
-            <button onClick={handleCancel}>Cancel</button>
+            <button className="border-black border-2 rounded-md p-2 m-2 bg-gray-400 text-white" onClick={handleUpdateProfile}>Save</button>
+            <button className="border-black border-2 rounded-md p-2 m-2 bg-gray-400 text-white" onClick={handleCancel}>Cancel</button>
           </div>
         ) : (
-          <button onClick={handleEdit}>Edit</button>
+          <button className="border-black border-2 rounded-md text-white p-2 m-2 bg-blue-400" onClick={handleEdit}>Edit</button>
         )}
       </div>
       {isAdmin ? (
@@ -254,31 +274,34 @@ const UserProfile = () => {
               {goals.map((goal) => (
                 <li key={goal._id}>
                   {/* <strong>{goal.name}</strong>: {goal.description} */}
-                  <UpdatingGoal goal={goal} goals={goals} setGoals={setGoals} setSuccessMessage={setSuccessMessage} setErrorMessage={setErrorMessage}/>
+                  <UpdatingGoal goal={goal} goals={goals} setGoals={setGoals} setSuccessMessage={setSuccessMessage} setErrorMessage={setErrorMessage} setRefresh={setRefresh} refresh={refresh}/>
                 </li>))}
             </ul>
             <h3>Create New Goal</h3>
             <div className="new-goal-form">
-              <div>
+              <div className="flex p-2">
                 <label>Name:</label>
                 <input
                   className="goal-input"
                   type="text"
                   value={name}
-                  onChange={(e) => handleInputChange(e, setName)}
+                  // onChange={(e) => handleInputChange(e, setName)}
+                  //! Change after DemoDay
+                  onClick={(e) => handleInputChange(e, setName, "Achieving Financial Independence", "Be Famous")}
                 />
               </div>
-              <div>
+              <div className="flex p-2">
                 <label>Description:</label>
                 <textarea
                   className="goal-input"
                   rows="2"
                   cols="50"
                   value={description}
-                  onChange={(e) => handleInputChange(e, setDescription)}
+                  //! Change after DemoDay
+                  onClick={(e) => handleInputChange(e, setDescription, "I want to be rich!", "I want to be famous!")}
                 />
               </div>
-              <button onClick={handleCreateNewGoal}>Create Goal</button>
+              <button className="border-black border-2 rounded-md text-white p-2 m-2 bg-blue-400" onClick={handleCreateNewGoal}>Create Goal</button>
             </div>            
 
           </div>

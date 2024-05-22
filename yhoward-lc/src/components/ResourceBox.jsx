@@ -17,7 +17,6 @@ export default function ResourceBox( {url, img, title }) {
               src={img}
               top
               width="100%"
-              height="100%"
               />
             <CardBody>
               <h3><strong>{title}</strong></h3>

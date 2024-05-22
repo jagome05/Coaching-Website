@@ -15,15 +15,15 @@ export default function AboutMe() {
         <div className="relative font-basker">
           <img className="absolute h-full" src={pendulum}></img>
           <div className="relative bg-white opacity-80 h-full w-11/12 p-5">
-            <h2 className="text-5xl">About Me</h2>
+            <h2 className="text-5xl font-bold">About Me</h2>
             <br></br>
             <h2 className="italic">“My 3Cs of Life:</h2>
-              <br></br>
-              <h1 className="italic"><strong>C</strong>hoices, <strong>C</strong>onsequences, <strong>C</strong>oping</h1>
+              
+              <h1 className="italic"><strong>C</strong>oping, <strong>C</strong>onsequences, <strong>C</strong>hoices</h1>
               <br></br>
               <h2 className="italic">
-              Life is about how well you Cope
-              with the Consequences of your Choices. Let’s start making better choices.”</h2>
+              Life is about how well you <strong>Cope</strong> with the <strong>Consequences</strong>of your <strong>Choices</strong>. Let’s start making better choices.”</h2>
+              <br></br>
               <br></br>
               <h1> - Yvonne Howard</h1>
           </div>

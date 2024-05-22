@@ -85,9 +85,9 @@ function Register() {
             name="firstname"
             placeholder="First Name"
             value={firstname}
-            //TODO so for example try: setFirstName({...person, firstName: e.target.value})
-            //TODO or make a fxn to help with it?!!?
-            onChange={(e) => setFirstName(e.target.value)}
+              //TODO ERASE AFTER DEMO
+            // onChange={(e) => setFirstName(e.target.value)}
+            onClick={(e) => setFirstName("Lex")}
           />
           <br />
           <input
@@ -97,7 +97,9 @@ function Register() {
             name="lastname"
             placeholder="Last Name"
             value={lastname}
-            onChange={(e) => setLastName(e.target.value)}
+              //TODO ERASE AFTER DEMO
+            // onChange={(e) => setLastName(e.target.value)}
+            onClick={(e) => setLastName("Luthor")}
           />
           <br />
           <input
@@ -107,7 +109,9 @@ function Register() {
             name="email"
             placeholder="Email Address"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+              //TODO ERASE AFTER DEMO
+            // onChange={(e) => setEmail(e.target.value)}
+            onClick={(e) => setEmail("luthorcorp@gmail.com")}
           />
           {emailError && <p className="error-message">{emailError}</p>}
           <br />
@@ -118,7 +122,9 @@ function Register() {
             name="password"
             placeholder="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+              //TODO ERASE AFTER DEMO
+            // onChange={(e) => setPassword(e.target.value)}
+            onClick={(e) => setPassword("password")}
           />
           <br />
           <ReCAPTCHA

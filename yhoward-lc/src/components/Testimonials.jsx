@@ -58,7 +58,7 @@ export default function Testimonials({ name, caption, quoteName, quote }) {
         className="text-black italic bg-white opacity-80 text-xl top-20 py-5"
           captionHeader={item.name}
           />
-                  <CarouselCaption
+        <CarouselCaption
         className="text-black italic text-xl"
           captionText={item.caption}
           />
@@ -67,9 +67,8 @@ export default function Testimonials({ name, caption, quoteName, quote }) {
   });
 
   return (
-    <div className='shadow-2xl border-2 border-black'>
 
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <Carousel className='font-basker shadow-2xl border-2 border-black' activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators
           items={items}
           activeIndex={activeIndex}
@@ -87,6 +86,6 @@ export default function Testimonials({ name, caption, quoteName, quote }) {
           onClickHandler={next}
         />
       </Carousel>
-    </div>
+
   );
 }

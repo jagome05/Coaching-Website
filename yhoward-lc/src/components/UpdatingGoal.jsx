@@ -1,8 +1,10 @@
 import React from 'react'
+import {Trash3, Pencil} from "react-bootstrap-icons"
 import { useState } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
  
 // TODO : form, values need to change based on information on the form, button needs to call update end point, user profile needs a pop up(modal)
-function UpdatingGoal({goal, goals, setGoals, setSuccessMessage, setErrorMessage}) {
+function UpdatingGoal({goal, goals, setGoals, setSuccessMessage, setErrorMessage, setRefresh, refresh}) {
   const [editMode, setEditMode] = useState(false);
   const [goalName, setGoalName] = useState(goal.name)
   const [goalDescription, setGoalDescription] = useState(goal.description)
@@ -35,6 +37,7 @@ function UpdatingGoal({goal, goals, setGoals, setSuccessMessage, setErrorMessage
           // Update a goal from the list
           const updatedGoals = goals.filter((goal) => goal._id !== goal._id);
           setGoals(updatedGoals);
+          setRefresh(!refresh)
           setSuccessMessage("Goal Successfully updated!");
   
     // Update localStorage with the updated goals
@@ -99,7 +102,9 @@ const handleDeleteGoal = async (goalId) => {
                    <div>
                     <label>Name: </label>
                     {editMode ? (
-                      <input type="text"
+                      <input 
+                      className="goal-input"
+                      type="text"
                       value = {goalName}
                       onChange={(e) => handleInputChange(e, setGoalName)} />
                     ):(
@@ -109,19 +114,19 @@ const handleDeleteGoal = async (goalId) => {
                   <div>
                     <label>Description: </label>
                     {editMode ?(
-                      <input type ="text"
+                      <input 
+                      className="goal-input"
+                      type ="text"
                       value = {goalDescription}
                       onChange={(e) => handleInputChange(e, setGoalDescription)} />
                     ) : (
                       <span> {goal.description}</span>
                     )}
                   </div>
-                  <button onClick={() => handleDeleteGoal(goal._id)}>
-                  Delete
-                </button>
-                <button onClick={() => handleUpdateGoal()}>
-                  Update
-                </button>
+                  <div className='flex gap-2'>
+                  <Pencil className='editIcon' onClick={() => handleUpdateGoal()}></Pencil>
+                  <Trash3 className='trashIcon' onClick={() => handleDeleteGoal(goal._id)}></Trash3>
+                  </div>
               </div>
   )
 }

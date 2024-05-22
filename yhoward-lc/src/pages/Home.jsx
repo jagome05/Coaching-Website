@@ -18,7 +18,7 @@ export default function Home() {
         <h2 className="italic text-lg lg:text-2xl">
           Embarking on a new chapter can be exciting and daunting.{" "}
         </h2>
-        <h3 className="text-base lg:text-xl">
+        <h3 className="text-base lg:text-2xl">
           I’m Yvonne Howard of Verve &amp; Veritas Coaching and if you are
           feeling lost, uncertain, or ready to unlock your full potential,
           I&#39;d love to be your supportive guide on this wondrous journey.
@@ -31,16 +31,16 @@ export default function Home() {
 
       <br></br>
 
-      <div className="text-center p-5 font-basker relative">
+      <div className="text-center p-5 font-basker relative bottom-40">
 
-        <h1 className="text-3xl md:text-6xl py-5">Services</h1>
+        <h1 className="text-3xl md:text-6xl py-5 relative font-bold">Services</h1>
 
         <div className="flex gap-20 relative overflow-hidden">
 
           <img src={butterfly} className="absolute w-full"></img>
 
           <div className="basis-1/2 border-4 rounded-lg border-black shadow-2xl z-20 bg-white opacity-90">
-            <h1 className="bg-red-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
+            <h1 className="bg-blue-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
               Transitioning Services
             </h1>
             <article className="text-base md:text-xl p-5">
@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
           <div className="basis-1/2 border-4 rounded-lg border-black shadow-2xl z-20 bg-white opacity-90">
-            <h1 className="bg-green-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
+            <h1 className="bg-blue-400 border-b-2 p-4 border-black text-xl md:text-3xl font-bold">
               Talking About Adoption
             </h1>
             <article className="text-base md:text-xl p-5">
@@ -86,9 +86,9 @@ export default function Home() {
 
       <br></br>
 
-      <div className="font-basker p-5">
+      <div className="font-basker p-5 relative bottom-20">
         <Testimonials 
-        name={`Danyelle`}
+        name="Danyelle"
          caption="Yvonne is such a delight to work with as a coach! Her keen listening skills andremarkable ability to reflect back enrich our coaching sessions tremendously. What I love about Yvonne is her ability to ask probing questions which facilitate newperceptions allowing me to uncover hidden answers. Exemplifying compassion and aprofound orientation towards people, Yvonne is remarkable in her &#39;3G&#39; approach: Grace,Gratitude, and Goodness. In my opinion, her unique style and passion particularly resonate with the BIPOCcommunities. I highly recommend Yvonne: a masterful coach whose heart creates aspace for exceptional personal growth and discovery. She's a difference-maker; your journey with her will be transformative!"
          quote="”You can, you should, and if you’re brave enough to start, you will.”"
         quoteName="- Stephen King"

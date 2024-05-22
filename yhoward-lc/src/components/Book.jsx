@@ -24,8 +24,9 @@ const Book = () => {
         textColor="#ffffff"
         color="#0D6EFD"
         prefill={{
-          name: "" || userFullName,
-          email: "" || userEmail,
+          //! edit out
+          name: "Jason" || userFullName,
+          email: "jagome05@gmail.com" || userEmail,
         }}
       />
     </div>

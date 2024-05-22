@@ -42,9 +42,12 @@ function Login() {
           type="text"
           name="email"
           placeholder="Email address"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
+          value={email}
+          // onChange={(e) => {
+          //   setEmail(e.target.value);
+          // }}
+          //! ERASE AFTER DEMO
+          onClick={(e) => setEmail("ysh@timelesscoach-consult.com")}
         />
         <br />
         <input
@@ -52,14 +55,17 @@ function Login() {
           type="password"
           name="password"
           placeholder="Password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              handleLogin();
-            }
-          }}
+          value={password}
+          // onChange={(e) => {
+          //   setPassword(e.target.value);
+          // }}
+          // onKeyDown={(e) => {
+          //   if (e.key === "Enter") {
+          //     handleLogin();
+          //   }
+          // }}
+          //! ERASE AFTER DEMO
+          onClick={(e) => setPassword("admin123")}
         />
         {invalid && <span className="warning">Invalid password</span>}
         <br />
