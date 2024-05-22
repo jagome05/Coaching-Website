@@ -91,55 +91,60 @@ const Admin = () => {
 
   return (
     <div className="admin-container">
-      <div className="search-section">
-        <input
-          className="search-input"
-          type="text"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          placeholder="Search for a user..."
-        />
-      </div>
-      <div className="table-section">
-        <table className="users-table">
-          <thead>
-            <tr>
-              <th>Full Name</th>
-              <th>Email</th>
-              <th>Goals</th>
-            </tr>
-          </thead>
-          <tbody>
+      <div className="admin-content">
+        <div className="sidebar">
+          <input
+            className="search-input"
+            type="text"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            placeholder="Search for a user..."
+          />
+          <ul className="user-list">
             {filteredUsers.map((user) => (
-              <tr key={user._id} onClick={() => handleUserSelection(user._id)}>
-                <td>{`${user.firstname} ${user.lastname}`}</td>
-                <td>{user.email}</td>
-                <td>
-                  {user._id === selectedUser ? (
-                    <ul>
-                      {selectedUserGoals.map((goal) => (
-                        <li key={goal._id} className="tooltip-container">
-                          <strong>{goal.name}</strong>{" "}
-                          {/* Bold the goal name */}
-                          <span className="tooltip-text">
-                            {goal.description}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    ""
-                  )}
-                </td>
-              </tr>
+              <li
+                key={user._id}
+                onClick={() => handleUserSelection(user._id)}
+                className={user._id === selectedUser ? "selected" : ""}
+              >
+                {`${user.firstname} ${user.lastname}`}
+              </li>
             ))}
-            {filteredUsers.length === 0 && (
-              <tr>
-                <td colSpan="3">No users found</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+            {filteredUsers.length === 0 && <li>No users found</li>}
+          </ul>
+        </div>
+        <div className="main-content">
+          {selectedUser ? (
+            <div className="user-profile">
+              <h2>User Profile</h2>
+              <p>
+                <strong>Name:</strong>{" "}
+                {
+                  filteredUsers.find((user) => user._id === selectedUser)
+                    ?.firstname
+                }{" "}
+                {
+                  filteredUsers.find((user) => user._id === selectedUser)
+                    ?.lastname
+                }
+              </p>
+              <p>
+                <strong>Email:</strong>{" "}
+                {filteredUsers.find((user) => user._id === selectedUser)?.email}
+              </p>
+              <h3>Goals</h3>
+              <ul>
+                {selectedUserGoals.map((goal) => (
+                  <li key={goal._id}>
+                    <strong>{goal.name}</strong>: {goal.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <p>Select a User...</p>
+          )}
+        </div>
       </div>
     </div>
   );

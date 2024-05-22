@@ -102,9 +102,7 @@ const handleDeleteGoal = async (goalId) => {
                    <div>
                     <label>Name: </label>
                     {editMode ? (
-                      <input 
-                      className="goal-input"
-                      type="text"
+                      <input className='goal-input' type="text"
                       value = {goalName}
                       onChange={(e) => handleInputChange(e, setGoalName)} />
                     ):(
@@ -123,10 +121,12 @@ const handleDeleteGoal = async (goalId) => {
                       <span> {goal.description}</span>
                     )}
                   </div>
-                  <div className='flex gap-2'>
-                  <Pencil className='editIcon' onClick={() => handleUpdateGoal()}></Pencil>
-                  <Trash3 className='trashIcon' onClick={() => handleDeleteGoal(goal._id)}></Trash3>
-                  </div>
+                  <Pencil className='editIcon' onClick={() => handleDeleteGoal(goal._id)}>
+                  Delete
+                </Pencil>
+                <Trash3 className='trashIcon' onClick={() => handleUpdateGoal()}>
+                  Update
+                </Trash3>
               </div>
   )
 }

@@ -201,12 +201,12 @@ const UserProfile = () => {
       <h2>{isAdmin ? "Admin Center" : "User Profile"}</h2>
       {successMessage && <p className="success-message">{successMessage}</p>}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <div>
-        <div className="user-info">
+      <div className="user-info">
+        <div className="user-content-box">
           <label>First Name: </label>
           {editMode ? (
             <input
-              className="goal-input"
+              className="first-name-input"
               type="text"
               value={firstname}
               onChange={(e) => handleInputChange(e, setFirstname)}
@@ -219,7 +219,7 @@ const UserProfile = () => {
           <label>Last Name: </label>
           {editMode ? (
             <input
-            className="goal-input"
+            className="last-name-input"
               type="text"
               value={lastname}
               onChange={(e) => handleInputChange(e, setLastname)}
@@ -232,7 +232,7 @@ const UserProfile = () => {
           <label>Email: </label>
           {editMode ? (
             <input
-            className="goal-input"
+            className="email-input"
               type="text"
               value={email}
               onChange={(e) => handleInputChange(e, setEmail)}
@@ -246,7 +246,7 @@ const UserProfile = () => {
             <>
               <label>New Password:</label>
               <input
-              className="goal-input"
+              className="password-input"
                 type="password"
                 value={password}
                 onChange={(e) => handleInputChange(e, setPassword)}
@@ -255,12 +255,12 @@ const UserProfile = () => {
           )}
         </div>
         {editMode ? (
-          <div className="edit-buttons">
-            <button className="border-black border-2 rounded-md p-2 m-2 bg-gray-400 text-white" onClick={handleUpdateProfile}>Save</button>
-            <button className="border-black border-2 rounded-md p-2 m-2 bg-gray-400 text-white" onClick={handleCancel}>Cancel</button>
+          <div>
+            <button className="edit-buttons" onClick={handleUpdateProfile}>Save</button>
+            <button className="edit-buttons" onClick={handleCancel}>Cancel</button>
           </div>
         ) : (
-          <button className="border-black border-2 rounded-md text-white p-2 m-2 bg-blue-400" onClick={handleEdit}>Edit</button>
+          <button className="edit-profile-info" onClick={handleEdit}>Edit</button>
         )}
       </div>
       {isAdmin ? (
@@ -279,8 +279,8 @@ const UserProfile = () => {
             </ul>
             <h3>Create New Goal</h3>
             <div className="new-goal-form">
-              <div className="flex p-2">
-                <label>Name:</label>
+              <div>
+                <label className="goal-name">Name:</label>
                 <input
                   className="goal-input"
                   type="text"
@@ -290,8 +290,8 @@ const UserProfile = () => {
                   onClick={(e) => handleInputChange(e, setName, "Achieving Financial Independence", "Be Famous")}
                 />
               </div>
-              <div className="flex p-2">
-                <label>Description:</label>
+              <div className="goal-box">
+                <label className="goal-description">Description:</label>
                 <textarea
                   className="goal-input"
                   rows="2"
@@ -301,7 +301,7 @@ const UserProfile = () => {
                   onClick={(e) => handleInputChange(e, setDescription, "I want to be rich!", "I want to be famous!")}
                 />
               </div>
-              <button className="border-black border-2 rounded-md text-white p-2 m-2 bg-blue-400" onClick={handleCreateNewGoal}>Create Goal</button>
+              <button className="createGoalButton" onClick={handleCreateNewGoal}>Create Goal</button>
             </div>            
 
           </div>

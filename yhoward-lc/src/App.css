@@ -135,101 +135,304 @@ footer {
 }
 
 .user-profile-container {
-  margin: 20px;
-  padding: 20px
+  text-align: center;
 }
 
-.user-info {
-  margin: 0.5em;
-}
-
-/* Admin.css */
 .admin-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
   margin: 20px;
 }
 
-.search-section {
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+}
+
+.admin-content {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+  padding: 8px;
   margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-list li.selected {
+  background-color: #e0e0e0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.user-profile {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.user-profile h2 {
+  margin-top: 0;
+}
+
+.user-profile ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-profile ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.goal-input {
+  border: 2px solid rgb(0, 0, 0);
+  margin: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.createGoalButton {
+  font-weight:  bold;
+  color: rgb(58, 149, 246);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50px;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.createGoalButton:hover {
+  background-color: rgb(58, 149, 246);
+  color: rgb(255, 255, 255)
+}
+
+.updateGoalButton {
+  font-weight:  bold;
+  color: rgb(58, 149, 246);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  padding: 4px;
+  margin: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.updateGoalButton:hover {
+  background-color: rgb(58, 149, 246);
+  color: rgb(255, 255, 255)
+}
+
+.deleteGoalButton {
+  font-weight:  bold;
+  color: rgb(58, 149, 246);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  padding: 4px;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.deleteGoalButton:hover {
+  background-color: rgb(58, 149, 246);
+  color: rgb(255, 255, 255)
+}
+
+.edit-buttons {
+  font-weight:  bold;
+  color: rgb(58, 149, 246);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.edit-buttons:hover {
+  background-color: rgb(58, 149, 246);
+  color: rgb(255, 255, 255)
+}
+
+.first-name-input {
+  border: 2px solid rgb(0, 0, 0);
+  margin: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.last-name-input {
+  border: 2px solid rgb(0, 0, 0);
+  margin: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.goal-name {
+}
+
+.goal-description {
+  align-self: center;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
 }
 
 .search-input {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.table-section {
-  overflow-x: auto;
-}
-
-.users-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-.users-table th,
-.users-table td {
   padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 10px;
+  cursor: pointer;
   border-bottom: 1px solid #ddd;
 }
 
-.users-table th {
-  background-color: #f4f4f4;
-  width: 20%;
+.user-list li.selected {
+  background-color: #e0e0e0;
 }
 
-.users-table tr:hover {
-  background-color: #e8e8e8;
+.main-content {
+  flex: 1;
+  padding: 20px;
 }
 
-.tooltip-container {
-  position: relative;
-  display: list-item;
-  cursor: pointer;
+.user-profile {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.tooltip-text {
-  visibility: hidden;
-  min-width: 120px;
-  background-color: #0d6efd;
-  color: #fff;
-  text-align: left;
-  border-radius: 6px;
-  padding: 5px 10px;
-  position: absolute;
-  z-index: 1;
-  top: 110%; /* Adjusts vertical position to be below the goal name */
-  left: 0%; /* Aligns the start of the tooltip with the start of the goal name */
-  white-space: nowrap; /* Keeps the tooltip text on a single line */
-  opacity: 0;
-  transition: opacity 0.3s, visibility 0.3s ease-in-out; /* Smooth transition for the tooltip appearance */
+.user-profile h2 {
+  margin-top: 0;
 }
 
-.tooltip-container:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+.user-profile ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.tooltip-text::after {
-  content: "";
-  position: absolute;
-  top: -5px; /* Positioning arrow below the tooltip, pointing upwards */
-  left: 50%; /* Centering the arrow */
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent #555 transparent; /* Arrow color */
+.user-profile ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.link-button {
-  color: rgb(0, 119, 255) !important;
-  font-weight: bold;
+.email-input {
+  border: 2px solid rgb(0, 0, 0);
+  margin: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
 }
 
-.goal-card button:hover {
-  background-color: green;
-  margin-right: auto;
+.password-input {
+  border: 2px solid rgb(0, 0, 0);
+  margin: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
 }
+
+.save-button {
+  padding: 10px;
+}
+
+.cancel-button {
+  padding: 10px
+}
+
+.edit-profile-info {
+  font-weight:  bold;
+  color: rgb(58, 149, 246);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  padding: 4px;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.edit-profile-info:hover {
+  background-color: rgb(58, 149, 246);
+  color: rgb(255, 255, 255)
+}
+
+.user-profile-container {
+  background-image: url("./image/sumner-mahaffey-7Y0NshQLohk-unsplash.jpg");
+  padding: 40px;
+}
+
+.user-info {
+  background-color: #ffffffd4; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.goal-card {
+  background-color: #ffffffd4; 
+  padding: 5em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.goal-box {
+  display: flex;
+  padding: 0.5rem;
+}
+
+
+
+

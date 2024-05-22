@@ -1,10 +1,9 @@
 import React from "react";
 import Header from "../components/Header";
 import Testimonials from "../components/Testimonials";
-import butterfly from "../image/butterflies.jpg"
+import butterfly from "../image/butterflies.jpg";
 
 export default function Home() {
-
   return (
     <>
       <div className="p-5 flex flex-col gap-8 font-basker text-white absolute bg-transparent z-2 w-11/12 md:w-9/12 top-40 md:top-56 left-4 md:left-10">
@@ -36,7 +35,6 @@ export default function Home() {
         <h1 className="text-3xl md:text-6xl py-5 relative font-bold">Services</h1>
 
         <div className="flex gap-20 relative overflow-hidden">
-
           <img src={butterfly} className="absolute w-full"></img>
 
           <div className="basis-1/2 border-4 rounded-lg border-black shadow-2xl z-20 bg-white opacity-90">
@@ -44,17 +42,29 @@ export default function Home() {
               Transitioning Services
             </h1>
             <article className="text-base md:text-xl p-5">
-            <p>
-              People 35 years and older may face a unique set of challenges as they navigate through midlife and plans for retirement.</p>
+              <p>
+                People 35 years and older may face a unique set of challenges as
+                they navigate through midlife and plans for retirement.
+              </p>
               <br></br>
-            <p className="italic">Have you experienced the sweet taste of success only to have it replaced by a lack of growth opportunities and/or complacency?</p>
-            <br></br>
-            <p className="italic">Do you feel pulled in too many directions?</p>
-            <br></br>
-            <p className="italic">Is the life you are living, the life you want?</p>
-            <br></br>
-            <p>When you are ready to leave your daily monotony of existence, I will help guide you to recognize the untapped opportunities and gifts needed to break through and break free!
-            </p>
+              <p className="italic">
+                Have you experienced the sweet taste of success only to have it
+                replaced by a lack of growth opportunities and/or complacency?
+              </p>
+              <br></br>
+              <p className="italic">
+                Do you feel pulled in too many directions?
+              </p>
+              <br></br>
+              <p className="italic">
+                Is the life you are living, the life you want?
+              </p>
+              <br></br>
+              <p>
+                When you are ready to leave your daily monotony of existence, I
+                will help guide you to recognize the untapped opportunities and
+                gifts needed to break through and break free!
+              </p>
             </article>
           </div>
 
@@ -64,20 +74,27 @@ export default function Home() {
             </h1>
             <article className="text-base md:text-xl p-5">
               <p>
-                Adoption is often considered a gift – for both the adoptee and the adoptive parents.
+                Adoption is often considered a gift – for both the adoptee and
+                the adoptive parents.
               </p>
               <p>
-                Yet many times the adoptee is left with a multitude of unresolved thoughts and beliefs.
+                Yet many times the adoptee is left with a multitude of
+                unresolved thoughts and beliefs.
               </p>
               <p>
-                Are you considering seeking out your birth parents? Concerned about the potential blowback from both adoptive and birth families if you do?
+                Are you considering seeking out your birth parents? Concerned
+                about the potential blowback from both adoptive and birth
+                families if you do?
               </p>
               <p>
-                Are you a transracial or biracial adoptee who has had to grapple with living life between two or more worlds?
+                Are you a transracial or biracial adoptee who has had to grapple
+                with living life between two or more worlds?
               </p>
-              As a biracial adoptee from a closed adoption, come and be present in my safe place.
+              As a biracial adoptee from a closed adoption, come and be present
+              in my safe place.
               <p>
-                I can be a thought and a heart partner for you, as you find your sense of wholeness, belonging, and inner peace.
+                I can be a thought and a heart partner for you, as you find your
+                sense of wholeness, belonging, and inner peace.
               </p>
             </article>
           </div>
@@ -105,20 +122,20 @@ export default function Home() {
           Schedule a complimentary session or call
           <strong> 214-289-5599</strong> to share your story, explore your
           goals, and see if we’re a good fit for this adventure together.
-          Remember, you are not alone on this journey. Let's transform
-          together.
+          Remember, you are not alone on this journey. Let's transform together.
         </h2>
         <br></br>
         {/* //TODO update button to go somewhere */}
         <h1 class="text-4xl">Book Now!</h1>
         <br></br>
-        <p><strong>Yvonne Is Your Transformative Transition Coach & Thought Partner</strong></p>
+        <p>
+          <strong>
+            Yvonne Is Your Transformative Transition Coach & Thought Partner
+          </strong>
+        </p>
       </div>
 
-      <div>
-        
-      </div>
-
+      <div></div>
     </>
   );
 }
