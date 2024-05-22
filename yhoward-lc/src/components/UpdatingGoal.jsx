@@ -99,7 +99,7 @@ const handleDeleteGoal = async (goalId) => {
                    <div>
                     <label>Name: </label>
                     {editMode ? (
-                      <input type="text"
+                      <input className='goal-input' type="text"
                       value = {goalName}
                       onChange={(e) => handleInputChange(e, setGoalName)} />
                     ):(
@@ -116,10 +116,10 @@ const handleDeleteGoal = async (goalId) => {
                       <span> {goal.description}</span>
                     )}
                   </div>
-                  <button onClick={() => handleDeleteGoal(goal._id)}>
+                  <button className='deleteGoalButton' onClick={() => handleDeleteGoal(goal._id)}>
                   Delete
                 </button>
-                <button onClick={() => handleUpdateGoal()}>
+                <button className='updateGoalButton' onClick={() => handleUpdateGoal()}>
                   Update
                 </button>
               </div>

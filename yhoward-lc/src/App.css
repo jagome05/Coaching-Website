@@ -142,20 +142,11 @@ footer {
 
 .admin-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
-  background-color: #f0f0f0;
-}
-
-.admin-content {
-  display: flex;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 1000px;
-  width: 100%;
+  margin: 20px;
 }
 
 .sidebar {
@@ -281,9 +272,9 @@ footer {
   color: rgb(58, 149, 246);
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(0, 0, 0);
-  padding: 4px;
   border-radius: 50px;
   padding: 10px 20px;
+  margin: 10px;
 }
 
 .edit-buttons:hover {
@@ -303,6 +294,13 @@ footer {
   margin: 20px;
   border-radius: 50px;
   padding: 10px 20px;
+}
+
+.goal-name {
+}
+
+.goal-description {
+  align-self: center;
 }
 
 .sidebar {
@@ -403,6 +401,40 @@ footer {
 
 .user-profile-container {
   background-image: url("./image/sumner-mahaffey-7Y0NshQLohk-unsplash.jpg");
+  padding: 40px;
 }
+
+.user-info {
+  background-color: #ffffffd4; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.goal-card {
+  background-color: #ffffffd4; 
+  padding: 5em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.goal-box {
+  display: flex;
+  padding: 0.5rem;
+}
+
+
 
 

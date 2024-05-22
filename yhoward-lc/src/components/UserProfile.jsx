@@ -186,7 +186,7 @@ const UserProfile = () => {
       {successMessage && <p className="success-message">{successMessage}</p>}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       <div className="user-info">
-        <div>
+        <div className="user-content-box">
           <label>First Name: </label>
           {editMode ? (
             <input
@@ -239,9 +239,9 @@ const UserProfile = () => {
           )}
         </div>
         {editMode ? (
-          <div className="edit-buttons">
-            <button className="save-button" onClick={handleUpdateProfile}>Save</button>
-            <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+          <div>
+            <button className="edit-buttons" onClick={handleUpdateProfile}>Save</button>
+            <button className="edit-buttons" onClick={handleCancel}>Cancel</button>
           </div>
         ) : (
           <button className="edit-profile-info" onClick={handleEdit}>Edit</button>
@@ -264,7 +264,7 @@ const UserProfile = () => {
             <h3>Create New Goal</h3>
             <div className="new-goal-form">
               <div>
-                <label>Name:</label>
+                <label className="goal-name">Name:</label>
                 <input
                   className="goal-input"
                   type="text"
@@ -272,8 +272,8 @@ const UserProfile = () => {
                   onChange={(e) => handleInputChange(e, setName)}
                 />
               </div>
-              <div>
-                <label>Description:</label>
+              <div className="goal-box">
+                <label className="goal-description">Description:</label>
                 <textarea
                   className="goal-input"
                   rows="2"
@@ -282,7 +282,7 @@ const UserProfile = () => {
                   onChange={(e) => handleInputChange(e, setDescription)}
                 />
               </div>
-              <button onClick={handleCreateNewGoal}>Create Goal</button>
+              <button className="createGoalButton" onClick={handleCreateNewGoal}>Create Goal</button>
             </div>            
 
           </div>
