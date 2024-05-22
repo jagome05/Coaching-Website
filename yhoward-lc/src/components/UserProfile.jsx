@@ -190,6 +190,7 @@ const UserProfile = () => {
           <label>First Name: </label>
           {editMode ? (
             <input
+              className="first-name-input"
               type="text"
               value={firstname}
               onChange={(e) => handleInputChange(e, setFirstname)}
@@ -202,6 +203,7 @@ const UserProfile = () => {
           <label>Last Name: </label>
           {editMode ? (
             <input
+            className="last-name-input"
               type="text"
               value={lastname}
               onChange={(e) => handleInputChange(e, setLastname)}
@@ -214,6 +216,7 @@ const UserProfile = () => {
           <label>Email: </label>
           {editMode ? (
             <input
+            className="email-input"
               type="text"
               value={email}
               onChange={(e) => handleInputChange(e, setEmail)}
@@ -227,6 +230,7 @@ const UserProfile = () => {
             <>
               <label>New Password:</label>
               <input
+              className="password-input"
                 type="password"
                 value={password}
                 onChange={(e) => handleInputChange(e, setPassword)}
@@ -236,11 +240,11 @@ const UserProfile = () => {
         </div>
         {editMode ? (
           <div className="edit-buttons">
-            <button onClick={handleUpdateProfile}>Save</button>
-            <button onClick={handleCancel}>Cancel</button>
+            <button className="save-button" onClick={handleUpdateProfile}>Save</button>
+            <button className="cancel-button" onClick={handleCancel}>Cancel</button>
           </div>
         ) : (
-          <button onClick={handleEdit}>Edit</button>
+          <button className="edit-profile-info" onClick={handleEdit}>Edit</button>
         )}
       </div>
       {isAdmin ? (
