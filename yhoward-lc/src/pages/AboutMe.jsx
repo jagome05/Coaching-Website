@@ -6,26 +6,22 @@ import pendulum from "../image/pendulum.jpg";
 export default function AboutMe() {
   return (
     <>
-      <div className="flex p-5 gap-5 font-basker">
-        <img className="h-1/3 w-1/4 shadow-2xl" src={headshot} alt="headshot" />
+      <div className="flex justify-normal p-5 gap-5 font-basker">
+        <img className="h-1/3 w-1/4 shadow-2xl relative" src={headshot} alt="headshot" />
         <div className="relative font-basker">
           <img className="absolute h-full" src={pendulum}></img>
           <div className="relative bg-white opacity-80 h-full w-11/12 p-5">
-            <h2 className="text-5xl text-center">About Me</h2>
+            <h2 className="text-5xl font-bold">About Me</h2>
             <br></br>
-            <h2 className="italic">My 3Cs of Life:</h2>
-            <br></br>
-            <h1 className="italic">
-              <strong>C</strong>hoices, <strong>C</strong>onsequences,{" "}
-              <strong>C</strong>oping
-            </h1>
-            <br></br>
-            <h2 className="italic text-2xl">
-              "Life is about how well you Cope with the Consequences of your
-              Choices. Let’s start making better choices.”
-            </h2>
-            <br></br>
-            <h1> - Yvonne Howard</h1>
+            <h2 className="italic">“My 3Cs of Life:</h2>
+              
+              <h1 className="italic"><strong>C</strong>oping, <strong>C</strong>onsequences, <strong>C</strong>hoices</h1>
+              <br></br>
+              <h2 className="italic">
+              Life is about how well you <strong>Cope</strong> with the <strong>Consequences</strong>of your <strong>Choices</strong>. Let’s start making better choices.”</h2>
+              <br></br>
+              <br></br>
+              <h1> - Yvonne Howard</h1>
           </div>
         </div>
       </div>
@@ -33,37 +29,33 @@ export default function AboutMe() {
       <div className="flex bg-[#B7ADCF] border-2 border-black relative z-20">
         {/* //TODo thonk about Breakpoints to min text */}
 
-        <div className="basis-1/2 w-full m-5 flex flex-col gap-2 font-basker bg-transparent">
-          <h2 class="text-sm lg:text-xl">
-            Think of me as your trusted, perceptive partner in transformation.{" "}
-            <strong>With over 25+ years of experience</strong>, I bring unique
-            insights and expertise as a former:
+        <div className="basis-1/2 flex flex-col font-basker bg-transparent">
+
+          <h2 class="text-sm lg:text-2xl p-5">
+            Think of me as your trusted, perceptive partner in transformation. <strong>With over 25+ years of experience</strong>, I bring unique insights and expertise as a former:
           </h2>
-          <h3 className="text-sm lg:text-xl">
-            <ul>
-              <strong>Licensed Counselor:</strong> I offer a compassionate and
-              understanding space to explore your emotions and heal from
-              challenges.
+          <h3 className="text-sm lg:text-xl px-5">
+            <ul className="">
+              <strong>Licensed Counselor:</strong> I offer a compassionate and understanding
+              space to explore your emotions and heal from challenges.
             </ul>
-            <ul>
-              <strong>Educator:</strong> I am passionate about guiding you
-              through self-discovery exercises and equipping you with tools for
-              lasting change.
+            <ul className="">
+              <strong>Educator:</strong> I am passionate about guiding you through self-discovery
+              exercises and equipping you with tools for lasting change.
             </ul>
-            <ul>
-              <strong>Consultant:</strong> I utilize strategic thinking to help
-              you create actionable plans and overcome obstacles, ensuring a
-              smooth and empowering transition.
+            <ul className="">
+              <strong>Consultant:</strong> I utilize strategic thinking to help you create
+              actionable plans and overcome obstacles, ensuring a smooth and
+              empowering transition.
             </ul>
-            <ul>
-              <strong>‘Across the Country’ Resident: </strong> I have had the
-              opportunity to call the East, Midwest, West, and Southwest
-              (currently) my home.
+            <ul className="">
+              <strong>‘Across the Country’ Resident: </strong> I have had the opportunity to call
+              the East, Midwest, West, and Southwest (currently) my home.
             </ul>
           </h3>
         </div>
 
-        <div className="basis-1/2 z-20">
+        <div className="basis-1/2 z-20 border-black border-x-2">
           <video autoPlay loop muted className="w-full">
             <source src={mergeVid} />
           </video>

@@ -61,6 +61,7 @@ function Register() {
       localStorage.setItem("user", JSON.stringify(user));
       setTimeout(() => {
         nav("/");
+        window.location.reload()
       }, 3000);
     } catch (error) {
       console.error("Registration error:", error);
@@ -85,8 +86,6 @@ function Register() {
             name="firstname"
             placeholder="First Name"
             value={firstname}
-            //TODO so for example try: setFirstName({...person, firstName: e.target.value})
-            //TODO or make a fxn to help with it?!!?
             onChange={(e) => setFirstName(e.target.value)}
           />
           <br />

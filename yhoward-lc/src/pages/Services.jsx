@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 import Testimonials from "../components/Testimonials";
 import lightbulb from "../../src/image/lightbulb.png";
-import stoneman from "../../src/image/stonefig.jpg";
+import colorTree from "../../src/image/colorTree.jpg"
 
 //TODO update FAQ info and Testimonials...
 export default function Services() {
@@ -92,7 +92,7 @@ export default function Services() {
                 <Col>
                   <img
                     className="shadow-2xl w-full rounded-lg"
-                    src={stoneman}
+                    src={colorTree}
                     alt="img"
                   />
                 </Col>
@@ -118,12 +118,18 @@ export default function Services() {
           </TabContent>
         </div>
 
-        <div class="p-4">
-          <Testimonials />
+        <div class="p-5 ">
+        <Testimonials 
+        name="Brittany H."
+         caption="I can’t say enough good things about working with Yvonne! As a coach, she is fantasticat keeping me grounded, supporting me in problem-solving, and collaborating with mygoals and ambitions. She brings a wealth of knowledge and experience into oursessions together. As a person, she is genuinely kind, has a high level of integrity, and ahuge heart that loves to help others reach their full potential. Through working withYvonne, I’ve been able to gain the confidence to launch my new business and maintainconsistent healthy habits. I highly recommend her!"
+         quote="The less you respond to negative people, the more positive your life will
+         become.”"
+         quoteName="- Paulo Coelho"
+        />
         </div>
 
-        <div className="p-4 gap-5">
-          <div class="bg-white p-3 border-5 border-black shadow-2xl">
+        <div className="p-5 gap-5">
+          <div class="bg-white p-5 border-5 border-black shadow-2xl z-10 relative">
             <h3 className="text-4xl">
               My approach is deeply collaborative, holistic, and
               strengths-based:
@@ -151,7 +157,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div class="p-3 shadow-2xl">
+        <div class="p-5 shadow-md relative z-10">
           <FAQ />
         </div>
       </div>

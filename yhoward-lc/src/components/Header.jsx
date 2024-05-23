@@ -64,9 +64,9 @@ const Header = () => {
       : { position: "absolute", left: 0, top: "-3em", width: "220px" };
 
   const homeHeaderStyle =
-    "relative flex flex-row justify-end items-center gap-4 p-5 bg-[rgb(235, 246, 255), 0] z-20";
+    "relative flex flex-row justify-end items-center gap-4 p-5 bg-[rgb(235, 246, 255), 0] z-20 font-basker";
   const otherPagesHeaderStyle =
-    "relative flex flex-row justify-end items-center gap-4 p-5 bg-sky-800 border-black border-b-2";
+    "relative flex flex-row justify-end items-center gap-4 p-5 bg-sky-800 border-black border-b-2 font-basker";
 
   const headerStyle =
     location.pathname === "/" ? homeHeaderStyle : otherPagesHeaderStyle;

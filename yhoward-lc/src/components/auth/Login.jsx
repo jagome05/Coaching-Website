@@ -42,6 +42,7 @@ function Login() {
           type="text"
           name="email"
           placeholder="Email address"
+          value={email}
           onChange={(e) => {
             setEmail(e.target.value);
           }}
@@ -52,6 +53,7 @@ function Login() {
           type="password"
           name="password"
           placeholder="Password"
+          value={password}
           onChange={(e) => {
             setPassword(e.target.value);
           }}
