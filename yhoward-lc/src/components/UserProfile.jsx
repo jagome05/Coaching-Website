@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Admin from "./Admin";
 import UpdatingGoal from "./UpdatingGoal";
-import {Pencil} from "react-bootstrap-icons"
+import { Pencil } from "react-bootstrap-icons"
+import sand from "../../src/image/sumner-mahaffey-7Y0NshQLohk-unsplash.jpg"
 
 const UserProfile = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -17,7 +18,7 @@ const UserProfile = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
   const [refresh, setRefresh] = useState(true)
-  
+
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -59,18 +60,12 @@ const UserProfile = () => {
     }
   };
 
-  //! Change after DemoDay
-  let counter = 1
-  const handleInputChange = (e, setter, string1, string2) => {
-    console.log(counter)
-    if (Math.floor(counter%2) == 0) {
-      setter(string1);
-    } else {
-      setter(string2);
-    }
-    // setter(e.target.value);
-    return counter++
+
+  const handleInputChange = (e, setter) => {
+
+    setter(e.target.value);
   };
+
 
   const handleEdit = () => {
     setFirstname(userInfo.firstname);
@@ -197,119 +192,118 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="user-profile-container">
-      <h2>{isAdmin ? "Admin Center" : "User Profile"}</h2>
-      {successMessage && <p className="success-message">{successMessage}</p>}
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <div className="user-info">
-        <div className="user-content-box">
-          <label>First Name: </label>
-          {editMode ? (
-            <input
-              className="first-name-input"
-              type="text"
-              value={firstname}
-              onChange={(e) => handleInputChange(e, setFirstname)}
-            />
-          ) : (
-            <span> {firstname}</span>
-          )}
-        </div>
+    <>
+      <div className="user-profile-container">
+        <h2>{isAdmin ? "Admin Center" : "User Profile"}</h2>
+        {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <div className="user-info">
-          <label>Last Name: </label>
-          {editMode ? (
-            <input
-            className="last-name-input"
-              type="text"
-              value={lastname}
-              onChange={(e) => handleInputChange(e, setLastname)}
-            />
-          ) : (
-            <span> {userInfo.lastname}</span>
-          )}
-        </div>
-        <div className="user-info">
-          <label>Email: </label>
-          {editMode ? (
-            <input
-            className="email-input"
-              type="text"
-              value={email}
-              onChange={(e) => handleInputChange(e, setEmail)}
-            />
-          ) : (
-            <span> {userInfo.email}</span>
-          )}
-        </div>
-        <div>
-          {editMode && (
-            <>
-              <label>New Password:</label>
+          <div className="user-content-box">
+            <label>First Name: </label>
+            {editMode ? (
               <input
-              className="password-input"
-                type="password"
-                value={password}
-                onChange={(e) => handleInputChange(e, setPassword)}
+                className="first-name-input"
+                type="text"
+                value={firstname}
+                onChange={(e) => handleInputChange(e, setFirstname)}
               />
-            </>
+            ) : (
+              <span> {firstname}</span>
+            )}
+          </div>
+          <div>
+            <label>Last Name: </label>
+            {editMode ? (
+              <input
+                className="last-name-input"
+                type="text"
+                value={lastname}
+                onChange={(e) => handleInputChange(e, setLastname)}
+              />
+            ) : (
+              <span> {userInfo.lastname}</span>
+            )}
+          </div>
+          <div>
+            <label>Email: </label>
+            {editMode ? (
+              <input
+                className="email-input"
+                type="text"
+                value={email}
+                onChange={(e) => handleInputChange(e, setEmail)}
+              />
+            ) : (
+              <span> {userInfo.email}</span>
+            )}
+          </div>
+          <div>
+            {editMode && (
+              <>
+                <label>New Password:</label>
+                <input
+                  className="password-input"
+                  type="password"
+                  value={password}
+                  onChange={(e) => handleInputChange(e, setPassword)}
+                />
+              </>
+            )}
+          </div>
+          {editMode ? (
+            <div>
+              <button className="edit-buttons" onClick={handleUpdateProfile}>Save</button>
+              <button className="edit-buttons" onClick={handleCancel}>Cancel</button>
+            </div>
+          ) : (
+            <button className="edit-profile-info" onClick={handleEdit}>Edit</button>
           )}
         </div>
-        {editMode ? (
-          <div>
-            <button className="edit-buttons" onClick={handleUpdateProfile}>Save</button>
-            <button className="edit-buttons" onClick={handleCancel}>Cancel</button>
-          </div>
+        {isAdmin ? (
+          <Admin />
         ) : (
-          <button className="edit-profile-info" onClick={handleEdit}>Edit</button>
-        )}
-      </div>
-      {isAdmin ? (
-        <Admin />
-      ) : (
-        <div className="user-goals">
+          <div className="user-goals">
 
-          <div className="goal-card">
-            <h3>Goals</h3>
-            <ul className="goal-list">
-              {goals.map((goal) => (
-                <li key={goal._id}>
-                  {/* <strong>{goal.name}</strong>: {goal.description} */}
-                  <UpdatingGoal goal={goal} goals={goals} setGoals={setGoals} setSuccessMessage={setSuccessMessage} setErrorMessage={setErrorMessage} setRefresh={setRefresh} refresh={refresh}/>
-                </li>))}
-            </ul>
-            <h3>Create New Goal</h3>
-            <div className="new-goal-form">
-              <div>
-                <label className="goal-name">Name:</label>
-                <input
-                  className="goal-input"
-                  type="text"
-                  value={name}
-                  // onChange={(e) => handleInputChange(e, setName)}
-                  //! Change after DemoDay
-                  onClick={(e) => handleInputChange(e, setName, "Achieving Financial Independence", "Be Famous")}
-                />
+            <div className="goal-card">
+              <h3>Goals</h3>
+              <ul className="goal-list">
+                {goals.map((goal) => (
+                  <li key={goal._id}>
+                    {/* <strong>{goal.name}</strong>: {goal.description} */}
+                    <UpdatingGoal goal={goal} goals={goals} setGoals={setGoals} setSuccessMessage={setSuccessMessage} setErrorMessage={setErrorMessage} setRefresh={setRefresh} refresh={refresh} />
+                  </li>))}
+              </ul>
+              <h3>Create New Goal</h3>
+              <div className="new-goal-form">
+                <div>
+                  <label className="goal-name">Name:</label>
+                  <input
+                    className="goal-input"
+                    type="text"
+                    value={name}
+                    onChange={(e) => handleInputChange(e, setName)}
+                  />
+                </div>
+                <div className="goal-box">
+                  <label className="goal-description">Description:</label>
+                  <textarea
+                    className="goal-input"
+                    rows="2"
+                    cols="50"
+                    value={description}
+                    onChange={(e) => handleInputChange(e, setDescription)}
+                  />
+                </div>
+                <button className="createGoalButton" onClick={handleCreateNewGoal}>Create Goal</button>
               </div>
-              <div className="goal-box">
-                <label className="goal-description">Description:</label>
-                <textarea
-                  className="goal-input"
-                  rows="2"
-                  cols="50"
-                  value={description}
-                  //! Change after DemoDay
-                  onClick={(e) => handleInputChange(e, setDescription, "I want to be rich!", "I want to be famous!")}
-                />
-              </div>
-              <button className="createGoalButton" onClick={handleCreateNewGoal}>Create Goal</button>
-            </div>            
+
+            </div>
 
           </div>
+        )}
 
-        </div>
-      )}
-
-    </div>
+      </div>
+    </>
   );
 };
 

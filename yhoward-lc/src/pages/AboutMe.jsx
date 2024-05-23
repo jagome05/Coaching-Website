@@ -6,8 +6,8 @@ import pendulum from "../image/pendulum.jpg";
 export default function AboutMe() {
   return (
     <>
-      <div className="flex p-5 gap-5 font-basker">
-        <img className="h-1/3 w-1/4 shadow-2xl" src={headshot} alt="headshot" />
+      <div className="flex justify-normal p-5 gap-5 font-basker">
+        <img className="h-1/3 w-1/4 shadow-2xl relative" src={headshot} alt="headshot" />
         <div className="relative font-basker">
           <img className="absolute h-full" src={pendulum}></img>
           <div className="relative bg-white opacity-80 h-full w-11/12 p-5">

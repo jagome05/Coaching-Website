@@ -121,12 +121,16 @@ const handleDeleteGoal = async (goalId) => {
                       <span> {goal.description}</span>
                     )}
                   </div>
-                  <Pencil className='editIcon' onClick={() => handleDeleteGoal(goal._id)}>
+                  <div className='flex gap-5 p-2 justify-center'>
+                  <Pencil className='editIcon' onClick={() => handleUpdateGoal()}>
                   Delete
                 </Pencil>
-                <Trash3 className='trashIcon' onClick={() => handleUpdateGoal()}>
+                <Trash3 className='trashIcon' onClick={() => handleDeleteGoal(goal._id)}>
                   Update
                 </Trash3>
+                
+                  </div>
+                  <hr></hr>
               </div>
   )
 }

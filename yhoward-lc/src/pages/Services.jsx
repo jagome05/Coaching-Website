@@ -14,7 +14,7 @@ import {
 } from "reactstrap";
 import Testimonials from "../components/Testimonials";
 import lightbulb from "../../src/image/lightbulb.png";
-import stoneman from "../../src/image/stonefig.jpg";
+import colorTree from "../../src/image/colorTree.jpg"
 
 //TODO update FAQ info and Testimonials...
 export default function Services() {
@@ -92,7 +92,7 @@ export default function Services() {
                 <Col>
                   <img
                     className="shadow-2xl w-full rounded-lg"
-                    src={stoneman}
+                    src={colorTree}
                     alt="img"
                   />
                 </Col>

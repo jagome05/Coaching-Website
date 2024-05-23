@@ -43,11 +43,9 @@ function Login() {
           name="email"
           placeholder="Email address"
           value={email}
-          // onChange={(e) => {
-          //   setEmail(e.target.value);
-          // }}
-          //! ERASE AFTER DEMO
-          onClick={(e) => setEmail("ysh@timelesscoach-consult.com")}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
         />
         <br />
         <input
@@ -56,16 +54,14 @@ function Login() {
           name="password"
           placeholder="Password"
           value={password}
-          // onChange={(e) => {
-          //   setPassword(e.target.value);
-          // }}
-          // onKeyDown={(e) => {
-          //   if (e.key === "Enter") {
-          //     handleLogin();
-          //   }
-          // }}
-          //! ERASE AFTER DEMO
-          onClick={(e) => setPassword("admin123")}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleLogin();
+            }
+          }}
         />
         {invalid && <span className="warning">Invalid password</span>}
         <br />

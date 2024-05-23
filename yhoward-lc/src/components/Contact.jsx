@@ -89,9 +89,7 @@ return (
                     placeholder="First Name"
                     type="text"
                     value={first}
-                    // onChange={(e) => setFirst(e.target.value)}
-                    //! ERASE AFTER DEMO
-          onClick={(e) => setFirst("Jason")}
+                    onChange={(e) => setFirst(e.target.value)}
                   />
                 </FormGroup>
               </Col>
@@ -105,9 +103,7 @@ return (
                     placeholder="Last Name"
                     type="text"
                     value={last}
-                    // onChange={(e) => setLast(e.target.value)}
-                    //! ERASE AFTER DEMO
-          onClick={(e) => setLast("Gomez")}
+                    onChange={(e) => setLast(e.target.value)}
                   />
                 </FormGroup>
               </Col>
@@ -120,9 +116,7 @@ return (
                 name="from"
                 placeholder="Email Address"
                 value={from}
-                // onChange={(e) => setFrom(e.target.value)}
-                //! ERASE AFTER DEMO
-          onClick={(e) => setFrom("jagome05@gmail.com")}
+                onChange={(e) => setFrom(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
@@ -133,9 +127,7 @@ return (
                 name="message"
                 type="textarea"
                 value={message}
-                // onChange={(e) => setMessage(e.target.value)}
-                //! ERASE AFTER DEMO
-          onClick={(e) => setMessage("Hello Yvonne!")}
+                onChange={(e) => setMessage(e.target.value)}
               />
             </FormGroup>
             <Button type="submit">Send</Button>

@@ -61,6 +61,7 @@ function Register() {
       localStorage.setItem("user", JSON.stringify(user));
       setTimeout(() => {
         nav("/");
+        window.location.reload()
       }, 3000);
     } catch (error) {
       console.error("Registration error:", error);
@@ -85,9 +86,7 @@ function Register() {
             name="firstname"
             placeholder="First Name"
             value={firstname}
-              //TODO ERASE AFTER DEMO
-            // onChange={(e) => setFirstName(e.target.value)}
-            onClick={(e) => setFirstName("Lex")}
+            onChange={(e) => setFirstName(e.target.value)}
           />
           <br />
           <input
@@ -97,9 +96,7 @@ function Register() {
             name="lastname"
             placeholder="Last Name"
             value={lastname}
-              //TODO ERASE AFTER DEMO
-            // onChange={(e) => setLastName(e.target.value)}
-            onClick={(e) => setLastName("Luthor")}
+            onChange={(e) => setLastName(e.target.value)}
           />
           <br />
           <input
@@ -109,9 +106,7 @@ function Register() {
             name="email"
             placeholder="Email Address"
             value={email}
-              //TODO ERASE AFTER DEMO
-            // onChange={(e) => setEmail(e.target.value)}
-            onClick={(e) => setEmail("luthorcorp@gmail.com")}
+            onChange={(e) => setEmail(e.target.value)}
           />
           {emailError && <p className="error-message">{emailError}</p>}
           <br />
@@ -122,9 +117,7 @@ function Register() {
             name="password"
             placeholder="Password"
             value={password}
-              //TODO ERASE AFTER DEMO
-            // onChange={(e) => setPassword(e.target.value)}
-            onClick={(e) => setPassword("password")}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <br />
           <ReCAPTCHA

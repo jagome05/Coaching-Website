@@ -33,7 +33,6 @@ footer {
   background-color: rgba(204, 204, 204);
   text-align: center;
   border: 1px solid #000000;
-  z-index: 1;
 }
 
 .user-profile {
@@ -93,6 +92,21 @@ footer {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.link-button {
+  font-weight: bold !important;
+  color:#007bff !important;
+}
+
+hr {
+  display:block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left:auto;
+  margin-right:auto;
+  border-style:inset;
+  border-width:1px;
+  }
 
 .warning {
   color: red;
